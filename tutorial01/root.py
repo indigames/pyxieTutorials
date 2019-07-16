@@ -8,11 +8,13 @@ import pyxie
 from pyxie import devtool
 from pyxie import apputil
 import pyvmath as vmath
+import os.path
 
 # convert png to the format suitable for the platform (ship.png -> ship.pyxi)
 # devtool module can not be used in the app
 # this process should be completed in advance, not at runtime
-devtool.convertTextureToPlatform('ship.png', 'ship', devtool.TARGET_PLATFORM_PC, False, False)
+if not os.path.exists('ship.pyxi'):
+    devtool.convertTextureToPlatform('ship.png', 'ship', pyxie.TARGET_PLATFORM_PC, False, False)
 
 # open or resize window (This function is valid only on PC,Ignored in smartphone apps)
 pyxie.window(True, 480, 640)
