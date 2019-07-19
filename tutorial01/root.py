@@ -6,7 +6,7 @@ star ship moves when you touch the screen
 """
 import pyxie
 from pyxie import devtool
-from pyxie import apputil
+from pyxie.apputil import graphicsHelper
 import pyvmath as vmath
 import os.path
 
@@ -19,10 +19,7 @@ if not os.path.exists('ship.pyxi'):
 # open or resize window (This function is valid only on PC,Ignored in smartphone apps)
 pyxie.window(True, 480, 640)
 
-# create drawable rectangle object
-# apputil module is just a sample code
-# please copy and edit it for your own convenience.
-ship = apputil.createSprite(100, 100, "ship")
+ship = graphicsHelper.createSprite(100, 100, "ship")
 
 camera = pyxie.camera("cam01")
 camera.orthographicProjection = True

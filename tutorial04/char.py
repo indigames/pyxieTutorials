@@ -19,8 +19,6 @@ STATE_MOTION = {STATUS_STAY:"Sapphiart@idle", STATUS_WALK:"Sapphiart@walk", STAT
 
 TRANSIT_TIME = 0.2
 MOVING_DISTANCE = 0.5
-L_ROT = vmath.mat_rotationY(-0.1, 3)
-R_ROT = vmath.mat_rotationY( 0.1, 3)
 
 
 class Character():
@@ -49,10 +47,8 @@ class Character():
         r = vmath.dot(self.currentDir, self.gorlDir)
         if r < 0.99:
             n = vmath.cross(self.currentDir, self.gorlDir)
-            if n.y < 0:
-                self.currentDir = vmath.normalize(L_ROT * self.currentDir)
-            else:
-                self.currentDir = vmath.normalize(R_ROT * self.currentDir)
+            ROT = vmath.mat_rotationY((1.0-r)*n.y*0.5, 3)
+            self.currentDir = vmath.normalize(ROT * self.currentDir)
 
         if self.currentState == STATUS_RUN:
             self.currentPosition += self.currentDir * 0.06

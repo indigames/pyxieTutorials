@@ -8,13 +8,13 @@ Controller class
 """
 import pyxie
 import pyvmath as vmath
-from pyxie import apputil
+from pyxie.apputil import graphicsHelper
 
 
 class Controller():
     def __init__(self):
-        self.frame = apputil.createSprite(50,50,'images/ctrl01')
-        self.button = apputil.createSprite(50,50,'images/ctrl02')
+        self.frame = graphicsHelper.createSprite(50,50,'images/ctrl01')
+        self.button = graphicsHelper.createSprite(50,50,'images/ctrl02')
         self.camera = pyxie.camera('2dcam')
         self.camera.orthographicProjection = True
         self.camera.position = (0, 0, 100)

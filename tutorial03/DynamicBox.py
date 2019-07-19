@@ -5,7 +5,7 @@ Tutorial03
 class DynamicBox
 """
 
-from pyxie import apputil
+from pyxie.apputil import graphicsHelper
 import pyvmath as vmath
 from Box2D.b2 import (world, polygonShape, staticBody, dynamicBody)
 
@@ -19,7 +19,8 @@ class DynamicBox:
             self.body.CreatePolygonFixture(box=size, density=1, friction=0.3)
 
         points = self.body.fixtures[0].shape.vertices
-        self.figure = apputil.createBox(points)
+        index = (0,1,3,1,2,3)
+        self.figure = graphicsHelper.createMesh(points, index)
         showcase.add(self.figure)
 
     def update(self):

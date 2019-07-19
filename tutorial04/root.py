@@ -6,7 +6,7 @@ walk through 3d character with animation
 """
 import pyxie
 from pyxie import devtool
-from pyxie import apputil
+from pyxie.apputil import graphicsHelper
 import pyvmath as vmath
 import os.path
 from char import Character
@@ -26,7 +26,7 @@ char = Character()
 cam = TargetCamera()
 controller = Controller()
 
-ground = apputil.createSprite(20.0,20.0,texture ='images/Dirt-2290', normal=(0,1,0))
+ground = graphicsHelper.createSprite(20.0,20.0,texture ='images/Dirt-2290', normal=(0,1,0))
 
 # what you want to draw should be registered in showcase
 showcase = pyxie.showcase("case01")

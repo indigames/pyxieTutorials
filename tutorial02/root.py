@@ -27,7 +27,7 @@ while True:
     if touch != None:
         curX = touch['cur_x'] + w // 2
         curY = -touch['cur_y'] + h // 2
-        press = touch['is_hold'] | touch['is_move']
+        press = touch['is_holded'] | touch['is_moved']
     impl.process_inputs()
 
     imgui.new_frame()
