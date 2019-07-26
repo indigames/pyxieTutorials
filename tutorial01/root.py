@@ -29,9 +29,6 @@ camera.position = (0, 0, 100)
 showcase = pyxie.showcase("case01")
 showcase.add(ship)
 
-l_rot = vmath.mat_rotation(-0.05, 2)
-r_rot = vmath.mat_rotation(0.05, 2)
-
 goal = vmath.vec2(0, 0)
 pos = vmath.vec2(0, 0)
 dir = vmath.vec2(0, 1)
@@ -49,11 +46,14 @@ while loop:
     if r < 0.98:
         n = vmath.cross(d, dir)
         if n > 0:
-            dir = l_rot * dir
+            rot = vmath.mat_rotation(-5.0 * pyxie.getElapsedTime(), 2)
         else:
-            dir = r_rot * dir
+            rot = vmath.mat_rotation(5.0 * pyxie.getElapsedTime(), 2)
+        dir = rot * dir
+
+
     if dist > 5.0:
-        pos = pos + dir
+        pos = pos + dir * (pyxie.getElapsedTime() * 100.0)
 
     # update the direction and position of the ship object
     ship.rotation = vmath.normalize(vmath.quat_rotation((0, 1), dir))

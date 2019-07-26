@@ -23,10 +23,6 @@ showcase = pyxie.showcase()
 
 boxes = []
 
-PPM = 20.0  # pixels per meter
-TARGET_FPS = 60
-TIME_STEP = 1.0 / TARGET_FPS
-
 world = world(gravity=(0, -10), doSleep=True)
 boxes.append(DynamicBox(world, showcase, (0, -100), (150, 20), 0, True))
 boxes.append(DynamicBox(world, showcase, (10, 100), (10, 5), 15))
@@ -36,7 +32,7 @@ while True:
     if touch is not None and touch['is_pressed']:
         boxes.append(DynamicBox(world, showcase, (touch['cur_x'], touch['cur_y']), (10, 5), 15))
 
-    world.Step(TIME_STEP, 10, 10)
+    world.Step(pyxie.getElapsedTime(), 10, 10)
     for box in boxes:
         box.update()
     cam.shoot(showcase)
