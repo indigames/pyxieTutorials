@@ -51,9 +51,9 @@ class Character():
             self.currentDir = vmath.normalize(ROT * self.currentDir)
 
         if self.currentState == STATUS_RUN:
-            self.currentPosition += self.currentDir * 0.06
+            self.currentPosition += self.currentDir * 2.0 * pyxie.getElapsedTime()
         elif self.currentState == STATUS_WALK:
-            self.currentPosition += self.currentDir * 0.02
+            self.currentPosition += self.currentDir * 1.0 * pyxie.getElapsedTime()
 
         self.__transitMotion()
 
