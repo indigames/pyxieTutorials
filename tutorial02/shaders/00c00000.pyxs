@@ -1,0 +1,38 @@
+#version 330
+
+uniform mat4 ViewProj ;
+uniform mat4 World ;
+in vec4 Position ;
+in vec2 Texcoord0 ;
+in vec4 Color ;
+out vec4 vColor ;
+out vec2 vTexcoord0 ;
+void main ( )
+{
+vec4 TmpPosition ;
+TmpPosition = Position ;
+;
+TmpPosition = ( ( TmpPosition ) * ( World ) ) ;
+gl_Position = ( ( TmpPosition ) * ( ViewProj ) ) ;
+vTexcoord0 . xy = Texcoord0 ;
+vColor = Color ;
+}
+
+?-?
+#version 330
+
+uniform sampler2D ColorSampler ;
+uniform vec4 DiffuseColor ;
+uniform float MipBias ;
+in vec4 vColor ;
+in vec2 vTexcoord0 ;
+out vec4 oColor ;
+void main ( )
+{
+vec4 colorRGBA ;
+colorRGBA = texture ( ColorSampler , vTexcoord0 . xy , MipBias ) ;
+vec4 diffuseColor = colorRGBA ;
+diffuseColor . rgb *= vColor . rgb ;
+diffuseColor *= DiffuseColor ;
+oColor = diffuseColor ;
+}

@@ -1,0 +1,41 @@
+重複したノード名 Head を Head_cpy にリネームしました重複したノード名 SapphiArt_19_Head を SapphiArt_19_Head_cpy にリネームしました重複したノード名 SapphiArt_19_Head を SapphiArt_19_Head_cpy にリネームしました重複したノード名 SapphiArt_19_Head を SapphiArt_19_Head_cpy にリネームしました重複したノード名 SapphiArt_19_Head を SapphiArt_19_Head_cpy にリネームしましたZ:\proj\github\pyxieTutorials\tutorial04\PyLib\site-packages\pyxie\devtool\__init__.py:187: ResourceWarning: unclosed file <_io.BufferedReader name='.\\Sapphiart\\Sapphi_clothes_c.dds'>
+  fileDataBinary = open(srcfile, 'rb').read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+skip convert .\Sapphiart\Sapphi_clothes_c.dds because no change
+Z:\proj\github\pyxieTutorials\tutorial04\PyLib\site-packages\pyxie\devtool\__init__.py:187: ResourceWarning: unclosed file <_io.BufferedReader name='.\\Sapphiart\\Sapphi_chequer_c.dds'>
+  fileDataBinary = open(srcfile, 'rb').read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+skip convert .\Sapphiart\Sapphi_chequer_c.dds because no change
+Z:\proj\github\pyxieTutorials\tutorial04\PyLib\site-packages\pyxie\devtool\__init__.py:187: ResourceWarning: unclosed file <_io.BufferedReader name='.\\Sapphiart\\Sapphi_hairhead_c.dds'>
+  fileDataBinary = open(srcfile, 'rb').read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+skip convert .\Sapphiart\Sapphi_hairhead_c.dds because no change
+Z:\proj\github\pyxieTutorials\tutorial04\PyLib\site-packages\pyxie\devtool\__init__.py:187: ResourceWarning: unclosed file <_io.BufferedReader name='.\\Sapphiart\\Sapphi_eye_c.dds'>
+  fileDataBinary = open(srcfile, 'rb').read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+skip convert .\Sapphiart\Sapphi_eye_c.dds because no change
+Z:\proj\github\pyxieTutorials\tutorial04\PyLib\site-packages\pyxie\devtool\__init__.py:187: ResourceWarning: unclosed file <_io.BufferedReader name='.\\Sapphiart\\Sapphi_underwear_c.dds'>
+  fileDataBinary = open(srcfile, 'rb').read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+skip convert .\Sapphiart\Sapphi_underwear_c.dds because no change
+Z:\proj\github\pyxieTutorials\tutorial04\PyLib\site-packages\pyxie\devtool\__init__.py:187: ResourceWarning: unclosed file <_io.BufferedReader name='.\\Sapphiart\\Sapphi_glow_c.dds'>
+  fileDataBinary = open(srcfile, 'rb').read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+skip convert .\Sapphiart\Sapphi_glow_c.dds because no change
+Z:\proj\github\pyxieTutorials\tutorial04\PyLib\site-packages\pyxie\devtool\__init__.py:187: ResourceWarning: unclosed file <_io.BufferedReader name='.\\Sapphiart\\Sapphi_hairhead_psd.dds'>
+  fileDataBinary = open(srcfile, 'rb').read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+skip convert .\Sapphiart\Sapphi_hairhead_psd.dds because no change
+Z:\proj\github\pyxieTutorials\tutorial04\PyLib\site-packages\pyxie\devtool\__init__.py:187: ResourceWarning: unclosed file <_io.BufferedReader name='.\\Sapphiart\\Sapphi_bodysuit_c.dds'>
+  fileDataBinary = open(srcfile, 'rb').read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+skip convert .\Sapphiart\Sapphi_bodysuit_c.dds because no change
+Z:\proj\github\pyxieTutorials\tutorial04\PyLib\site-packages\pyxie\devtool\__init__.py:187: ResourceWarning: unclosed file <_io.BufferedReader name='.\\images\\Dirt-2290.png'>
+  fileDataBinary = open(srcfile, 'rb').read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+skip convert .\images\Dirt-2290.png because no change
+Z:\proj\github\pyxieTutorials\tutorial04\PyLib\site-packages\pyxie\devtool\__init__.py:187: ResourceWarning: unclosed file <_io.BufferedReader name='.\\images\\ctrl01.png'>
+  fileDataBinary = open(srcfile, 'rb').read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+skip convert .\images\ctrl01.png because no change
+Z:\proj\github\pyxieTutorials\tutorial04\PyLib\site-packages\pyxie\d

@@ -1,0 +1,35 @@
+#version 330
+
+uniform mat4 ViewProj ;
+uniform vec4 MatrixPalette [ 100 * 3 ] ;
+in vec4 Position ;
+in vec2 Texcoord0 ;
+out vec2 vTexcoord0 ;
+void main ( )
+{
+vec4 TmpPosition ;
+mat4 jointMatrix ;
+jointMatrix [ 3 ] = vec4 ( 0.0 , 0.0 , 0.0 , 1.0 ) ;
+vec4 pos = Position ;
+;
+jointMatrix [ 0 ] = MatrixPalette [ 0 + 0 ] ; jointMatrix [ 1 ] = MatrixPalette [ 0 + 1 ] ; jointMatrix [ 2 ] = MatrixPalette [ 0 + 2 ] ; TmpPosition = ( ( pos ) * ( jointMatrix ) ) ;
+gl_Position = ( ( TmpPosition ) * ( ViewProj ) ) ;
+vTexcoord0 . xy = Texcoord0 ;
+}
+
+?-?
+#version 330
+
+uniform sampler2D ColorSampler ;
+uniform vec4 DiffuseColor ;
+uniform float MipBias ;
+in vec2 vTexcoord0 ;
+out vec4 oColor ;
+void main ( )
+{
+vec4 colorRGBA ;
+colorRGBA = texture ( ColorSampler , vTexcoord0 . xy , MipBias ) ;
+vec4 diffuseColor = colorRGBA ;
+diffuseColor *= DiffuseColor ;
+oColor = diffuseColor ;
+}

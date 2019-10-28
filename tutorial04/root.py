@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
 """
 pyxie game engine
 Tutorial04
@@ -18,8 +16,7 @@ from controller import Controller
 # convert all assets to the format suitable for the platform
 # devtool module can not be used in the app
 # this process should be completed in advance, not at runtime
-if not os.path.exists('Sapphiart/Sapphiart.pyxf'):
-    devtool.convertAssets('.','.', pyxie.TARGET_PLATFORM_PC)
+devtool.convertAssets('.','.', pyxie.TARGET_PLATFORM_PC)
 
 # open or resize window (This function is valid only on PC,Ignored in smartphone apps)
 pyxie.window(True, 480, 640)
