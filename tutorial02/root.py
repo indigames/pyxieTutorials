@@ -1,29 +1,29 @@
 """
-pyxie game engine
+indi game engine
 Tutorial02
 
-using imgui with pyxie
+using imgui with indi
 """
-import pyxie
-from pyxie import apputil
-import pyvmath as vmath
+import igeCore as core
+from igeCore import apputil
+import igeVmath as vmath
 import imgui
-from pyxie.apputil.imguirenderer import ImgiPyxieRenderer
+from igeCore.apputil.imguirenderer import ImgiIGERenderer
 
 
 # open or resize window (This function is valid only on PC,Ignored in smartphone apps)
-pyxie.window(True, 480, 640)
+core.window(True, 480, 640)
 
 imgui.create_context()
 
-impl = ImgiPyxieRenderer()
+impl = ImgiIGERenderer()
 
 while True:
-    w, h = pyxie.viewSize()
+    w, h = core.viewSize()
     curX = 0
     curY = 0
     press = 0
-    touch = pyxie.singleTouch()
+    touch = core.singleTouch()
     if touch != None:
         curX = touch['cur_x'] + w // 2
         curY = -touch['cur_y'] + h // 2
@@ -51,4 +51,4 @@ while True:
 
     imgui.render()
     impl.render(imgui.get_draw_data())
-    pyxie.swap()
+    core.swap()

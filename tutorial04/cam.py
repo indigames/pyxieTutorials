@@ -1,20 +1,21 @@
 """
-pyxie game engine
+indi game engine
 Tutorial04
 
 cam.py
 
 TargetCamera class
 """
-import pyxie
-import pyvmath as vmath
+import igeCore as core
+import igeVmath as vmath
 
 class TargetCamera():
+
     def __init__(self):
         self.pos = vmath.vec3(0,0,5)
         self.height = 3.0
         self.targetHeighjt = 1.0
-        self.camera = pyxie.camera("cam01")
+        self.camera = core.camera("cam01")
 
     def step(self, targetFigure):
         at = targetFigure.position
@@ -33,8 +34,6 @@ class TargetCamera():
 
         self.camera.target = at + vmath.vec3(0,self.targetHeighjt, 0)
         self.camera.position = self.pos + vmath.vec3(0,self.height, 0)
-
-
 
     def getWalkThroughMatrix(self):
         savePos = self.camera.position

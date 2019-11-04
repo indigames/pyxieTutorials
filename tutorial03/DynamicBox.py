@@ -1,12 +1,12 @@
 """
-pyxie game engine
+indi game engine
 Tutorial03
 
 class DynamicBox
 """
 
-from pyxie.apputil import graphicsHelper
-import pyvmath as vmath
+from igeCore.apputil import graphicsHelper
+import igeVmath as vmath
 from Box2D.b2 import (world, polygonShape, staticBody, dynamicBody)
 
 class DynamicBox:

@@ -1,14 +1,14 @@
 """
-pyxie game engine
+indi game engine
 Tutorial04
 
 controller.py
 
 Controller class
 """
-import pyxie
-import pyvmath as vmath
-from pyxie.apputil import graphicsHelper
+import igeCore as core
+import igeVmath as vmath
+from igeCore.apputil import graphicsHelper
 
 
 class Controller( ):
@@ -18,7 +18,7 @@ class Controller( ):
 
     def step(self):
 
-        touch = pyxie.singleTouch()
+        touch = core.singleTouch()
         if touch is not None:
             self.frame.position = vmath.vec3(touch['org_x'],touch['org_y'],0)
             self.button.position = vmath.vec3(touch['cur_x'],touch['cur_y'],10)

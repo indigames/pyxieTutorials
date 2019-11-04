@@ -1,6 +1,19 @@
-pyxie game engine
+indi game engine
 
 Tutorial06
 
-liquidfun demo
+
+igeBullet tutorial
+
+
+root.py
+	program entry point
+	
+DynamicBox.py
+	class of 2d rectangle rigid body object	
+
+	
+befor running this tutorial, you have to install igeBullet
+
+[pip install igeBullet]
 

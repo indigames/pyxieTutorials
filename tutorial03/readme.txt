@@ -1,12 +1,11 @@
-pyxie game engine
+indi game engine
 
 Tutorial03
 
-using Box2D with pyxie
+using Box2D with ige
 
 
 This is a demonstration of a simple 2D physics operation using Box2D
-
 
 
 root.py
@@ -15,11 +14,10 @@ root.py
 	
 
 DynamicBox.py
+	class of 2d rectangle rigid body object	
+
 	
-
-
-
-beforrunning this tutorial, you have to install Box2D
+befor running this tutorial, you have to install Box2D
 
 [pip install box2d-py]
 

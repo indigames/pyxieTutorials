@@ -1,8 +1,8 @@
-pyxie game engine
+indi game engine
 
 Tutorial02
 
-using imgui with pyxie
+using imgui with ige
 
 
 root.py
@@ -19,5 +19,3 @@ https://pyimgui.readthedocs.io/en/latest/guide/first-steps.html
 
 beforrunning this tutorial, you have to install imgui
 [pip install imgui]
-
-
