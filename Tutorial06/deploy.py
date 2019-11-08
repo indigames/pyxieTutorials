@@ -1,27 +1,29 @@
-import pyxie
-from pyxie import devtool
-from pyxie import apputil
-from pyxie.apputil import launch_server
-import pyvmath as vmath
+import igeCore as core
+from igeCore import devtool
+from igeCore import apputil
+from igeCore.apputil import launch_server
+import igeVmath as vmath
 import pickle
 import glob
 import os
 
-def convertVoxelModel(filename, src, dest, platform):
+def convertVoxelModel(filename, src, dest, platform,scale):
 
-    efig = pyxie.editableFigure('efig')
+    efig = core.editableFigure('efig')
     devtool.loadCollada(os.path.join(src, filename+'.dae'), efig)
 
     boxinfo = []
     for i in range(efig.numMeshes):
         aabb = vmath.aabb()
-        inverts = efig.getVertexElements(i, pyxie.ATTRIBUTE_ID_POSITION)
+        inverts = efig.getVertexElements(i, core.ATTRIBUTE_ID_POSITION)
         for pos in inverts:
+            pos *= scale
             aabb.insert(pos)
         outverts = []
         for pos in inverts:
+            pos *= scale
             outverts.append(pos - aabb.center)
-        efig.setVertexElements(i, pyxie.ATTRIBUTE_ID_POSITION, outverts)
+        efig.setVertexElements(i, core.ATTRIBUTE_ID_POSITION, outverts)
         efig.setJoint(i, position=aabb.center)
 
         min, max = efig.getMeshAABB(i)
