@@ -1,4 +1,4 @@
-pyxie game engine
+indi game engine
 
 Tutorial01
 
@@ -9,7 +9,7 @@ star ship moves when you touch the screen
 
 root.py
 	program entry point
-	pyxie apprications have to start root.py
+	ige apprications have to start root.py
 	
 ship.png
 	asset image

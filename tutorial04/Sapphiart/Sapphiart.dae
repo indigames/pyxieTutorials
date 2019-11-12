@@ -4,7 +4,7 @@
     <contributor>
       <author>kiharushishikura</author>
       <authoring_tool>Maya2019 | ColladaMaya v3.05B</authoring_tool>
-      <comments>ColladaMaya export options: bakeTransforms=0;exportPolygonMeshes=1;bakeLighting=0;isSampling=0;
+      <comments>ColladaMaya export options: bakeTransforms=1;exportPolygonMeshes=1;bakeLighting=0;isSampling=0;
 curveConstrainSampling=0;removeStaticCurves=1;exportCameraAsLookat=0;
 exportLights=1;exportCameras=1;exportJointsAndSkin=1;
 exportAnimations=1;exportTriangles=0;exportInvisibleNodes=0;
@@ -12,10 +12,10 @@ exportNormals=1;exportTexCoords=1;
 exportVertexColors=1;exportVertexColorsAnimation=0;exportTangents=0;
 exportTexTangents=0;exportConstraints=1;exportPhysics=1;exportXRefs=1;
 dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
-      <source_data>file:///C:/Users/kiharushishikura/proj/pyxie/app/assetTest/src/Sapphiart/Sapphiart.mb</source_data>
+      <source_data>file:///Z:/proj/github/pyxieTutorials/tutorial04/Sapphiart/Sapphiart.mb</source_data>
     </contributor>
-    <created>2019-05-31T03:53:30Z</created>
-    <modified>2019-05-31T03:53:31Z</modified>
+    <created>2019-09-24T08:45:39Z</created>
+    <modified>2019-09-24T08:45:40Z</modified>
     <unit meter="0.01" name="centimeter"/>
     <up_axis>Y_UP</up_axis>
     <glview enable_backbuffer="true" enable_shadow="true" enable_manipulator="true" enable_aspect="true" enable_post_effect="true" enable_color_correction="true" enable_glare="true" blur_offset="-4.31602e8" bloom_scale="-4.31602e8" bloom_limit="-4.31602e8">
@@ -45,8 +45,8 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
     </physics_scene>
   </library_physics_scenes>
   <library_images>
-    <image id="file7" name="file7">
-      <init_from>file:///C:/Users/kiharushishikura/proj/pyxie/app/assetTest/src/Sapphiart/Sapphi_chequer_c.dds</init_from>
+    <image id="file8" name="file8">
+      <init_from>file:///Z:/proj/github/pyxieTutorials/tutorial04/Sapphiart/Sapphi_clothes_c.dds</init_from>
       <extra>
         <technique profile="MAYA">
           <dgnode_type>kFile</dgnode_type>
@@ -54,8 +54,8 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
         </technique>
       </extra>
     </image>
-    <image id="file8" name="file8">
-      <init_from>file:///C:/Users/kiharushishikura/proj/pyxie/app/assetTest/src/Sapphiart/Sapphi_clothes_c.dds</init_from>
+    <image id="file7" name="file7">
+      <init_from>file:///Z:/proj/github/pyxieTutorials/tutorial04/Sapphiart/Sapphi_chequer_c.dds</init_from>
       <extra>
         <technique profile="MAYA">
           <dgnode_type>kFile</dgnode_type>
@@ -64,16 +64,7 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
       </extra>
     </image>
     <image id="file9" name="file9">
-      <init_from>file:///C:/Users/kiharushishikura/proj/pyxie/app/assetTest/src/Sapphiart/Sapphi_hairhead_c.dds</init_from>
-      <extra>
-        <technique profile="MAYA">
-          <dgnode_type>kFile</dgnode_type>
-          <image_sequence>0</image_sequence>
-        </technique>
-      </extra>
-    </image>
-    <image id="file10" name="file10">
-      <init_from>file:///C:/Users/kiharushishikura/proj/pyxie/app/assetTest/src/Sapphiart/Sapphi_underwear_c.dds</init_from>
+      <init_from>file:///Z:/proj/github/pyxieTutorials/tutorial04/Sapphiart/Sapphi_hairhead_c.dds</init_from>
       <extra>
         <technique profile="MAYA">
           <dgnode_type>kFile</dgnode_type>
@@ -82,7 +73,16 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
       </extra>
     </image>
     <image id="file11" name="file11">
-      <init_from>file:///C:/Users/kiharushishikura/proj/pyxie/app/assetTest/src/Sapphiart/Sapphi_eye_c.dds</init_from>
+      <init_from>file:///Z:/proj/github/pyxieTutorials/tutorial04/Sapphiart/Sapphi_eye_c.dds</init_from>
+      <extra>
+        <technique profile="MAYA">
+          <dgnode_type>kFile</dgnode_type>
+          <image_sequence>0</image_sequence>
+        </technique>
+      </extra>
+    </image>
+    <image id="file10" name="file10">
+      <init_from>file:///Z:/proj/github/pyxieTutorials/tutorial04/Sapphiart/Sapphi_underwear_c.dds</init_from>
       <extra>
         <technique profile="MAYA">
           <dgnode_type>kFile</dgnode_type>
@@ -92,52 +92,6 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
     </image>
   </library_images>
   <library_materials>
-    <material id="colladafxShader1" name="colladafxShader1">
-      <instance_effect url="#colladafxShader1-fx">
-        <technique_hint platform="PC-OGL" ref="Main"/>
-        <setparam ref="colladafxShader1ViewProj">
-          <float4x4>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</float4x4>
-        </setparam>
-        <setparam ref="colladafxShader1World">
-          <float4x4>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</float4x4>
-        </setparam>
-        <setparam ref="colladafxShader1ColorSampler">
-          <sampler2D>
-            <source>file7Surface</source>
-            <wrap_s>WRAP</wrap_s>
-            <wrap_t>WRAP</wrap_t>
-            <minfilter>LINEAR_MIPMAP_LINEAR</minfilter>
-            <magfilter>LINEAR</magfilter>
-            <mipfilter>NONE</mipfilter>
-          </sampler2D>
-        </setparam>
-        <setparam ref="file7Surface">
-          <surface type="2D">
-            <init_from mip="0" slice="0">file7</init_from>
-            <format>A8R8G8B8</format>
-          </surface>
-        </setparam>
-        <setparam ref="colladafxShader1DiffuseColor">
-          <float3>1 1 1</float3>
-        </setparam>
-      </instance_effect>
-      <extra>
-        <technique profile="MAYA">
-          <dynamic_attributes>
-            <ViewProj short_name="ViewProj" type="float4x4">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</ViewProj>
-            <World short_name="World" type="float4x4">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</World>
-            <ColorTexture short_name="ColorTexture" type="string"/>
-            <ColorSampler short_name="ColorSampler" type="color3">0 0 0</ColorSampler>
-            <DiffuseColor short_name="DiffuseColor" type="color3">1 1 1</DiffuseColor>
-            <depth_test_enable short_name="depth_test_enable"/>
-            <depth_func short_name="depth_func"/>
-            <depth_mask short_name="depth_mask"/>
-            <alpha_test_enable short_name="alpha_test_enable"/>
-            <cull_face_enable short_name="cull_face_enable"/>
-          </dynamic_attributes>
-        </technique>
-      </extra>
-    </material>
     <material id="colladafxShader2" name="colladafxShader2">
       <instance_effect url="#colladafxShader2-fx">
         <technique_hint platform="PC-OGL" ref="Main"/>
@@ -166,6 +120,24 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
         <setparam ref="colladafxShader2DiffuseColor">
           <float3>1 1 1</float3>
         </setparam>
+        <setparam ref="colladafxShader2WorldInverse">
+          <float4x4>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</float4x4>
+        </setparam>
+        <setparam ref="colladafxShader2DirLamp01Color">
+          <float4>1 1 1 0</float4>
+        </setparam>
+        <setparam ref="colladafxShader2DirLight01Intensity">
+          <float>1</float>
+        </setparam>
+        <setparam ref="colladafxShader2DirLamp01Dir">
+          <float3>-45.6427 5.12635 -14.6161</float3>
+        </setparam>
+        <setparam ref="colladafxShader2AmbientColor">
+          <float3>0.358333 0.358333 0.358333</float3>
+        </setparam>
+        <setparam ref="colladafxShader2AmbientIntensity">
+          <float>1</float>
+        </setparam>
       </instance_effect>
       <extra>
         <technique profile="MAYA">
@@ -175,6 +147,82 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
             <ColorTexture short_name="ColorTexture" type="string"/>
             <ColorSampler short_name="ColorSampler" type="color3">0 0 0</ColorSampler>
             <DiffuseColor short_name="DiffuseColor" type="color3">1 1 1</DiffuseColor>
+            <WorldInverse short_name="WorldInverse" type="float4x4">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</WorldInverse>
+            <DirLamp01Color short_name="DirLamp01Color" type="color3">1 1 1</DirLamp01Color>
+            <DirLight01Intensity short_name="DirLight01Intensity" type="float">1</DirLight01Intensity>
+            <DirLamp01Dir short_name="DirLamp01Dir" type="color3">-45.6427 5.12635 -14.6161</DirLamp01Dir>
+            <AmbientColor short_name="AmbientColor" type="color3">0.358333 0.358333 0.358333</AmbientColor>
+            <AmbientIntensity short_name="AmbientIntensity" type="float">1</AmbientIntensity>
+            <depth_test_enable short_name="depth_test_enable"/>
+            <depth_func short_name="depth_func"/>
+            <depth_mask short_name="depth_mask"/>
+            <alpha_test_enable short_name="alpha_test_enable"/>
+            <cull_face_enable short_name="cull_face_enable"/>
+          </dynamic_attributes>
+        </technique>
+      </extra>
+    </material>
+    <material id="colladafxShader1" name="colladafxShader1">
+      <instance_effect url="#colladafxShader1-fx">
+        <technique_hint platform="PC-OGL" ref="Main"/>
+        <setparam ref="colladafxShader1ViewProj">
+          <float4x4>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</float4x4>
+        </setparam>
+        <setparam ref="colladafxShader1World">
+          <float4x4>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</float4x4>
+        </setparam>
+        <setparam ref="colladafxShader1ColorSampler">
+          <sampler2D>
+            <source>file7Surface</source>
+            <wrap_s>WRAP</wrap_s>
+            <wrap_t>WRAP</wrap_t>
+            <minfilter>LINEAR_MIPMAP_LINEAR</minfilter>
+            <magfilter>LINEAR</magfilter>
+            <mipfilter>NONE</mipfilter>
+          </sampler2D>
+        </setparam>
+        <setparam ref="file7Surface">
+          <surface type="2D">
+            <init_from mip="0" slice="0">file7</init_from>
+            <format>A8R8G8B8</format>
+          </surface>
+        </setparam>
+        <setparam ref="colladafxShader1DiffuseColor">
+          <float3>1 1 1</float3>
+        </setparam>
+        <setparam ref="colladafxShader1WorldInverse">
+          <float4x4>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</float4x4>
+        </setparam>
+        <setparam ref="colladafxShader1DirLamp01Color">
+          <float4>1 1 1 0</float4>
+        </setparam>
+        <setparam ref="colladafxShader1DirLight01Intensity">
+          <float>1</float>
+        </setparam>
+        <setparam ref="colladafxShader1DirLamp01Dir">
+          <float3>-45.6427 5.12635 -14.6161</float3>
+        </setparam>
+        <setparam ref="colladafxShader1AmbientColor">
+          <float3>0.358333 0.358333 0.358333</float3>
+        </setparam>
+        <setparam ref="colladafxShader1AmbientIntensity">
+          <float>1</float>
+        </setparam>
+      </instance_effect>
+      <extra>
+        <technique profile="MAYA">
+          <dynamic_attributes>
+            <ViewProj short_name="ViewProj" type="float4x4">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</ViewProj>
+            <World short_name="World" type="float4x4">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</World>
+            <ColorTexture short_name="ColorTexture" type="string"/>
+            <ColorSampler short_name="ColorSampler" type="color3">0 0 0</ColorSampler>
+            <DiffuseColor short_name="DiffuseColor" type="color3">1 1 1</DiffuseColor>
+            <WorldInverse short_name="WorldInverse" type="float4x4">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</WorldInverse>
+            <DirLamp01Color short_name="DirLamp01Color" type="color3">1 1 1</DirLamp01Color>
+            <DirLight01Intensity short_name="DirLight01Intensity" type="float">1</DirLight01Intensity>
+            <DirLamp01Dir short_name="DirLamp01Dir" type="color3">-45.6427 5.12635 -14.6161</DirLamp01Dir>
+            <AmbientColor short_name="AmbientColor" type="color3">0.358333 0.358333 0.358333</AmbientColor>
+            <AmbientIntensity short_name="AmbientIntensity" type="float">1</AmbientIntensity>
             <depth_test_enable short_name="depth_test_enable"/>
             <depth_func short_name="depth_func"/>
             <depth_mask short_name="depth_mask"/>
@@ -212,51 +260,23 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
         <setparam ref="colladafxShader3DiffuseColor">
           <float3>1 1 1</float3>
         </setparam>
-      </instance_effect>
-      <extra>
-        <technique profile="MAYA">
-          <dynamic_attributes>
-            <ViewProj short_name="ViewProj" type="float4x4">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</ViewProj>
-            <World short_name="World" type="float4x4">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</World>
-            <ColorTexture short_name="ColorTexture" type="string"/>
-            <ColorSampler short_name="ColorSampler" type="color3">0 0 0</ColorSampler>
-            <DiffuseColor short_name="DiffuseColor" type="color3">1 1 1</DiffuseColor>
-            <depth_test_enable short_name="depth_test_enable"/>
-            <depth_func short_name="depth_func"/>
-            <depth_mask short_name="depth_mask"/>
-            <alpha_test_enable short_name="alpha_test_enable"/>
-            <cull_face_enable short_name="cull_face_enable"/>
-          </dynamic_attributes>
-        </technique>
-      </extra>
-    </material>
-    <material id="colladafxShader4" name="colladafxShader4">
-      <instance_effect url="#colladafxShader4-fx">
-        <technique_hint platform="PC-OGL" ref="Main"/>
-        <setparam ref="colladafxShader4ViewProj">
+        <setparam ref="colladafxShader3WorldInverse">
           <float4x4>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</float4x4>
         </setparam>
-        <setparam ref="colladafxShader4World">
-          <float4x4>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</float4x4>
+        <setparam ref="colladafxShader3DirLamp01Color">
+          <float4>1 1 1 0</float4>
         </setparam>
-        <setparam ref="colladafxShader4ColorSampler">
-          <sampler2D>
-            <source>file10Surface</source>
-            <wrap_s>WRAP</wrap_s>
-            <wrap_t>WRAP</wrap_t>
-            <minfilter>LINEAR_MIPMAP_LINEAR</minfilter>
-            <magfilter>LINEAR</magfilter>
-            <mipfilter>NONE</mipfilter>
-          </sampler2D>
+        <setparam ref="colladafxShader3DirLight01Intensity">
+          <float>1</float>
         </setparam>
-        <setparam ref="file10Surface">
-          <surface type="2D">
-            <init_from mip="0" slice="0">file10</init_from>
-            <format>A8R8G8B8</format>
-          </surface>
+        <setparam ref="colladafxShader3DirLamp01Dir">
+          <float3>-45.6427 5.12635 -14.6161</float3>
         </setparam>
-        <setparam ref="colladafxShader4DiffuseColor">
-          <float3>1 1 1</float3>
+        <setparam ref="colladafxShader3AmbientColor">
+          <float3>0.358333 0.358333 0.358333</float3>
+        </setparam>
+        <setparam ref="colladafxShader3AmbientIntensity">
+          <float>1</float>
         </setparam>
       </instance_effect>
       <extra>
@@ -267,6 +287,12 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
             <ColorTexture short_name="ColorTexture" type="string"/>
             <ColorSampler short_name="ColorSampler" type="color3">0 0 0</ColorSampler>
             <DiffuseColor short_name="DiffuseColor" type="color3">1 1 1</DiffuseColor>
+            <WorldInverse short_name="WorldInverse" type="float4x4">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</WorldInverse>
+            <DirLamp01Color short_name="DirLamp01Color" type="color3">1 1 1</DirLamp01Color>
+            <DirLight01Intensity short_name="DirLight01Intensity" type="float">1</DirLight01Intensity>
+            <DirLamp01Dir short_name="DirLamp01Dir" type="color3">-45.6427 5.12635 -14.6161</DirLamp01Dir>
+            <AmbientColor short_name="AmbientColor" type="color3">0.358333 0.358333 0.358333</AmbientColor>
+            <AmbientIntensity short_name="AmbientIntensity" type="float">1</AmbientIntensity>
             <depth_test_enable short_name="depth_test_enable"/>
             <depth_func short_name="depth_func"/>
             <depth_mask short_name="depth_mask"/>
@@ -304,6 +330,24 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
         <setparam ref="colladafxShader5DiffuseColor">
           <float3>1 1 1</float3>
         </setparam>
+        <setparam ref="colladafxShader5WorldInverse">
+          <float4x4>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</float4x4>
+        </setparam>
+        <setparam ref="colladafxShader5DirLamp01Color">
+          <float4>1 1 1 0</float4>
+        </setparam>
+        <setparam ref="colladafxShader5DirLight01Intensity">
+          <float>1</float>
+        </setparam>
+        <setparam ref="colladafxShader5DirLamp01Dir">
+          <float3>-45.6427 5.12635 -14.6161</float3>
+        </setparam>
+        <setparam ref="colladafxShader5AmbientColor">
+          <float3>0.358333 0.358333 0.358333</float3>
+        </setparam>
+        <setparam ref="colladafxShader5AmbientIntensity">
+          <float>1</float>
+        </setparam>
       </instance_effect>
       <extra>
         <technique profile="MAYA">
@@ -313,6 +357,82 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
             <ColorTexture short_name="ColorTexture" type="string"/>
             <ColorSampler short_name="ColorSampler" type="color3">0 0 0</ColorSampler>
             <DiffuseColor short_name="DiffuseColor" type="color3">1 1 1</DiffuseColor>
+            <WorldInverse short_name="WorldInverse" type="float4x4">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</WorldInverse>
+            <DirLamp01Color short_name="DirLamp01Color" type="color3">1 1 1</DirLamp01Color>
+            <DirLight01Intensity short_name="DirLight01Intensity" type="float">1</DirLight01Intensity>
+            <DirLamp01Dir short_name="DirLamp01Dir" type="color3">-45.6427 5.12635 -14.6161</DirLamp01Dir>
+            <AmbientColor short_name="AmbientColor" type="color3">0.358333 0.358333 0.358333</AmbientColor>
+            <AmbientIntensity short_name="AmbientIntensity" type="float">1</AmbientIntensity>
+            <depth_test_enable short_name="depth_test_enable"/>
+            <depth_func short_name="depth_func"/>
+            <depth_mask short_name="depth_mask"/>
+            <alpha_test_enable short_name="alpha_test_enable"/>
+            <cull_face_enable short_name="cull_face_enable"/>
+          </dynamic_attributes>
+        </technique>
+      </extra>
+    </material>
+    <material id="colladafxShader4" name="colladafxShader4">
+      <instance_effect url="#colladafxShader4-fx">
+        <technique_hint platform="PC-OGL" ref="Main"/>
+        <setparam ref="colladafxShader4ViewProj">
+          <float4x4>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</float4x4>
+        </setparam>
+        <setparam ref="colladafxShader4World">
+          <float4x4>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</float4x4>
+        </setparam>
+        <setparam ref="colladafxShader4ColorSampler">
+          <sampler2D>
+            <source>file10Surface</source>
+            <wrap_s>WRAP</wrap_s>
+            <wrap_t>WRAP</wrap_t>
+            <minfilter>LINEAR_MIPMAP_LINEAR</minfilter>
+            <magfilter>LINEAR</magfilter>
+            <mipfilter>NONE</mipfilter>
+          </sampler2D>
+        </setparam>
+        <setparam ref="file10Surface">
+          <surface type="2D">
+            <init_from mip="0" slice="0">file10</init_from>
+            <format>A8R8G8B8</format>
+          </surface>
+        </setparam>
+        <setparam ref="colladafxShader4DiffuseColor">
+          <float3>1 1 1</float3>
+        </setparam>
+        <setparam ref="colladafxShader4WorldInverse">
+          <float4x4>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</float4x4>
+        </setparam>
+        <setparam ref="colladafxShader4DirLamp01Color">
+          <float4>1 1 1 0</float4>
+        </setparam>
+        <setparam ref="colladafxShader4DirLight01Intensity">
+          <float>1</float>
+        </setparam>
+        <setparam ref="colladafxShader4DirLamp01Dir">
+          <float3>-45.6427 5.12635 -14.6161</float3>
+        </setparam>
+        <setparam ref="colladafxShader4AmbientColor">
+          <float3>0.358333 0.358333 0.358333</float3>
+        </setparam>
+        <setparam ref="colladafxShader4AmbientIntensity">
+          <float>1</float>
+        </setparam>
+      </instance_effect>
+      <extra>
+        <technique profile="MAYA">
+          <dynamic_attributes>
+            <ViewProj short_name="ViewProj" type="float4x4">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</ViewProj>
+            <World short_name="World" type="float4x4">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</World>
+            <ColorTexture short_name="ColorTexture" type="string"/>
+            <ColorSampler short_name="ColorSampler" type="color3">0 0 0</ColorSampler>
+            <DiffuseColor short_name="DiffuseColor" type="color3">1 1 1</DiffuseColor>
+            <WorldInverse short_name="WorldInverse" type="float4x4">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</WorldInverse>
+            <DirLamp01Color short_name="DirLamp01Color" type="color3">1 1 1</DirLamp01Color>
+            <DirLight01Intensity short_name="DirLight01Intensity" type="float">1</DirLight01Intensity>
+            <DirLamp01Dir short_name="DirLamp01Dir" type="color3">-45.6427 5.12635 -14.6161</DirLamp01Dir>
+            <AmbientColor short_name="AmbientColor" type="color3">0.358333 0.358333 0.358333</AmbientColor>
+            <AmbientIntensity short_name="AmbientIntensity" type="float">1</AmbientIntensity>
             <depth_test_enable short_name="depth_test_enable"/>
             <depth_func short_name="depth_func"/>
             <depth_mask short_name="depth_mask"/>
@@ -324,84 +444,10 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
     </material>
   </library_materials>
   <library_effects>
-    <effect id="colladafxShader1-fx">
-      <profile_CG platform="PC-OGL">
-        <include sid="include" url="file:///C:/Users/kiharushishikura/proj/pyxie/app/assetTest/shader/00________D______11111_________________________________11111___________________________________________________________.cgfx"/>
-        <include sid="include2" url="file:///C:/Users/kiharushishikura/proj/pyxie/app/assetTest/shader/00________D______11111_________________________________11111___________________________________________________________.cgfx"/>
-        <newparam sid="colladafxShader1ViewProj">
-          <semantic>ViewProjection</semantic>
-          <float4x4>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</float4x4>
-        </newparam>
-        <newparam sid="colladafxShader1World">
-          <semantic>World</semantic>
-          <float4x4>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</float4x4>
-        </newparam>
-        <newparam sid="colladafxShader1ColorSampler">
-          <annotate name="UIName">
-            <string>ColorSampler</string>
-          </annotate>
-          <sampler2D>
-            <source>file7Surface</source>
-            <wrap_s>WRAP</wrap_s>
-            <wrap_t>WRAP</wrap_t>
-            <minfilter>NONE</minfilter>
-            <magfilter>NONE</magfilter>
-            <mipfilter>NONE</mipfilter>
-          </sampler2D>
-        </newparam>
-        <newparam sid="file7Surface">
-          <annotate name="UIName">
-            <string>file7</string>
-          </annotate>
-          <surface type="2D">
-            <init_from mip="0" slice="0">file7</init_from>
-            <format>A8R8G8B8</format>
-          </surface>
-        </newparam>
-        <newparam sid="colladafxShader1DiffuseColor">
-          <annotate name="UIName">
-            <string>DiffuseColor</string>
-          </annotate>
-          <annotate name="UIType">
-            <string>Color</string>
-          </annotate>
-          <float3>1 1 1</float3>
-        </newparam>
-        <technique sid="Main">
-          <pass sid="colladafxShader1">
-            <depth_func value="LEQUAL"/>
-            <depth_mask value="1"/>
-            <alpha_test_enable value="0"/>
-            <cull_face_enable value="1"/>
-            <depth_test_enable value="1"/>
-            <shader stage="VERTEX">
-              <compiler_target>arbvp1</compiler_target>
-              <name source="include">std_VS</name>
-              <bind symbol="ViewProj">
-                <param ref="colladafxShader1ViewProj"/>
-              </bind>
-              <bind symbol="World">
-                <param ref="colladafxShader1World"/>
-              </bind>
-            </shader>
-            <shader stage="FRAGMENT">
-              <compiler_target>arbfp1</compiler_target>
-              <name source="include2">std_PS</name>
-              <bind symbol="ColorSampler">
-                <param ref="colladafxShader1ColorSampler"/>
-              </bind>
-              <bind symbol="DiffuseColor">
-                <param ref="colladafxShader1DiffuseColor"/>
-              </bind>
-            </shader>
-          </pass>
-        </technique>
-      </profile_CG>
-    </effect>
     <effect id="colladafxShader2-fx">
       <profile_CG platform="PC-OGL">
-        <include sid="include" url="file:///C:/Users/kiharushishikura/proj/pyxie/app/assetTest/shader/00________D______11111_________________________________11111___________________________________________________________.cgfx"/>
-        <include sid="include2" url="file:///C:/Users/kiharushishikura/proj/pyxie/app/assetTest/shader/00________D______11111_________________________________11111___________________________________________________________.cgfx"/>
+        <include sid="include" url="file://Mac/Home/Documents/10A_______D______11111_________________________________11111___________________________________________________________.cgfx"/>
+        <include sid="include2" url="file://Mac/Home/Documents/10A_______D______11111_________________________________11111___________________________________________________________.cgfx"/>
         <newparam sid="colladafxShader2ViewProj">
           <semantic>ViewProjection</semantic>
           <float4x4>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</float4x4>
@@ -441,6 +487,63 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
           </annotate>
           <float3>1 1 1</float3>
         </newparam>
+        <newparam sid="colladafxShader2WorldInverse">
+          <semantic>WorldInverse</semantic>
+          <float4x4>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</float4x4>
+        </newparam>
+        <newparam sid="colladafxShader2DirLamp01Color">
+          <annotate name="UIName">
+            <string>DirLamp01Color</string>
+          </annotate>
+          <annotate name="UIType">
+            <string>Color</string>
+          </annotate>
+          <semantic>Diffuse</semantic>
+          <float4>1 1 1 0</float4>
+        </newparam>
+        <newparam sid="colladafxShader2DirLight01Intensity">
+          <annotate name="UIName">
+            <string>DirLight01Intensity</string>
+          </annotate>
+          <annotate name="UIMin">
+            <float>0</float>
+          </annotate>
+          <annotate name="UIMax">
+            <float>100</float>
+          </annotate>
+          <float>1</float>
+        </newparam>
+        <newparam sid="colladafxShader2DirLamp01Dir">
+          <annotate name="UIName">
+            <string>DirLamp01Dir</string>
+          </annotate>
+          <annotate name="UIType">
+            <string>Color</string>
+          </annotate>
+          <semantic>Direction</semantic>
+          <float3>-45.6427 5.12635 -14.6161</float3>
+        </newparam>
+        <newparam sid="colladafxShader2AmbientColor">
+          <annotate name="UIName">
+            <string>AmbientColor</string>
+          </annotate>
+          <annotate name="UIType">
+            <string>Color</string>
+          </annotate>
+          <float3>0.358333 0.358333 0.358333</float3>
+        </newparam>
+        <newparam sid="colladafxShader2AmbientIntensity">
+          <annotate name="UIName">
+            <string>AmbientIntensity</string>
+          </annotate>
+          <annotate name="UIMin">
+            <float>0</float>
+          </annotate>
+          <annotate name="UIMax">
+            <float>100</float>
+          </annotate>
+          <float>1</float>
+        </newparam>
         <technique sid="Main">
           <pass sid="colladafxShader2">
             <depth_func value="LEQUAL"/>
@@ -457,6 +560,9 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
               <bind symbol="World">
                 <param ref="colladafxShader2World"/>
               </bind>
+              <bind symbol="WorldInverse">
+                <param ref="colladafxShader2WorldInverse"/>
+              </bind>
             </shader>
             <shader stage="FRAGMENT">
               <compiler_target>arbfp1</compiler_target>
@@ -467,6 +573,170 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
               <bind symbol="DiffuseColor">
                 <param ref="colladafxShader2DiffuseColor"/>
               </bind>
+              <bind symbol="DirLamp01Color">
+                <param ref="colladafxShader2DirLamp01Color"/>
+              </bind>
+              <bind symbol="DirLight01Intensity">
+                <param ref="colladafxShader2DirLight01Intensity"/>
+              </bind>
+              <bind symbol="DirLamp01Dir">
+                <param ref="colladafxShader2DirLamp01Dir"/>
+              </bind>
+              <bind symbol="AmbientColor">
+                <param ref="colladafxShader2AmbientColor"/>
+              </bind>
+              <bind symbol="AmbientIntensity">
+                <param ref="colladafxShader2AmbientIntensity"/>
+              </bind>
+            </shader>
+          </pass>
+        </technique>
+      </profile_CG>
+    </effect>
+    <effect id="colladafxShader1-fx">
+      <profile_CG platform="PC-OGL">
+        <include sid="include" url="file://Mac/Home/Documents/10A_______D______11111_________________________________11111___________________________________________________________.cgfx"/>
+        <include sid="include2" url="file://Mac/Home/Documents/10A_______D______11111_________________________________11111___________________________________________________________.cgfx"/>
+        <newparam sid="colladafxShader1ViewProj">
+          <semantic>ViewProjection</semantic>
+          <float4x4>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</float4x4>
+        </newparam>
+        <newparam sid="colladafxShader1World">
+          <semantic>World</semantic>
+          <float4x4>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</float4x4>
+        </newparam>
+        <newparam sid="colladafxShader1ColorSampler">
+          <annotate name="UIName">
+            <string>ColorSampler</string>
+          </annotate>
+          <sampler2D>
+            <source>file7Surface</source>
+            <wrap_s>WRAP</wrap_s>
+            <wrap_t>WRAP</wrap_t>
+            <minfilter>NONE</minfilter>
+            <magfilter>NONE</magfilter>
+            <mipfilter>NONE</mipfilter>
+          </sampler2D>
+        </newparam>
+        <newparam sid="file7Surface">
+          <annotate name="UIName">
+            <string>file7</string>
+          </annotate>
+          <surface type="2D">
+            <init_from mip="0" slice="0">file7</init_from>
+            <format>A8R8G8B8</format>
+          </surface>
+        </newparam>
+        <newparam sid="colladafxShader1DiffuseColor">
+          <annotate name="UIName">
+            <string>DiffuseColor</string>
+          </annotate>
+          <annotate name="UIType">
+            <string>Color</string>
+          </annotate>
+          <float3>1 1 1</float3>
+        </newparam>
+        <newparam sid="colladafxShader1WorldInverse">
+          <semantic>WorldInverse</semantic>
+          <float4x4>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</float4x4>
+        </newparam>
+        <newparam sid="colladafxShader1DirLamp01Color">
+          <annotate name="UIName">
+            <string>DirLamp01Color</string>
+          </annotate>
+          <annotate name="UIType">
+            <string>Color</string>
+          </annotate>
+          <semantic>Diffuse</semantic>
+          <float4>1 1 1 0</float4>
+        </newparam>
+        <newparam sid="colladafxShader1DirLight01Intensity">
+          <annotate name="UIName">
+            <string>DirLight01Intensity</string>
+          </annotate>
+          <annotate name="UIMin">
+            <float>0</float>
+          </annotate>
+          <annotate name="UIMax">
+            <float>100</float>
+          </annotate>
+          <float>1</float>
+        </newparam>
+        <newparam sid="colladafxShader1DirLamp01Dir">
+          <annotate name="UIName">
+            <string>DirLamp01Dir</string>
+          </annotate>
+          <annotate name="UIType">
+            <string>Color</string>
+          </annotate>
+          <semantic>Direction</semantic>
+          <float3>-45.6427 5.12635 -14.6161</float3>
+        </newparam>
+        <newparam sid="colladafxShader1AmbientColor">
+          <annotate name="UIName">
+            <string>AmbientColor</string>
+          </annotate>
+          <annotate name="UIType">
+            <string>Color</string>
+          </annotate>
+          <float3>0.358333 0.358333 0.358333</float3>
+        </newparam>
+        <newparam sid="colladafxShader1AmbientIntensity">
+          <annotate name="UIName">
+            <string>AmbientIntensity</string>
+          </annotate>
+          <annotate name="UIMin">
+            <float>0</float>
+          </annotate>
+          <annotate name="UIMax">
+            <float>100</float>
+          </annotate>
+          <float>1</float>
+        </newparam>
+        <technique sid="Main">
+          <pass sid="colladafxShader1">
+            <depth_func value="LEQUAL"/>
+            <depth_mask value="1"/>
+            <alpha_test_enable value="0"/>
+            <cull_face_enable value="1"/>
+            <depth_test_enable value="1"/>
+            <shader stage="VERTEX">
+              <compiler_target>arbvp1</compiler_target>
+              <name source="include">std_VS</name>
+              <bind symbol="ViewProj">
+                <param ref="colladafxShader1ViewProj"/>
+              </bind>
+              <bind symbol="World">
+                <param ref="colladafxShader1World"/>
+              </bind>
+              <bind symbol="WorldInverse">
+                <param ref="colladafxShader1WorldInverse"/>
+              </bind>
+            </shader>
+            <shader stage="FRAGMENT">
+              <compiler_target>arbfp1</compiler_target>
+              <name source="include2">std_PS</name>
+              <bind symbol="ColorSampler">
+                <param ref="colladafxShader1ColorSampler"/>
+              </bind>
+              <bind symbol="DiffuseColor">
+                <param ref="colladafxShader1DiffuseColor"/>
+              </bind>
+              <bind symbol="DirLamp01Color">
+                <param ref="colladafxShader1DirLamp01Color"/>
+              </bind>
+              <bind symbol="DirLight01Intensity">
+                <param ref="colladafxShader1DirLight01Intensity"/>
+              </bind>
+              <bind symbol="DirLamp01Dir">
+                <param ref="colladafxShader1DirLamp01Dir"/>
+              </bind>
+              <bind symbol="AmbientColor">
+                <param ref="colladafxShader1AmbientColor"/>
+              </bind>
+              <bind symbol="AmbientIntensity">
+                <param ref="colladafxShader1AmbientIntensity"/>
+              </bind>
             </shader>
           </pass>
         </technique>
@@ -474,8 +744,8 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
     </effect>
     <effect id="colladafxShader3-fx">
       <profile_CG platform="PC-OGL">
-        <include sid="include" url="file:///C:/Users/kiharushishikura/proj/pyxie/app/assetTest/shader/00________D______11111_________________________________11111___________________________________________________________.cgfx"/>
-        <include sid="include2" url="file:///C:/Users/kiharushishikura/proj/pyxie/app/assetTest/shader/00________D______11111_________________________________11111___________________________________________________________.cgfx"/>
+        <include sid="include" url="file://Mac/Home/Documents/10A_______D______11111_________________________________11111___________________________________________________________.cgfx"/>
+        <include sid="include2" url="file://Mac/Home/Documents/10A_______D______11111_________________________________11111___________________________________________________________.cgfx"/>
         <newparam sid="colladafxShader3ViewProj">
           <semantic>ViewProjection</semantic>
           <float4x4>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</float4x4>
@@ -515,6 +785,63 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
           </annotate>
           <float3>1 1 1</float3>
         </newparam>
+        <newparam sid="colladafxShader3WorldInverse">
+          <semantic>WorldInverse</semantic>
+          <float4x4>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</float4x4>
+        </newparam>
+        <newparam sid="colladafxShader3DirLamp01Color">
+          <annotate name="UIName">
+            <string>DirLamp01Color</string>
+          </annotate>
+          <annotate name="UIType">
+            <string>Color</string>
+          </annotate>
+          <semantic>Diffuse</semantic>
+          <float4>1 1 1 0</float4>
+        </newparam>
+        <newparam sid="colladafxShader3DirLight01Intensity">
+          <annotate name="UIName">
+            <string>DirLight01Intensity</string>
+          </annotate>
+          <annotate name="UIMin">
+            <float>0</float>
+          </annotate>
+          <annotate name="UIMax">
+            <float>100</float>
+          </annotate>
+          <float>1</float>
+        </newparam>
+        <newparam sid="colladafxShader3DirLamp01Dir">
+          <annotate name="UIName">
+            <string>DirLamp01Dir</string>
+          </annotate>
+          <annotate name="UIType">
+            <string>Color</string>
+          </annotate>
+          <semantic>Direction</semantic>
+          <float3>-45.6427 5.12635 -14.6161</float3>
+        </newparam>
+        <newparam sid="colladafxShader3AmbientColor">
+          <annotate name="UIName">
+            <string>AmbientColor</string>
+          </annotate>
+          <annotate name="UIType">
+            <string>Color</string>
+          </annotate>
+          <float3>0.358333 0.358333 0.358333</float3>
+        </newparam>
+        <newparam sid="colladafxShader3AmbientIntensity">
+          <annotate name="UIName">
+            <string>AmbientIntensity</string>
+          </annotate>
+          <annotate name="UIMin">
+            <float>0</float>
+          </annotate>
+          <annotate name="UIMax">
+            <float>100</float>
+          </annotate>
+          <float>1</float>
+        </newparam>
         <technique sid="Main">
           <pass sid="colladafxShader3">
             <depth_func value="LEQUAL"/>
@@ -531,6 +858,9 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
               <bind symbol="World">
                 <param ref="colladafxShader3World"/>
               </bind>
+              <bind symbol="WorldInverse">
+                <param ref="colladafxShader3WorldInverse"/>
+              </bind>
             </shader>
             <shader stage="FRAGMENT">
               <compiler_target>arbfp1</compiler_target>
@@ -541,79 +871,20 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
               <bind symbol="DiffuseColor">
                 <param ref="colladafxShader3DiffuseColor"/>
               </bind>
-            </shader>
-          </pass>
-        </technique>
-      </profile_CG>
-    </effect>
-    <effect id="colladafxShader4-fx">
-      <profile_CG platform="PC-OGL">
-        <include sid="include" url="file:///C:/Users/kiharushishikura/proj/pyxie/app/assetTest/shader/00________D______11111_________________________________11111___________________________________________________________.cgfx"/>
-        <include sid="include2" url="file:///C:/Users/kiharushishikura/proj/pyxie/app/assetTest/shader/00________D______11111_________________________________11111___________________________________________________________.cgfx"/>
-        <newparam sid="colladafxShader4ViewProj">
-          <semantic>ViewProjection</semantic>
-          <float4x4>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</float4x4>
-        </newparam>
-        <newparam sid="colladafxShader4World">
-          <semantic>World</semantic>
-          <float4x4>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</float4x4>
-        </newparam>
-        <newparam sid="colladafxShader4ColorSampler">
-          <annotate name="UIName">
-            <string>ColorSampler</string>
-          </annotate>
-          <sampler2D>
-            <source>file10Surface</source>
-            <wrap_s>WRAP</wrap_s>
-            <wrap_t>WRAP</wrap_t>
-            <minfilter>NONE</minfilter>
-            <magfilter>NONE</magfilter>
-            <mipfilter>NONE</mipfilter>
-          </sampler2D>
-        </newparam>
-        <newparam sid="file10Surface">
-          <annotate name="UIName">
-            <string>file10</string>
-          </annotate>
-          <surface type="2D">
-            <init_from mip="0" slice="0">file10</init_from>
-            <format>A8R8G8B8</format>
-          </surface>
-        </newparam>
-        <newparam sid="colladafxShader4DiffuseColor">
-          <annotate name="UIName">
-            <string>DiffuseColor</string>
-          </annotate>
-          <annotate name="UIType">
-            <string>Color</string>
-          </annotate>
-          <float3>1 1 1</float3>
-        </newparam>
-        <technique sid="Main">
-          <pass sid="colladafxShader4">
-            <depth_func value="LEQUAL"/>
-            <depth_mask value="1"/>
-            <alpha_test_enable value="0"/>
-            <cull_face_enable value="1"/>
-            <depth_test_enable value="1"/>
-            <shader stage="VERTEX">
-              <compiler_target>arbvp1</compiler_target>
-              <name source="include">std_VS</name>
-              <bind symbol="ViewProj">
-                <param ref="colladafxShader4ViewProj"/>
+              <bind symbol="DirLamp01Color">
+                <param ref="colladafxShader3DirLamp01Color"/>
               </bind>
-              <bind symbol="World">
-                <param ref="colladafxShader4World"/>
+              <bind symbol="DirLight01Intensity">
+                <param ref="colladafxShader3DirLight01Intensity"/>
               </bind>
-            </shader>
-            <shader stage="FRAGMENT">
-              <compiler_target>arbfp1</compiler_target>
-              <name source="include2">std_PS</name>
-              <bind symbol="ColorSampler">
-                <param ref="colladafxShader4ColorSampler"/>
+              <bind symbol="DirLamp01Dir">
+                <param ref="colladafxShader3DirLamp01Dir"/>
               </bind>
-              <bind symbol="DiffuseColor">
-                <param ref="colladafxShader4DiffuseColor"/>
+              <bind symbol="AmbientColor">
+                <param ref="colladafxShader3AmbientColor"/>
+              </bind>
+              <bind symbol="AmbientIntensity">
+                <param ref="colladafxShader3AmbientIntensity"/>
               </bind>
             </shader>
           </pass>
@@ -622,8 +893,8 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
     </effect>
     <effect id="colladafxShader5-fx">
       <profile_CG platform="PC-OGL">
-        <include sid="include" url="file:///C:/Users/kiharushishikura/proj/pyxie/app/assetTest/shader/00________D______11111_________________________________11111___________________________________________________________.cgfx"/>
-        <include sid="include2" url="file:///C:/Users/kiharushishikura/proj/pyxie/app/assetTest/shader/00________D______11111_________________________________11111___________________________________________________________.cgfx"/>
+        <include sid="include" url="file://Mac/Home/Documents/10A_______D______11111_________________________________11111___________________________________________________________.cgfx"/>
+        <include sid="include2" url="file://Mac/Home/Documents/10A_______D______11111_________________________________11111___________________________________________________________.cgfx"/>
         <newparam sid="colladafxShader5ViewProj">
           <semantic>ViewProjection</semantic>
           <float4x4>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</float4x4>
@@ -663,6 +934,63 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
           </annotate>
           <float3>1 1 1</float3>
         </newparam>
+        <newparam sid="colladafxShader5WorldInverse">
+          <semantic>WorldInverse</semantic>
+          <float4x4>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</float4x4>
+        </newparam>
+        <newparam sid="colladafxShader5DirLamp01Color">
+          <annotate name="UIName">
+            <string>DirLamp01Color</string>
+          </annotate>
+          <annotate name="UIType">
+            <string>Color</string>
+          </annotate>
+          <semantic>Diffuse</semantic>
+          <float4>1 1 1 0</float4>
+        </newparam>
+        <newparam sid="colladafxShader5DirLight01Intensity">
+          <annotate name="UIName">
+            <string>DirLight01Intensity</string>
+          </annotate>
+          <annotate name="UIMin">
+            <float>0</float>
+          </annotate>
+          <annotate name="UIMax">
+            <float>100</float>
+          </annotate>
+          <float>1</float>
+        </newparam>
+        <newparam sid="colladafxShader5DirLamp01Dir">
+          <annotate name="UIName">
+            <string>DirLamp01Dir</string>
+          </annotate>
+          <annotate name="UIType">
+            <string>Color</string>
+          </annotate>
+          <semantic>Direction</semantic>
+          <float3>-45.6427 5.12635 -14.6161</float3>
+        </newparam>
+        <newparam sid="colladafxShader5AmbientColor">
+          <annotate name="UIName">
+            <string>AmbientColor</string>
+          </annotate>
+          <annotate name="UIType">
+            <string>Color</string>
+          </annotate>
+          <float3>0.358333 0.358333 0.358333</float3>
+        </newparam>
+        <newparam sid="colladafxShader5AmbientIntensity">
+          <annotate name="UIName">
+            <string>AmbientIntensity</string>
+          </annotate>
+          <annotate name="UIMin">
+            <float>0</float>
+          </annotate>
+          <annotate name="UIMax">
+            <float>100</float>
+          </annotate>
+          <float>1</float>
+        </newparam>
         <technique sid="Main">
           <pass sid="colladafxShader5">
             <depth_func value="LEQUAL"/>
@@ -679,6 +1007,9 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
               <bind symbol="World">
                 <param ref="colladafxShader5World"/>
               </bind>
+              <bind symbol="WorldInverse">
+                <param ref="colladafxShader5WorldInverse"/>
+              </bind>
             </shader>
             <shader stage="FRAGMENT">
               <compiler_target>arbfp1</compiler_target>
@@ -688,6 +1019,170 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
               </bind>
               <bind symbol="DiffuseColor">
                 <param ref="colladafxShader5DiffuseColor"/>
+              </bind>
+              <bind symbol="DirLamp01Color">
+                <param ref="colladafxShader5DirLamp01Color"/>
+              </bind>
+              <bind symbol="DirLight01Intensity">
+                <param ref="colladafxShader5DirLight01Intensity"/>
+              </bind>
+              <bind symbol="DirLamp01Dir">
+                <param ref="colladafxShader5DirLamp01Dir"/>
+              </bind>
+              <bind symbol="AmbientColor">
+                <param ref="colladafxShader5AmbientColor"/>
+              </bind>
+              <bind symbol="AmbientIntensity">
+                <param ref="colladafxShader5AmbientIntensity"/>
+              </bind>
+            </shader>
+          </pass>
+        </technique>
+      </profile_CG>
+    </effect>
+    <effect id="colladafxShader4-fx">
+      <profile_CG platform="PC-OGL">
+        <include sid="include" url="file://Mac/Home/Documents/10A_______D______11111_________________________________11111___________________________________________________________.cgfx"/>
+        <include sid="include2" url="file://Mac/Home/Documents/10A_______D______11111_________________________________11111___________________________________________________________.cgfx"/>
+        <newparam sid="colladafxShader4ViewProj">
+          <semantic>ViewProjection</semantic>
+          <float4x4>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</float4x4>
+        </newparam>
+        <newparam sid="colladafxShader4World">
+          <semantic>World</semantic>
+          <float4x4>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</float4x4>
+        </newparam>
+        <newparam sid="colladafxShader4ColorSampler">
+          <annotate name="UIName">
+            <string>ColorSampler</string>
+          </annotate>
+          <sampler2D>
+            <source>file10Surface</source>
+            <wrap_s>WRAP</wrap_s>
+            <wrap_t>WRAP</wrap_t>
+            <minfilter>NONE</minfilter>
+            <magfilter>NONE</magfilter>
+            <mipfilter>NONE</mipfilter>
+          </sampler2D>
+        </newparam>
+        <newparam sid="file10Surface">
+          <annotate name="UIName">
+            <string>file10</string>
+          </annotate>
+          <surface type="2D">
+            <init_from mip="0" slice="0">file10</init_from>
+            <format>A8R8G8B8</format>
+          </surface>
+        </newparam>
+        <newparam sid="colladafxShader4DiffuseColor">
+          <annotate name="UIName">
+            <string>DiffuseColor</string>
+          </annotate>
+          <annotate name="UIType">
+            <string>Color</string>
+          </annotate>
+          <float3>1 1 1</float3>
+        </newparam>
+        <newparam sid="colladafxShader4WorldInverse">
+          <semantic>WorldInverse</semantic>
+          <float4x4>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</float4x4>
+        </newparam>
+        <newparam sid="colladafxShader4DirLamp01Color">
+          <annotate name="UIName">
+            <string>DirLamp01Color</string>
+          </annotate>
+          <annotate name="UIType">
+            <string>Color</string>
+          </annotate>
+          <semantic>Diffuse</semantic>
+          <float4>1 1 1 0</float4>
+        </newparam>
+        <newparam sid="colladafxShader4DirLight01Intensity">
+          <annotate name="UIName">
+            <string>DirLight01Intensity</string>
+          </annotate>
+          <annotate name="UIMin">
+            <float>0</float>
+          </annotate>
+          <annotate name="UIMax">
+            <float>100</float>
+          </annotate>
+          <float>1</float>
+        </newparam>
+        <newparam sid="colladafxShader4DirLamp01Dir">
+          <annotate name="UIName">
+            <string>DirLamp01Dir</string>
+          </annotate>
+          <annotate name="UIType">
+            <string>Color</string>
+          </annotate>
+          <semantic>Direction</semantic>
+          <float3>-45.6427 5.12635 -14.6161</float3>
+        </newparam>
+        <newparam sid="colladafxShader4AmbientColor">
+          <annotate name="UIName">
+            <string>AmbientColor</string>
+          </annotate>
+          <annotate name="UIType">
+            <string>Color</string>
+          </annotate>
+          <float3>0.358333 0.358333 0.358333</float3>
+        </newparam>
+        <newparam sid="colladafxShader4AmbientIntensity">
+          <annotate name="UIName">
+            <string>AmbientIntensity</string>
+          </annotate>
+          <annotate name="UIMin">
+            <float>0</float>
+          </annotate>
+          <annotate name="UIMax">
+            <float>100</float>
+          </annotate>
+          <float>1</float>
+        </newparam>
+        <technique sid="Main">
+          <pass sid="colladafxShader4">
+            <depth_func value="LEQUAL"/>
+            <depth_mask value="1"/>
+            <alpha_test_enable value="0"/>
+            <cull_face_enable value="1"/>
+            <depth_test_enable value="1"/>
+            <shader stage="VERTEX">
+              <compiler_target>arbvp1</compiler_target>
+              <name source="include">std_VS</name>
+              <bind symbol="ViewProj">
+                <param ref="colladafxShader4ViewProj"/>
+              </bind>
+              <bind symbol="World">
+                <param ref="colladafxShader4World"/>
+              </bind>
+              <bind symbol="WorldInverse">
+                <param ref="colladafxShader4WorldInverse"/>
+              </bind>
+            </shader>
+            <shader stage="FRAGMENT">
+              <compiler_target>arbfp1</compiler_target>
+              <name source="include2">std_PS</name>
+              <bind symbol="ColorSampler">
+                <param ref="colladafxShader4ColorSampler"/>
+              </bind>
+              <bind symbol="DiffuseColor">
+                <param ref="colladafxShader4DiffuseColor"/>
+              </bind>
+              <bind symbol="DirLamp01Color">
+                <param ref="colladafxShader4DirLamp01Color"/>
+              </bind>
+              <bind symbol="DirLight01Intensity">
+                <param ref="colladafxShader4DirLight01Intensity"/>
+              </bind>
+              <bind symbol="DirLamp01Dir">
+                <param ref="colladafxShader4DirLamp01Dir"/>
+              </bind>
+              <bind symbol="AmbientColor">
+                <param ref="colladafxShader4AmbientColor"/>
+              </bind>
+              <bind symbol="AmbientIntensity">
+                <param ref="colladafxShader4AmbientIntensity"/>
               </bind>
             </shader>
           </pass>
@@ -3128,17 +3623,11 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
   <library_visual_scenes>
     <visual_scene id="VisualSceneNode" name="Sapphiart">
       <node id="Mesh_grp" name="Mesh_grp" type="NODE">
-        <rotate sid="rotateZ">0 0 1 0</rotate>
-        <rotate sid="rotateY">0 1 0 0</rotate>
-        <rotate sid="rotateX">1 0 0 0</rotate>
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
         <node id="Cloth" name="Cloth" type="NODE">
-          <rotate sid="rotateZ">0 0 1 0</rotate>
-          <rotate sid="rotateY">0 1 0 0</rotate>
-          <rotate sid="rotateX">1 0 0 0</rotate>
+          <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
           <node id="Tie" name="Tie" type="NODE">
-            <rotate sid="rotateZ">0 0 1 0</rotate>
-            <rotate sid="rotateY">0 1 0 0</rotate>
-            <rotate sid="rotateX">1 0 0 0</rotate>
+            <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
             <instance_controller url="#TieShape-skin">
               <skeleton>#Chest</skeleton>
               <bind_material>
@@ -3158,9 +3647,7 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
             </extra>
           </node>
           <node id="Skirt" name="Skirt" type="NODE">
-            <rotate sid="rotateZ">0 0 1 0</rotate>
-            <rotate sid="rotateY">0 1 0 0</rotate>
-            <rotate sid="rotateX">1 0 0 0</rotate>
+            <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
             <instance_controller url="#SkirtShape-skin">
               <skeleton>#Hips</skeleton>
               <bind_material>
@@ -3180,9 +3667,7 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
             </extra>
           </node>
           <node id="Skirt_Inside" name="Skirt_Inside" type="NODE">
-            <rotate sid="rotateZ">0 0 1 0</rotate>
-            <rotate sid="rotateY">0 1 0 0</rotate>
-            <rotate sid="rotateX">1 0 0 0</rotate>
+            <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
             <instance_controller url="#Skirt_InsideShape-skin">
               <skeleton>#Hips</skeleton>
               <bind_material>
@@ -3202,9 +3687,7 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
             </extra>
           </node>
           <node id="BackSkirt_Inside" name="BackSkirt_Inside" type="NODE">
-            <rotate sid="rotateZ">0 0 1 0</rotate>
-            <rotate sid="rotateY">0 1 0 0</rotate>
-            <rotate sid="rotateX">1 0 0 0</rotate>
+            <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
             <instance_controller url="#BackSkirt_InsideShape-skin">
               <skeleton>#Hips</skeleton>
               <bind_material>
@@ -3224,9 +3707,7 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
             </extra>
           </node>
           <node id="ClothOuter" name="ClothOuter" type="NODE">
-            <rotate sid="rotateZ">0 0 1 0</rotate>
-            <rotate sid="rotateY">0 1 0 0</rotate>
-            <rotate sid="rotateX">1 0 0 0</rotate>
+            <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
             <instance_controller url="#ClothOuterShape-skin">
               <skeleton>#Hips</skeleton>
               <skeleton>#UpperArmTwist_L</skeleton>
@@ -3248,9 +3729,7 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
             </extra>
           </node>
           <node id="Belt" name="Belt" type="NODE">
-            <rotate sid="rotateZ">0 0 1 0</rotate>
-            <rotate sid="rotateY">0 1 0 0</rotate>
-            <rotate sid="rotateX">1 0 0 0</rotate>
+            <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
             <instance_controller url="#BeltShape-skin">
               <skeleton>#Chest</skeleton>
               <bind_material>
@@ -3270,9 +3749,7 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
             </extra>
           </node>
           <node id="Button" name="Button" type="NODE">
-            <rotate sid="rotateZ">0 0 1 0</rotate>
-            <rotate sid="rotateY">0 1 0 0</rotate>
-            <rotate sid="rotateX">1 0 0 0</rotate>
+            <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
             <instance_controller url="#ButtonShape-skin">
               <skeleton>#Spine</skeleton>
               <bind_material>
@@ -3292,13 +3769,9 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
             </extra>
           </node>
           <node id="Tile" name="Tile" type="NODE">
-            <rotate sid="rotateZ">0 0 1 0</rotate>
-            <rotate sid="rotateY">0 1 0 0</rotate>
-            <rotate sid="rotateX">1 0 0 0</rotate>
+            <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
             <node id="Colar_Tile" name="Colar_Tile" type="NODE">
-              <rotate sid="rotateZ">0 0 1 0</rotate>
-              <rotate sid="rotateY">0 1 0 0</rotate>
-              <rotate sid="rotateX">1 0 0 0</rotate>
+              <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
               <instance_controller url="#Colar_TileShape-skin">
                 <skeleton>#Chest</skeleton>
                 <bind_material>
@@ -3318,9 +3791,7 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
               </extra>
             </node>
             <node id="BackSkirt_Tile" name="BackSkirt_Tile" type="NODE">
-              <rotate sid="rotateZ">0 0 1 0</rotate>
-              <rotate sid="rotateY">0 1 0 0</rotate>
-              <rotate sid="rotateX">1 0 0 0</rotate>
+              <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
               <instance_controller url="#BackSkirt_TileShape-skin">
                 <skeleton>#Hips</skeleton>
                 <bind_material>
@@ -3342,21 +3813,13 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
           </node>
         </node>
         <node id="body" name="body" type="NODE">
-          <rotate sid="rotateZ">0 0 1 0</rotate>
-          <rotate sid="rotateY">0 1 0 0</rotate>
-          <rotate sid="rotateX">1 0 0 0</rotate>
+          <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
           <node id="group25" name="group25" type="NODE">
-            <rotate sid="rotateZ">0 0 1 0</rotate>
-            <rotate sid="rotateY">0 1 0 0</rotate>
-            <rotate sid="rotateX">1 0 0 0</rotate>
+            <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
             <node id="Hair_Grp" name="Hair_Grp" type="NODE">
-              <rotate sid="rotateZ">0 0 1 0</rotate>
-              <rotate sid="rotateY">0 1 0 0</rotate>
-              <rotate sid="rotateX">1 0 0 0</rotate>
+              <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
               <node id="hairFront" name="hairFront" type="NODE">
-                <rotate sid="rotateZ">0 0 1 0</rotate>
-                <rotate sid="rotateY">0 1 0 0</rotate>
-                <rotate sid="rotateX">1 0 0 0</rotate>
+                <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
                 <instance_controller url="#hairFrontShape-skin">
                   <skeleton>#Hair_Side_01_R</skeleton>
                   <skeleton>#Hair_Front_01_R</skeleton>
@@ -3380,9 +3843,7 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
                 </extra>
               </node>
               <node id="hairBack" name="hairBack" type="NODE">
-                <rotate sid="rotateZ">0 0 1 0</rotate>
-                <rotate sid="rotateY">0 1 0 0</rotate>
-                <rotate sid="rotateX">1 0 0 0</rotate>
+                <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
                 <instance_controller url="#hairBackShape-skin">
                   <skeleton>#Backhair_01_L</skeleton>
                   <skeleton>#Backhair_01_R</skeleton>
@@ -3405,13 +3866,9 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
               </node>
             </node>
             <node id="group25_Head" name="Head" type="NODE">
-              <rotate sid="rotateZ">0 0 1 0</rotate>
-              <rotate sid="rotateY">0 1 0 0</rotate>
-              <rotate sid="rotateX">1 0 0 0</rotate>
+              <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
               <node id="face" name="face" type="NODE">
-                <rotate sid="rotateZ">0 0 1 0</rotate>
-                <rotate sid="rotateY">0 1 0 0</rotate>
-                <rotate sid="rotateX">1 0 0 0</rotate>
+                <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
                 <instance_controller url="#faceShape-skin">
                   <skeleton>#Chest</skeleton>
                   <bind_material>
@@ -3431,9 +3888,7 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
                 </extra>
               </node>
               <node id="eyes" name="eyes" type="NODE">
-                <rotate sid="rotateZ">0 0 1 0</rotate>
-                <rotate sid="rotateY">0 1 0 0</rotate>
-                <rotate sid="rotateX">1 0 0 0</rotate>
+                <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
                 <instance_controller url="#eyesShape-skin">
                   <skeleton>#Eye_L</skeleton>
                   <skeleton>#Eye_R</skeleton>
@@ -3454,9 +3909,7 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
                 </extra>
               </node>
               <node id="brow" name="brow" type="NODE">
-                <rotate sid="rotateZ">0 0 1 0</rotate>
-                <rotate sid="rotateY">0 1 0 0</rotate>
-                <rotate sid="rotateX">1 0 0 0</rotate>
+                <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
                 <instance_controller url="#browShape-skin">
                   <skeleton>#Neck_Head</skeleton>
                   <bind_material>
@@ -3477,9 +3930,7 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
               </node>
             </node>
             <node id="hairAcce" name="hairAcce" type="NODE">
-              <rotate sid="rotateZ">0 0 1 0</rotate>
-              <rotate sid="rotateY">0 1 0 0</rotate>
-              <rotate sid="rotateX">1 0 0 0</rotate>
+              <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
               <instance_controller url="#hairAcceShape-skin">
                 <skeleton>#Neck_Head</skeleton>
                 <bind_material>
@@ -3499,9 +3950,7 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
               </extra>
             </node>
             <node id="legAcc" name="legAcc" type="NODE">
-              <rotate sid="rotateZ">0 0 1 0</rotate>
-              <rotate sid="rotateY">0 1 0 0</rotate>
-              <rotate sid="rotateX">1 0 0 0</rotate>
+              <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
               <instance_controller url="#legAccShape-skin">
                 <skeleton>#Knee_L</skeleton>
                 <skeleton>#Knee_R</skeleton>
@@ -3522,13 +3971,9 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
               </extra>
             </node>
             <node id="Mech_Grp" name="Mech_Grp" type="NODE">
-              <rotate sid="rotateZ">0 0 1 0</rotate>
-              <rotate sid="rotateY">0 1 0 0</rotate>
-              <rotate sid="rotateX">1 0 0 0</rotate>
+              <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
               <node id="Mech_Cover_L" name="Mech_Cover_L" type="NODE">
-                <rotate sid="rotateZ">0 0 1 0</rotate>
-                <rotate sid="rotateY">0 1 0 0</rotate>
-                <rotate sid="rotateX">1 0 0 0</rotate>
+                <matrix sid="transform">1 0 0 0.000000 0 1 0 0.000004 0 0 1 -0.000001 0 0 0 1</matrix>
                 <instance_controller url="#Mech_Cover_LShape-skin">
                   <skeleton>#Mech_cover_L</skeleton>
                   <bind_material>
@@ -3548,9 +3993,7 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
                 </extra>
               </node>
               <node id="Mech_Cover_R" name="Mech_Cover_R" type="NODE">
-                <rotate sid="rotateZ">0 0 1 0</rotate>
-                <rotate sid="rotateY">0 1 0 0</rotate>
-                <rotate sid="rotateX">1 0 0 0</rotate>
+                <matrix sid="transform">1 0 0 -0.000000 0 1 0 0.000004 0 0 1 -0.000001 0 0 0 1</matrix>
                 <instance_controller url="#Mech_Cover_RShape-skin">
                   <skeleton>#Mech_cover_R</skeleton>
                   <bind_material>
@@ -3570,9 +4013,7 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
                 </extra>
               </node>
               <node id="Mech_Outer_L" name="Mech_Outer_L" type="NODE">
-                <rotate sid="rotateZ">0 0 1 0</rotate>
-                <rotate sid="rotateY">0 1 0 0</rotate>
-                <rotate sid="rotateX">1 0 0 0</rotate>
+                <matrix sid="transform">1 0 0 0.000000 0 1 0 0.000004 0 0 1 -0.000001 0 0 0 1</matrix>
                 <instance_controller url="#Mech_Outer_LShape-skin">
                   <skeleton>#Mech_Out_L</skeleton>
                   <bind_material>
@@ -3592,9 +4033,7 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
                 </extra>
               </node>
               <node id="Mech_Inner_L" name="Mech_Inner_L" type="NODE">
-                <rotate sid="rotateZ">0 0 1 0</rotate>
-                <rotate sid="rotateY">0 1 0 0</rotate>
-                <rotate sid="rotateX">1 0 0 0</rotate>
+                <matrix sid="transform">1 0 0 0.000000 0 1 0 0.000004 0 0 1 -0.000001 0 0 0 1</matrix>
                 <instance_controller url="#Mech_Inner_LShape-skin">
                   <skeleton>#Mech_In_L</skeleton>
                   <bind_material>
@@ -3614,9 +4053,7 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
                 </extra>
               </node>
               <node id="Mech_Inner_R" name="Mech_Inner_R" type="NODE">
-                <rotate sid="rotateZ">0 0 1 0</rotate>
-                <rotate sid="rotateY">0 1 0 0</rotate>
-                <rotate sid="rotateX">1 0 0 0</rotate>
+                <matrix sid="transform">1 0 0 -0.000000 0 1 0 0.000004 0 0 1 -0.000001 0 0 0 1</matrix>
                 <instance_controller url="#Mech_Inner_RShape-skin">
                   <skeleton>#Mech_In_R</skeleton>
                   <bind_material>
@@ -3636,9 +4073,7 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
                 </extra>
               </node>
               <node id="Mech_Outer_R" name="Mech_Outer_R" type="NODE">
-                <rotate sid="rotateZ">0 0 1 0</rotate>
-                <rotate sid="rotateY">0 1 0 0</rotate>
-                <rotate sid="rotateX">1 0 0 0</rotate>
+                <matrix sid="transform">1 0 0 -0.000000 0 1 0 0.000004 0 0 1 -0.000001 0 0 0 1</matrix>
                 <instance_controller url="#Mech_Outer_RShape-skin">
                   <skeleton>#Mech_Out_R</skeleton>
                   <bind_material>
@@ -3659,9 +4094,7 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
               </node>
             </node>
             <node id="arms" name="arms" type="NODE">
-              <rotate sid="rotateZ">0 0 1 0</rotate>
-              <rotate sid="rotateY">0 1 0 0</rotate>
-              <rotate sid="rotateX">1 0 0 0</rotate>
+              <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
               <instance_controller url="#armsShape-skin">
                 <skeleton>#Chest</skeleton>
                 <bind_material>
@@ -3681,9 +4114,7 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
               </extra>
             </node>
             <node id="legs" name="legs" type="NODE">
-              <rotate sid="rotateZ">0 0 1 0</rotate>
-              <rotate sid="rotateY">0 1 0 0</rotate>
-              <rotate sid="rotateX">1 0 0 0</rotate>
+              <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
               <instance_controller url="#legsShape-skin">
                 <skeleton>#Hips</skeleton>
                 <bind_material>
@@ -3703,9 +4134,7 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
               </extra>
             </node>
             <node id="tummy" name="tummy" type="NODE">
-              <rotate sid="rotateZ">0 0 1 0</rotate>
-              <rotate sid="rotateY">0 1 0 0</rotate>
-              <rotate sid="rotateX">1 0 0 0</rotate>
+              <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
               <instance_controller url="#tummyShape-skin">
                 <skeleton>#Hips</skeleton>
                 <bind_material>
@@ -3725,9 +4154,7 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
               </extra>
             </node>
             <node id="boots" name="boots" type="NODE">
-              <rotate sid="rotateZ">0 0 1 0</rotate>
-              <rotate sid="rotateY">0 1 0 0</rotate>
-              <rotate sid="rotateX">1 0 0 0</rotate>
+              <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
               <instance_controller url="#bootsShape-skin">
                 <skeleton>#Knee_L</skeleton>
                 <skeleton>#Knee_R</skeleton>
@@ -3748,9 +4175,7 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
               </extra>
             </node>
             <node id="cloth" name="cloth" type="NODE">
-              <rotate sid="rotateZ">0 0 1 0</rotate>
-              <rotate sid="rotateY">0 1 0 0</rotate>
-              <rotate sid="rotateX">1 0 0 0</rotate>
+              <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
               <instance_controller url="#clothShape-skin">
                 <skeleton>#UpperArmTwist_L</skeleton>
                 <skeleton>#UpperArmTwist_R</skeleton>
@@ -3775,36 +4200,21 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
               </extra>
             </node>
             <node id="Tongue_grp" name="Tongue_grp" type="NODE">
-              <rotate sid="rotateZ">0 0 1 0</rotate>
-              <rotate sid="rotateY">0 1 0 0</rotate>
-              <rotate sid="rotateX">1 0 0 0</rotate>
+              <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
             </node>
           </node>
         </node>
       </node>
       <node id="BindJoints" name="BindJoints" type="NODE">
-        <rotate sid="rotateZ">0 0 1 0</rotate>
-        <rotate sid="rotateY">0 1 0 0</rotate>
-        <rotate sid="rotateX">1 0 0 0</rotate>
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
         <node id="PelvisRoot" name="PelvisRoot" type="JOINT">
-          <rotate sid="jointOrientZ">0 0 1 0</rotate>
-          <rotate sid="jointOrientY">0 1 0 0</rotate>
-          <rotate sid="jointOrientX">1 0 0 0</rotate>
+          <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
           <node id="Hips" name="Hips" sid="bone20" type="JOINT">
-            <translate sid="translate">0 104.282 6.68743</translate>
-            <rotate sid="jointOrientZ">0 0 1 90</rotate>
-            <rotate sid="jointOrientY">0 1 0 0</rotate>
-            <rotate sid="jointOrientX">1 0 0 0</rotate>
+            <matrix sid="transform">0 -1 0 0 1 0 0 104.282 0 0 1 6.68743 0 0 0 1</matrix>
             <node id="Skirt_Front_01" name="Skirt_Front_01" sid="bone4" type="JOINT">
-              <translate sid="translate">1.96393 0 8.95314</translate>
-              <rotate sid="jointOrientZ">0 0 1 180</rotate>
-              <rotate sid="jointOrientY">0 1 0 -19.8714</rotate>
-              <rotate sid="jointOrientX">1 0 0 90</rotate>
+              <matrix sid="transform">-0.940458 0.33991 0 1.96393 0 0 1 0 0.33991 0.940458 0 8.95314 0 0 0 1</matrix>
               <node id="Skirt_Front_02" name="Skirt_Front_02" sid="bone5" type="JOINT">
-                <translate sid="translate">13.615 0 0</translate>
-                <rotate sid="jointOrientZ">0 0 1 -3.25338</rotate>
-                <rotate sid="jointOrientY">0 1 0 0</rotate>
-                <rotate sid="jointOrientX">1 0 0 0</rotate>
+                <matrix sid="transform">0.998388 0.056751 0 13.615 -0.056751 0.998388 0 0 0 0 1 0 0 0 0 1</matrix>
                 <extra>
                   <technique profile="MAYA">
                     <dynamic_attributes>
@@ -3824,15 +4234,9 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
               </extra>
             </node>
             <node id="Skirt_FrontSide_01_L" name="Skirt_FrontSide_01_L" sid="bone6" type="JOINT">
-              <translate sid="translate">3.15692 -8.03297 6.71341</translate>
-              <rotate sid="jointOrientZ">0 0 1 -157.541</rotate>
-              <rotate sid="jointOrientY">0 1 0 -15.0487</rotate>
-              <rotate sid="jointOrientX">1 0 0 32.1325</rotate>
+              <matrix sid="transform">-0.892459 0.451129 0 3.15692 -0.368923 -0.729834 0.575533 -8.03297 0.259639 0.513639 0.817779 6.71341 0 0 0 1</matrix>
               <node id="Skirt_FrontSide_02_L" name="Skirt_FrontSide_02_L" sid="bone7" type="JOINT">
-                <translate sid="translate">13.9488 0 0</translate>
-                <rotate sid="jointOrientZ">0 0 1 -6.11246</rotate>
-                <rotate sid="jointOrientY">0 1 0 1.48955</rotate>
-                <rotate sid="jointOrientX">1 0 0 -3.93459</rotate>
+                <matrix sid="transform">0.993979 0.104456 0.033092 13.9488 -0.106444 0.992161 0.065466 0 -0.025994 -0.068594 0.997306 0 0 0 0 1</matrix>
                 <extra>
                   <technique profile="MAYA">
                     <dynamic_attributes>
@@ -3852,15 +4256,9 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
               </extra>
             </node>
             <node id="Skirt_Side_01_L" name="Skirt_Side_01_L" sid="bone8" type="JOINT">
-              <translate sid="translate">3.96788 -10.4527 1.70473</translate>
-              <rotate sid="jointOrientZ">0 0 1 -153.797</rotate>
-              <rotate sid="jointOrientY">0 1 0 -1.565</rotate>
-              <rotate sid="jointOrientX">1 0 0 3.17637</rotate>
+              <matrix sid="transform">-0.896897 0.442239 0 3.96788 -0.441395 -0.895185 0.061756 -10.4527 0.027311 0.055389 0.998091 1.70473 0 0 0 1</matrix>
               <node id="Skirt_Side_02_L" name="Skirt_Side_02_L" sid="bone9" type="JOINT">
-                <translate sid="translate">13.427 0 0</translate>
-                <rotate sid="jointOrientZ">0 0 1 -3.67958</rotate>
-                <rotate sid="jointOrientY">0 1 0 1.04255</rotate>
-                <rotate sid="jointOrientX">1 0 0 -2.50687</rotate>
+                <matrix sid="transform">0.997773 0.063321 0.020947 13.427 -0.064166 0.997035 0.042482 0 -0.018194 -0.043731 0.998878 0 0 0 0 1</matrix>
                 <extra>
                   <technique profile="MAYA">
                     <dynamic_attributes>
@@ -3880,15 +4278,9 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
               </extra>
             </node>
             <node id="Skirt_BackSide_01_L" name="Skirt_BackSide_01_L" sid="bone10" type="JOINT">
-              <translate sid="translate">3.59701 -7.6269 -5.06003</translate>
-              <rotate sid="jointOrientZ">0 0 1 -157.385</rotate>
-              <rotate sid="jointOrientY">0 1 0 24.0142</rotate>
-              <rotate sid="jointOrientX">1 0 0 -44.3324</rotate>
+              <matrix sid="transform">-0.843212 0.537581 0 3.59701 -0.351247 -0.550942 -0.757026 -7.6269 -0.406963 -0.638334 0.653384 -5.06003 0 0 0 1</matrix>
               <node id="Skirt_BackSide_02_L" name="Skirt_BackSide_02_L" sid="bone11" type="JOINT">
-                <translate sid="translate">14.5718 0 0</translate>
-                <rotate sid="jointOrientZ">0 0 1 -12.2258</rotate>
-                <rotate sid="jointOrientY">0 1 0 -3.19589</rotate>
-                <rotate sid="jointOrientX">1 0 0 8.57369</rotate>
+                <matrix sid="transform">0.975801 0.201276 -0.085447 14.5718 -0.211436 0.968159 -0.134026 0 0.055749 0.14885 0.987287 0 0 0 0 1</matrix>
                 <extra>
                   <technique profile="MAYA">
                     <dynamic_attributes>
@@ -3908,15 +4300,9 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
               </extra>
             </node>
             <node id="Skirt_Back_01" name="Skirt_Back_01" sid="bone12" type="JOINT">
-              <translate sid="translate">2.9788 0 -6.38907</translate>
-              <rotate sid="jointOrientZ">0 0 1 0</rotate>
-              <rotate sid="jointOrientY">0 1 0 144.174</rotate>
-              <rotate sid="jointOrientX">1 0 0 90</rotate>
+              <matrix sid="transform">-0.8108 0.585324 0 2.9788 0 0 -1 0 -0.585324 -0.8108 0 -6.38907 0 0 0 1</matrix>
               <node id="Skirt_Back_02" name="Skirt_Back_02" sid="bone13" type="JOINT">
-                <translate sid="translate">14.643 0 0</translate>
-                <rotate sid="jointOrientZ">0 0 1 -10.8039</rotate>
-                <rotate sid="jointOrientY">0 1 0 0</rotate>
-                <rotate sid="jointOrientX">1 0 0 0</rotate>
+                <matrix sid="transform">0.982274 0.187448 0 14.643 -0.187448 0.982274 0 0 0 0 1 0 0 0 0 1</matrix>
                 <extra>
                   <technique profile="MAYA">
                     <dynamic_attributes>
@@ -3936,15 +4322,9 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
               </extra>
             </node>
             <node id="Skirt_FrontSide_01_R" name="Skirt_FrontSide_01_R" sid="bone14" type="JOINT">
-              <translate sid="translate">3.1566 8.03297 6.71337</translate>
-              <rotate sid="jointOrientZ">0 0 1 -22.4592</rotate>
-              <rotate sid="jointOrientY">0 1 0 15.0487</rotate>
-              <rotate sid="jointOrientX">1 0 0 -147.867</rotate>
+              <matrix sid="transform">0.892459 -0.451129 0 3.1566 -0.368923 -0.729834 0.575533 8.03297 -0.259639 -0.513639 -0.817779 6.71337 0 0 0 1</matrix>
               <node id="Skirt_FrontSide_02_R" name="Skirt_FrontSide_02_R" sid="bone15" type="JOINT">
-                <translate sid="translate">-13.9485 -0.000164 -0.000041</translate>
-                <rotate sid="jointOrientZ">0 0 1 -6.11246</rotate>
-                <rotate sid="jointOrientY">0 1 0 1.48955</rotate>
-                <rotate sid="jointOrientX">1 0 0 -3.93459</rotate>
+                <matrix sid="transform">0.993979 0.104456 0.033092 -13.9485 -0.106444 0.992161 0.065466 -0.000164 -0.025994 -0.068594 0.997306 -0.000041 0 0 0 1</matrix>
                 <extra>
                   <technique profile="MAYA">
                     <dynamic_attributes>
@@ -3964,15 +4344,9 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
               </extra>
             </node>
             <node id="Skirt_Side_01_R" name="Skirt_Side_01_R" sid="bone16" type="JOINT">
-              <translate sid="translate">3.9676 10.4527 1.70473</translate>
-              <rotate sid="jointOrientZ">0 0 1 -26.2034</rotate>
-              <rotate sid="jointOrientY">0 1 0 1.565</rotate>
-              <rotate sid="jointOrientX">1 0 0 -176.824</rotate>
+              <matrix sid="transform">0.896897 -0.442239 0 3.9676 -0.441395 -0.895185 0.061756 10.4527 -0.027311 -0.055389 -0.998091 1.70473 0 0 0 1</matrix>
               <node id="Skirt_Side_02_R" name="Skirt_Side_02_R" sid="bone17" type="JOINT">
-                <translate sid="translate">-13.4268 -0.000099 0.000004</translate>
-                <rotate sid="jointOrientZ">0 0 1 -3.67958</rotate>
-                <rotate sid="jointOrientY">0 1 0 1.04255</rotate>
-                <rotate sid="jointOrientX">1 0 0 -2.50687</rotate>
+                <matrix sid="transform">0.997773 0.063321 0.020947 -13.4268 -0.064166 0.997035 0.042482 -0.000099 -0.018194 -0.043731 0.998878 0.000004 0 0 0 1</matrix>
                 <extra>
                   <technique profile="MAYA">
                     <dynamic_attributes>
@@ -3992,15 +4366,9 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
               </extra>
             </node>
             <node id="Skirt_BackSide_01_R" name="Skirt_BackSide_01_R" sid="bone18" type="JOINT">
-              <translate sid="translate">3.5966 7.6269 -5.06004</translate>
-              <rotate sid="jointOrientZ">0 0 1 -22.6146</rotate>
-              <rotate sid="jointOrientY">0 1 0 -24.0142</rotate>
-              <rotate sid="jointOrientX">1 0 0 135.668</rotate>
+              <matrix sid="transform">0.843212 -0.537581 0 3.5966 -0.351247 -0.550942 -0.757026 7.6269 0.406963 0.638334 -0.653384 -5.06004 0 0 0 1</matrix>
               <node id="Skirt_BackSide_02_R" name="Skirt_BackSide_02_R" sid="bone19" type="JOINT">
-                <translate sid="translate">-14.5715 -0.000181 0.000006</translate>
-                <rotate sid="jointOrientZ">0 0 1 -12.2258</rotate>
-                <rotate sid="jointOrientY">0 1 0 -3.19589</rotate>
-                <rotate sid="jointOrientX">1 0 0 8.57369</rotate>
+                <matrix sid="transform">0.975801 0.201276 -0.085447 -14.5715 -0.211436 0.968159 -0.134026 -0.000181 0.055749 0.14885 0.987287 0.000006 0 0 0 1</matrix>
                 <extra>
                   <technique profile="MAYA">
                     <dynamic_attributes>
@@ -4020,28 +4388,13 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
               </extra>
             </node>
             <node id="Leg_L" name="Leg_L" sid="bone109" type="JOINT">
-              <translate sid="translate">-10.7855 -7.43864 -0.560177</translate>
-              <rotate sid="jointOrientZ">0 0 1 177.451</rotate>
-              <rotate sid="jointOrientY">0 1 0 5.59499</rotate>
-              <rotate sid="jointOrientX">1 0 0 90</rotate>
-              <rotate sid="rotateZ">0 0 1 180</rotate>
-              <rotate sid="rotateY">0 1 0 180</rotate>
-              <rotate sid="rotateX">1 0 0 180</rotate>
+              <matrix sid="transform">-0.994251 -0.097399 0.044466 -10.7855 0.044254 0.004335 0.999011 -7.43864 -0.097495 0.995236 0 -0.560177 0 0 0 1</matrix>
               <node id="Knee_L" name="Knee_L" sid="bone62" type="JOINT">
-                <translate sid="translate">40.2458 0 0</translate>
-                <rotate sid="jointOrientZ">0 0 1 -3.72532</rotate>
-                <rotate sid="jointOrientY">0 1 0 0</rotate>
-                <rotate sid="jointOrientX">1 0 0 -180</rotate>
+                <matrix sid="transform">0.997887 -0.064973 0 40.2458 -0.064973 -0.997887 0 0 0 0 -1 0 0 0 0 1</matrix>
                 <node id="Foot_L" name="Foot_L" sid="bone111" type="JOINT">
-                  <translate sid="translate">39.1368 0 0</translate>
-                  <rotate sid="jointOrientZ">0 0 1 -43.2044</rotate>
-                  <rotate sid="jointOrientY">0 1 0 -2.11617</rotate>
-                  <rotate sid="jointOrientX">1 0 0 -178.579</rotate>
+                  <matrix sid="transform">0.728419 -0.683726 0.043879 39.1368 -0.684137 -0.729318 -0.007201 0 0.036925 -0.024773 -0.999011 0 0 0 0 1</matrix>
                   <node id="Toe_L" name="Toe_L" sid="bone110" type="JOINT">
-                    <translate sid="translate">14.5144 0 0</translate>
-                    <rotate sid="jointOrientZ">0 0 1 52.4106</rotate>
-                    <rotate sid="jointOrientY">0 1 0 0</rotate>
-                    <rotate sid="jointOrientX">1 0 0 0</rotate>
+                    <matrix sid="transform">0.609998 -0.792403 0 14.5144 0.792403 0.609998 0 0 0 0 1 0 0 0 0 1</matrix>
                     <extra>
                       <technique profile="MAYA">
                         <dynamic_attributes>
@@ -4061,10 +4414,7 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
                   </extra>
                 </node>
                 <node id="Mech_Out_L" name="Mech_Out_L" sid="bone66" type="JOINT">
-                  <translate sid="translate">33.2708 5.50636 1.88732</translate>
-                  <rotate sid="jointOrientZ">0 0 1 170.68</rotate>
-                  <rotate sid="jointOrientY">0 1 0 -87.4514</rotate>
-                  <rotate sid="jointOrientX">1 0 0 -90</rotate>
+                  <matrix sid="transform">-0.043879 -0.985822 -0.161954 33.2708 0.007201 0.161793 -0.986798 5.50636 0.999011 -0.044466 0 1.88732 0 0 0 1</matrix>
                   <extra>
                     <technique profile="MAYA">
                       <dynamic_attributes>
@@ -4075,10 +4425,7 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
                   </extra>
                 </node>
                 <node id="Mech_In_L" name="Mech_In_L" sid="bone67" type="JOINT">
-                  <translate sid="translate">33.4116 5.48324 -1.3199</translate>
-                  <rotate sid="jointOrientZ">0 0 1 170.68</rotate>
-                  <rotate sid="jointOrientY">0 1 0 -87.4514</rotate>
-                  <rotate sid="jointOrientX">1 0 0 -90</rotate>
+                  <matrix sid="transform">-0.043879 -0.985822 -0.161954 33.4116 0.007201 0.161793 -0.986798 5.48324 0.999011 -0.044466 0 -1.3199 0 0 0 1</matrix>
                   <extra>
                     <technique profile="MAYA">
                       <dynamic_attributes>
@@ -4089,10 +4436,7 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
                   </extra>
                 </node>
                 <node id="Mech_cover_L" name="Mech_cover_L" sid="bone64" type="JOINT">
-                  <translate sid="translate">29.456 6.71695 0.104253</translate>
-                  <rotate sid="jointOrientZ">0 0 1 170.68</rotate>
-                  <rotate sid="jointOrientY">0 1 0 -87.4514</rotate>
-                  <rotate sid="jointOrientX">1 0 0 -90</rotate>
+                  <matrix sid="transform">-0.043879 -0.985822 -0.161954 29.456 0.007201 0.161793 -0.986798 6.71695 0.999011 -0.044466 0 0.104253 0 0 0 1</matrix>
                   <extra>
                     <technique profile="MAYA">
                       <dynamic_attributes>
@@ -4121,25 +4465,13 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
               </extra>
             </node>
             <node id="Leg_R" name="Leg_R" sid="bone108" type="JOINT">
-              <translate sid="translate">-10.7855 7.43864 -0.560177</translate>
-              <rotate sid="jointOrientZ">0 0 1 2.54857</rotate>
-              <rotate sid="jointOrientY">0 1 0 -5.59499</rotate>
-              <rotate sid="jointOrientX">1 0 0 -90</rotate>
+              <matrix sid="transform">0.994252 0.097399 -0.044466 -10.7855 0.044254 0.004333 0.999011 7.43864 0.097495 -0.995236 -0.000001 -0.560177 0 0 0 1</matrix>
               <node id="Knee_R" name="Knee_R" sid="bone63" type="JOINT">
-                <translate sid="translate">-40.2459 -0.000007 0.000002</translate>
-                <rotate sid="jointOrientZ">0 0 1 -3.72532</rotate>
-                <rotate sid="jointOrientY">0 1 0 0</rotate>
-                <rotate sid="jointOrientX">1 0 0 -180</rotate>
+                <matrix sid="transform">0.997887 -0.064973 0 -40.2459 -0.064973 -0.997887 -0.000001 -0.000007 0 0.000001 -1 0.000002 0 0 0 1</matrix>
                 <node id="Foot_R" name="Foot_R" sid="bone113" type="JOINT">
-                  <translate sid="translate">-39.1368 -0.000006 -0.000004</translate>
-                  <rotate sid="jointOrientZ">0 0 1 -43.2044</rotate>
-                  <rotate sid="jointOrientY">0 1 0 -2.11617</rotate>
-                  <rotate sid="jointOrientX">1 0 0 -178.579</rotate>
+                  <matrix sid="transform">0.728419 -0.683726 0.043879 -39.1368 -0.684137 -0.729318 -0.007203 -0.000006 0.036927 -0.024772 -0.999011 -0.000004 0 0 0 1</matrix>
                   <node id="Toe_R" name="Toe_R" sid="bone112" type="JOINT">
-                    <translate sid="translate">-14.5144 -0.000004 0.000016</translate>
-                    <rotate sid="jointOrientZ">0 0 1 52.4106</rotate>
-                    <rotate sid="jointOrientY">0 1 0 0</rotate>
-                    <rotate sid="jointOrientX">1 0 0 0</rotate>
+                    <matrix sid="transform">0.609998 -0.792403 0.000001 -14.5144 0.792403 0.609998 0.000001 -0.000004 -0.000001 0 1 0.000016 0 0 0 1</matrix>
                     <extra>
                       <technique profile="MAYA">
                         <dynamic_attributes>
@@ -4159,10 +4491,7 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
                   </extra>
                 </node>
                 <node id="Mech_Out_R" name="Mech_Out_R" sid="bone69" type="JOINT">
-                  <translate sid="translate">-33.2708 -5.50636 -1.88732</translate>
-                  <rotate sid="jointOrientZ">0 0 1 170.68</rotate>
-                  <rotate sid="jointOrientY">0 1 0 -87.4514</rotate>
-                  <rotate sid="jointOrientX">1 0 0 -90</rotate>
+                  <matrix sid="transform">-0.043879 -0.985822 -0.161954 -33.2708 0.007201 0.161793 -0.986798 -5.50636 0.999011 -0.044466 0 -1.88732 0 0 0 1</matrix>
                   <extra>
                     <technique profile="MAYA">
                       <dynamic_attributes>
@@ -4173,10 +4502,7 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
                   </extra>
                 </node>
                 <node id="Mech_In_R" name="Mech_In_R" sid="bone68" type="JOINT">
-                  <translate sid="translate">-33.4116 -5.48324 1.31989</translate>
-                  <rotate sid="jointOrientZ">0 0 1 170.68</rotate>
-                  <rotate sid="jointOrientY">0 1 0 -87.4514</rotate>
-                  <rotate sid="jointOrientX">1 0 0 -90</rotate>
+                  <matrix sid="transform">-0.043879 -0.985822 -0.161954 -33.4116 0.007201 0.161793 -0.986798 -5.48324 0.999011 -0.044466 0 1.31989 0 0 0 1</matrix>
                   <extra>
                     <technique profile="MAYA">
                       <dynamic_attributes>
@@ -4187,10 +4513,7 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
                   </extra>
                 </node>
                 <node id="Mech_cover_R" name="Mech_cover_R" sid="bone65" type="JOINT">
-                  <translate sid="translate">-29.4559 -6.71696 -0.104257</translate>
-                  <rotate sid="jointOrientZ">0 0 1 170.68</rotate>
-                  <rotate sid="jointOrientY">0 1 0 -87.4514</rotate>
-                  <rotate sid="jointOrientX">1 0 0 -90</rotate>
+                  <matrix sid="transform">-0.043879 -0.985822 -0.161954 -29.4559 0.007201 0.161793 -0.986798 -6.71696 0.999011 -0.044466 0 -0.104257 0 0 0 1</matrix>
                   <extra>
                     <technique profile="MAYA">
                       <dynamic_attributes>
@@ -4219,15 +4542,9 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
               </extra>
             </node>
             <node id="OuterSkirt_Front_01_L" name="OuterSkirt_Front_01_L" sid="bone22" type="JOINT">
-              <translate sid="translate">5.00942 -5.58327 8.10126</translate>
-              <rotate sid="jointOrientZ">0 0 1 -149.749</rotate>
-              <rotate sid="jointOrientY">0 1 0 -12.4979</rotate>
-              <rotate sid="jointOrientX">1 0 0 60</rotate>
+              <matrix sid="transform">-0.843359 0.413785 -0.342824 5.00942 -0.491849 -0.337499 0.802608 -5.58327 0.216404 0.845504 0.488152 8.10126 0 0 0 1</matrix>
               <node id="OuterSkirt_Front_02_L" name="OuterSkirt_Front_02_L" sid="bone23" type="JOINT">
-                <translate sid="translate">6.15327 0 0</translate>
-                <rotate sid="jointOrientZ">0 0 1 1.51025</rotate>
-                <rotate sid="jointOrientY">0 1 0 -2.53294</rotate>
-                <rotate sid="jointOrientX">1 0 0 0</rotate>
+                <matrix sid="transform">0.998676 -0.026355 -0.044178 6.15327 0.02633 0.999653 -0.001164 0 0.044193 0 0.999023 0 0 0 0 1</matrix>
                 <extra>
                   <technique profile="MAYA">
                     <dynamic_attributes>
@@ -4247,15 +4564,9 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
               </extra>
             </node>
             <node id="OuterSkirt_Side_01_L" name="OuterSkirt_Side_01_L" sid="bone24" type="JOINT">
-              <translate sid="translate">6.19549 -9.94792 0.652632</translate>
-              <rotate sid="jointOrientZ">0 0 1 -143.973</rotate>
-              <rotate sid="jointOrientY">0 1 0 0</rotate>
-              <rotate sid="jointOrientX">1 0 0 0</rotate>
+              <matrix sid="transform">-0.808736 0.588172 0 6.19549 -0.588172 -0.808736 0 -9.94792 0 0 1 0.652632 0 0 0 1</matrix>
               <node id="OuterSkirt_Side_02_L" name="OuterSkirt_Side_02_L" sid="bone25" type="JOINT">
-                <translate sid="translate">9.45182 0 0</translate>
-                <rotate sid="jointOrientZ">0 0 1 0.525099</rotate>
-                <rotate sid="jointOrientY">0 1 0 0</rotate>
-                <rotate sid="jointOrientX">1 0 0 0</rotate>
+                <matrix sid="transform">0.999958 -0.009164 0 9.45182 0.009164 0.999958 0 0 0 0 1 0 0 0 0 1</matrix>
                 <extra>
                   <technique profile="MAYA">
                     <dynamic_attributes>
@@ -4275,20 +4586,11 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
               </extra>
             </node>
             <node id="OuterSkirt_Back_01_L" name="OuterSkirt_Back_01_L" sid="bone26" type="JOINT">
-              <translate sid="translate">6.05736 -4.66829 -5.35943</translate>
-              <rotate sid="jointOrientZ">0 0 1 -159.565</rotate>
-              <rotate sid="jointOrientY">0 1 0 34.0619</rotate>
-              <rotate sid="jointOrientX">1 0 0 -70</rotate>
+              <matrix sid="transform">-0.776301 0.612603 0.148577 6.05736 -0.289239 -0.136741 -0.94744 -4.66829 -0.560088 -0.778473 0.283341 -5.35943 0 0 0 1</matrix>
               <node id="OuterSkirt_Back_02_L" name="OuterSkirt_Back_02_L" sid="bone27" type="JOINT">
-                <translate sid="translate">15.49 0 0</translate>
-                <rotate sid="jointOrientZ">0 0 1 -3.56632</rotate>
-                <rotate sid="jointOrientY">0 1 0 -2.53081</rotate>
-                <rotate sid="jointOrientX">1 0 0 0</rotate>
+                <matrix sid="transform">0.99709 0.062203 -0.044071 15.49 -0.062143 0.998063 0.002746 0 0.044156 0 0.999025 0 0 0 0 1</matrix>
                 <node id="OuterSkirt_Back_03_L" name="OuterSkirt_Back_03_L" sid="bone28" type="JOINT">
-                  <translate sid="translate">20.7518 -0.179329 -0.329999</translate>
-                  <rotate sid="jointOrientZ">0 0 1 -13.4265</rotate>
-                  <rotate sid="jointOrientY">0 1 0 -1.61967</rotate>
-                  <rotate sid="jointOrientX">1 0 0 0</rotate>
+                  <matrix sid="transform">0.97228 0.232198 -0.027492 20.7518 -0.232105 0.972669 0.006563 -0.179329 0.028264 0 0.9996 -0.329999 0 0 0 1</matrix>
                   <extra>
                     <technique profile="MAYA">
                       <dynamic_attributes>
@@ -4317,15 +4619,9 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
               </extra>
             </node>
             <node id="OuterSkirt_Front_01_R" name="OuterSkirt_Front_01_R" sid="bone29" type="JOINT">
-              <translate sid="translate">5.0096 5.58327 8.10127</translate>
-              <rotate sid="jointOrientZ">0 0 1 -30.2508</rotate>
-              <rotate sid="jointOrientY">0 1 0 12.4979</rotate>
-              <rotate sid="jointOrientX">1 0 0 -120</rotate>
+              <matrix sid="transform">0.843359 -0.413785 0.342824 5.0096 -0.491849 -0.337499 0.802608 5.58327 -0.216404 -0.845504 -0.488152 8.10127 0 0 0 1</matrix>
               <node id="OuterSkirt_Front_02_R" name="OuterSkirt_Front_02_R" sid="bone30" type="JOINT">
-                <translate sid="translate">-6.15377 0.000235 -0.000201</translate>
-                <rotate sid="jointOrientZ">0 0 1 1.51025</rotate>
-                <rotate sid="jointOrientY">0 1 0 -2.53294</rotate>
-                <rotate sid="jointOrientX">1 0 0 0</rotate>
+                <matrix sid="transform">0.998676 -0.026355 -0.044178 -6.15377 0.02633 0.999653 -0.001164 0.000235 0.044193 0 0.999023 -0.000201 0 0 0 1</matrix>
                 <extra>
                   <technique profile="MAYA">
                     <dynamic_attributes>
@@ -4345,15 +4641,9 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
               </extra>
             </node>
             <node id="OuterSkirt_Side_01_R" name="OuterSkirt_Side_01_R" sid="bone31" type="JOINT">
-              <translate sid="translate">6.1956 9.94792 0.652633</translate>
-              <rotate sid="jointOrientZ">0 0 1 -36.0274</rotate>
-              <rotate sid="jointOrientY">0 1 0 0</rotate>
-              <rotate sid="jointOrientX">1 0 0 -180</rotate>
+              <matrix sid="transform">0.808736 -0.588172 0 6.1956 -0.588172 -0.808736 0 9.94792 0 0 -1 0.652633 0 0 0 1</matrix>
               <node id="OuterSkirt_Side_02_R" name="OuterSkirt_Side_02_R" sid="bone32" type="JOINT">
-                <translate sid="translate">-9.45179 -0.000005 0</translate>
-                <rotate sid="jointOrientZ">0 0 1 0.525099</rotate>
-                <rotate sid="jointOrientY">0 1 0 0</rotate>
-                <rotate sid="jointOrientX">1 0 0 0</rotate>
+                <matrix sid="transform">0.999958 -0.009164 0 -9.45179 0.009164 0.999958 0 -0.000005 0 0 1 0 0 0 0 1</matrix>
                 <extra>
                   <technique profile="MAYA">
                     <dynamic_attributes>
@@ -4373,20 +4663,11 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
               </extra>
             </node>
             <node id="OuterSkirt_Back_01_R" name="OuterSkirt_Back_01_R" sid="bone33" type="JOINT">
-              <translate sid="translate">6.0576 4.66829 -5.35943</translate>
-              <rotate sid="jointOrientZ">0 0 1 -20.4347</rotate>
-              <rotate sid="jointOrientY">0 1 0 -34.0619</rotate>
-              <rotate sid="jointOrientX">1 0 0 110</rotate>
+              <matrix sid="transform">0.776301 -0.612603 -0.148577 6.0576 -0.289239 -0.136741 -0.94744 4.66829 0.560088 0.778473 -0.283341 -5.35943 0 0 0 1</matrix>
               <node id="OuterSkirt_Back_02_R" name="OuterSkirt_Back_02_R" sid="bone34" type="JOINT">
-                <translate sid="translate">-15.4902 0.000179 0.000044</translate>
-                <rotate sid="jointOrientZ">0 0 1 -3.56632</rotate>
-                <rotate sid="jointOrientY">0 1 0 -2.53081</rotate>
-                <rotate sid="jointOrientX">1 0 0 0</rotate>
+                <matrix sid="transform">0.99709 0.062203 -0.044071 -15.4902 -0.062143 0.998063 0.002746 0.000179 0.044156 0 0.999025 0.000044 0 0 0 1</matrix>
                 <node id="OuterSkirt_Back_03_R" name="OuterSkirt_Back_03_R" sid="bone35" type="JOINT">
-                  <translate sid="translate">-20.7518 0.17933 0.330007</translate>
-                  <rotate sid="jointOrientZ">0 0 1 -13.4265</rotate>
-                  <rotate sid="jointOrientY">0 1 0 -1.61967</rotate>
-                  <rotate sid="jointOrientX">1 0 0 0</rotate>
+                  <matrix sid="transform">0.97228 0.232198 -0.027492 -20.7518 -0.232105 0.972669 0.006563 0.17933 0.028264 0 0.9996 0.330007 0 0 0 1</matrix>
                   <extra>
                     <technique profile="MAYA">
                       <dynamic_attributes>
@@ -4415,35 +4696,17 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
               </extra>
             </node>
             <node id="Spine" name="Spine" sid="bone21" type="JOINT">
-              <translate sid="translate">6.99392 0 0</translate>
-              <rotate sid="jointOrientZ">0 0 1 0</rotate>
-              <rotate sid="jointOrientY">0 1 0 7.58711</rotate>
-              <rotate sid="jointOrientX">1 0 0 90</rotate>
+              <matrix sid="transform">0.991245 0.132033 0 6.99392 0 0 -1 0 -0.132033 0.991245 0 0 0 0 0 1</matrix>
               <node id="Chest" name="Chest" sid="bone3" type="JOINT">
-                <translate sid="translate">7.62304 0 0</translate>
-                <rotate sid="jointOrientZ">0 0 1 -8.41637</rotate>
-                <rotate sid="jointOrientY">0 1 0 0</rotate>
-                <rotate sid="jointOrientX">1 0 0 0</rotate>
+                <matrix sid="transform">0.989231 0.146366 0 7.62304 -0.146366 0.989231 0 0 0 0 1 0 0 0 0 1</matrix>
                 <node id="Neck" name="Neck" sid="bone0" type="JOINT">
-                  <translate sid="translate">24.1317 0 0</translate>
-                  <rotate sid="jointOrientZ">0 0 1 21.9034</rotate>
-                  <rotate sid="jointOrientY">0 1 0 0</rotate>
-                  <rotate sid="jointOrientX">1 0 0 0</rotate>
+                  <matrix sid="transform">0.927814 -0.373042 0 24.1317 0.373042 0.927814 0 0 0 0 1 0 0 0 0 1</matrix>
                   <node id="Neck_Head" name="Head" sid="bone49" type="JOINT">
-                    <translate sid="translate">7.29088 0 0</translate>
-                    <rotate sid="jointOrientZ">0 0 1 -5.89989</rotate>
-                    <rotate sid="jointOrientY">0 1 0 0</rotate>
-                    <rotate sid="jointOrientX">1 0 0 0</rotate>
+                    <matrix sid="transform">0.994703 0.102791 0 7.29088 -0.102791 0.994703 0 0 0 0 1 0 0 0 0 1</matrix>
                     <node id="Head_End" name="Head_End" type="JOINT">
-                      <translate sid="translate">20.3662 0 0</translate>
-                      <rotate sid="jointOrientZ">0 0 1 0</rotate>
-                      <rotate sid="jointOrientY">0 1 0 0</rotate>
-                      <rotate sid="jointOrientX">1 0 0 0</rotate>
+                      <matrix sid="transform">1 0 0 20.3662 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
                       <node id="Hair_Side_01_R" name="Hair_Side_01_R" sid="bone42" type="JOINT">
-                        <translate sid="translate">-13.5478 2.87474 -9.24827</translate>
-                        <rotate sid="jointOrientZ">0 0 1 -174.703</rotate>
-                        <rotate sid="jointOrientY">0 1 0 -2.19</rotate>
-                        <rotate sid="jointOrientX">1 0 0 -10</rotate>
+                        <matrix sid="transform">-0.995002 0.084308 0.053503 -13.5478 -0.092251 -0.981215 -0.169432 2.87474 0.038213 -0.173521 0.984088 -9.24827 0 0 0 1</matrix>
                         <extra>
                           <technique profile="MAYA">
                             <dynamic_attributes>
@@ -4454,15 +4717,9 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
                         </extra>
                       </node>
                       <node id="Hair_Front_01_R" name="Hair_Front_01_R" sid="bone44" type="JOINT">
-                        <translate sid="translate">-6.56166 11.1472 -6.25816</translate>
-                        <rotate sid="jointOrientZ">0 0 1 -157.31</rotate>
-                        <rotate sid="jointOrientY">0 1 0 20.7817</rotate>
-                        <rotate sid="jointOrientX">1 0 0 -40.3182</rotate>
+                        <matrix sid="transform">-0.862579 0.505922 0 -6.56166 -0.360649 -0.614895 -0.70131 11.1472 -0.354808 -0.604936 0.712856 -6.25816 0 0 0 1</matrix>
                         <node id="Hair_Front_02_R" name="Hair_Front_02_R" sid="bone43" type="JOINT">
-                          <translate sid="translate">3.91752 0 0</translate>
-                          <rotate sid="jointOrientZ">0 0 1 -11.4912</rotate>
-                          <rotate sid="jointOrientY">0 1 0 -17.5659</rotate>
-                          <rotate sid="jointOrientX">1 0 0 0</rotate>
+                          <matrix sid="transform">0.93426 0.199218 -0.295753 3.91752 -0.189929 0.979955 0.060124 0 0.301803 0 0.95337 0 0 0 0 1</matrix>
                           <extra>
                             <technique profile="MAYA">
                               <dynamic_attributes>
@@ -4482,15 +4739,9 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
                         </extra>
                       </node>
                       <node id="Hair_Front_01_L" name="Hair_Front_01_L" sid="bone46" type="JOINT">
-                        <translate sid="translate">-6.80391 12.836 -2.01572</translate>
-                        <rotate sid="jointOrientZ">0 0 1 177.419</rotate>
-                        <rotate sid="jointOrientY">0 1 0 -14.8961</rotate>
-                        <rotate sid="jointOrientX">1 0 0 -81.945</rotate>
+                        <matrix sid="transform">-0.965413 -0.260582 -0.008598 -6.80391 0.043514 -0.128521 -0.990752 12.836 0.257067 -0.956859 0.135415 -2.01572 0 0 0 1</matrix>
                         <node id="Hair_Front_02_L" name="Hair_Front_02_L" sid="bone45" type="JOINT">
-                          <translate sid="translate">3.38347 0 0</translate>
-                          <rotate sid="jointOrientZ">0 0 1 -14.1704</rotate>
-                          <rotate sid="jointOrientY">0 1 0 -13.6772</rotate>
-                          <rotate sid="jointOrientX">1 0 0 0</rotate>
+                          <matrix sid="transform">0.942078 0.244807 -0.229257 3.38347 -0.237865 0.969572 0.057884 0 0.236451 0 0.971643 0 0 0 0 1</matrix>
                           <extra>
                             <technique profile="MAYA">
                               <dynamic_attributes>
@@ -4510,15 +4761,9 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
                         </extra>
                       </node>
                       <node id="Hair_Side_01_L" name="Hair_Side_01_L" sid="bone48" type="JOINT">
-                        <translate sid="translate">-4.31352 11.7956 3.19088</translate>
-                        <rotate sid="jointOrientZ">0 0 1 10.79</rotate>
-                        <rotate sid="jointOrientY">0 1 0 214.883</rotate>
-                        <rotate sid="jointOrientX">1 0 0 46.835</rotate>
+                        <matrix sid="transform">-0.805818 -0.537834 -0.247774 -4.31352 -0.153572 0.593914 -0.789735 11.7956 0.571903 -0.598332 -0.561183 3.19088 0 0 0 1</matrix>
                         <node id="Hair_Side_02_L" name="Hair_Side_02_L" sid="bone47" type="JOINT">
-                          <translate sid="translate">5.03173 0 0</translate>
-                          <rotate sid="jointOrientZ">0 0 1 -10</rotate>
-                          <rotate sid="jointOrientY">0 1 0 -24.517</rotate>
-                          <rotate sid="jointOrientX">1 0 0 0</rotate>
+                          <matrix sid="transform">0.896016 0.173648 -0.408659 5.03173 -0.157992 0.984808 0.072057 0 0.414963 0 0.909838 0 0 0 0 1</matrix>
                           <extra>
                             <technique profile="MAYA">
                               <dynamic_attributes>
@@ -4538,30 +4783,15 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
                         </extra>
                       </node>
                       <node id="Backhair_01_L" name="Backhair_01_L" sid="bone50" type="JOINT">
-                        <translate sid="translate">-19.1908 -10.186 6.82732</translate>
-                        <rotate sid="jointOrientZ">0 0 1 -141.12</rotate>
-                        <rotate sid="jointOrientY">0 1 0 -29.7991</rotate>
-                        <rotate sid="jointOrientX">1 0 0 15</rotate>
+                        <matrix sid="transform">-0.675526 0.706435 0.211222 -19.1908 -0.544697 -0.671198 0.502791 -10.186 0.496961 0.224596 0.838204 6.82732 0 0 0 1</matrix>
                         <node id="Backhair_02_L" name="Backhair_02_L" sid="bone51" type="JOINT">
-                          <translate sid="translate">10.9788 0 0</translate>
-                          <rotate sid="jointOrientZ">0 0 1 1.33658</rotate>
-                          <rotate sid="jointOrientY">0 1 0 -8.16712</rotate>
-                          <rotate sid="jointOrientX">1 0 0 0</rotate>
+                          <matrix sid="transform">0.989589 -0.023325 -0.142022 10.9788 0.023089 0.999728 -0.003313 0 0.142061 0 0.989858 0 0 0 0 1</matrix>
                           <node id="Backhair_03_L" name="Backhair_03_L" sid="bone52" type="JOINT">
-                            <translate sid="translate">13.3029 0 0</translate>
-                            <rotate sid="jointOrientZ">0 0 1 -9.58464</rotate>
-                            <rotate sid="jointOrientY">0 1 0 -1.79637</rotate>
-                            <rotate sid="jointOrientX">1 0 0 0</rotate>
+                            <matrix sid="transform">0.985556 0.166504 -0.030909 13.3029 -0.166423 0.986041 0.005219 0 0.031347 0 0.999509 0 0 0 0 1</matrix>
                             <node id="Backhair_04_L" name="Backhair_04_L" sid="bone53" type="JOINT">
-                              <translate sid="translate">14.3361 0 0</translate>
-                              <rotate sid="jointOrientZ">0 0 1 -23.6266</rotate>
-                              <rotate sid="jointOrientY">0 1 0 3.97026</rotate>
-                              <rotate sid="jointOrientX">1 0 0 0</rotate>
+                              <matrix sid="transform">0.913978 0.400775 0.063434 14.3361 -0.399813 0.916176 -0.027749 0 -0.069238 0 0.9976 0 0 0 0 1</matrix>
                               <node id="Backhair_05_L" name="Backhair_05_L" sid="bone54" type="JOINT">
-                                <translate sid="translate">10.4947 0 0</translate>
-                                <rotate sid="jointOrientZ">0 0 1 -36.9816</rotate>
-                                <rotate sid="jointOrientY">0 1 0 11.8711</rotate>
-                                <rotate sid="jointOrientX">1 0 0 0</rotate>
+                                <matrix sid="transform">0.781744 0.601559 0.164327 10.4947 -0.588694 0.798828 -0.123747 0 -0.20571 0 0.978613 0 0 0 0 1</matrix>
                                 <extra>
                                   <technique profile="MAYA">
                                     <dynamic_attributes>
@@ -4608,30 +4838,15 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
                         </extra>
                       </node>
                       <node id="Backhair_01_R" name="Backhair_01_R" sid="bone55" type="JOINT">
-                        <translate sid="translate">-19.1906 -10.1861 -6.82732</translate>
-                        <rotate sid="jointOrientZ">0 0 1 38.8803</rotate>
-                        <rotate sid="jointOrientY">0 1 0 -29.7991</rotate>
-                        <rotate sid="jointOrientX">1 0 0 15</rotate>
+                        <matrix sid="transform">0.675526 -0.706435 -0.211222 -19.1906 0.544697 0.671198 -0.502791 -10.1861 0.496961 0.224596 0.838204 -6.82732 0 0 0 1</matrix>
                         <node id="Backhair_02_R" name="Backhair_02_R" sid="bone56" type="JOINT">
-                          <translate sid="translate">-10.9792 0.000382 0.000065</translate>
-                          <rotate sid="jointOrientZ">0 0 1 1.33658</rotate>
-                          <rotate sid="jointOrientY">0 1 0 -8.16712</rotate>
-                          <rotate sid="jointOrientX">1 0 0 0</rotate>
+                          <matrix sid="transform">0.989589 -0.023325 -0.142022 -10.9792 0.023089 0.999728 -0.003313 0.000382 0.142061 0 0.989858 0.000065 0 0 0 1</matrix>
                           <node id="Backhair_03_R" name="Backhair_03_R" sid="bone57" type="JOINT">
-                            <translate sid="translate">-13.3024 -0.000535 -0.000188</translate>
-                            <rotate sid="jointOrientZ">0 0 1 -9.58464</rotate>
-                            <rotate sid="jointOrientY">0 1 0 -1.79637</rotate>
-                            <rotate sid="jointOrientX">1 0 0 0</rotate>
+                            <matrix sid="transform">0.985556 0.166504 -0.030909 -13.3024 -0.166423 0.986041 0.005219 -0.000535 0.031347 0 0.999509 -0.000188 0 0 0 1</matrix>
                             <node id="Backhair_04_R" name="Backhair_04_R" sid="bone58" type="JOINT">
-                              <translate sid="translate">-14.3366 0.000461 0.000238</translate>
-                              <rotate sid="jointOrientZ">0 0 1 -23.6266</rotate>
-                              <rotate sid="jointOrientY">0 1 0 3.97026</rotate>
-                              <rotate sid="jointOrientX">1 0 0 0</rotate>
+                              <matrix sid="transform">0.913978 0.400775 0.063434 -14.3366 -0.399813 0.916176 -0.027749 0.000461 -0.069238 0 0.9976 0.000238 0 0 0 1</matrix>
                               <node id="Backhair_05_R" name="Backhair_05_R" sid="bone59" type="JOINT">
-                                <translate sid="translate">-10.4945 -0.000075 -0.000085</translate>
-                                <rotate sid="jointOrientZ">0 0 1 -36.9816</rotate>
-                                <rotate sid="jointOrientY">0 1 0 11.8711</rotate>
-                                <rotate sid="jointOrientX">1 0 0 0</rotate>
+                                <matrix sid="transform">0.781744 0.601559 0.164327 -10.4945 -0.588694 0.798828 -0.123747 -0.000075 -0.20571 0 0.978613 -0.000085 0 0 0 1</matrix>
                                 <extra>
                                   <technique profile="MAYA">
                                     <dynamic_attributes>
@@ -4687,10 +4902,7 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
                       </extra>
                     </node>
                     <node id="Eye_L" name="Eye_L" sid="bone60" type="JOINT">
-                      <translate sid="translate">5.63994 9.08017 4.38463</translate>
-                      <rotate sid="jointOrientZ">0 0 1 -90</rotate>
-                      <rotate sid="jointOrientY">0 1 0 -69</rotate>
-                      <rotate sid="jointOrientX">1 0 0 5.77</rotate>
+                      <matrix sid="transform">0 0.994933 -0.100535 5.63994 -0.358368 0.093857 0.92885 9.08017 0.93358 0.036028 0.356552 4.38463 0 0 0 1</matrix>
                       <extra>
                         <technique profile="MAYA">
                           <dynamic_attributes>
@@ -4701,10 +4913,7 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
                       </extra>
                     </node>
                     <node id="Eye_R" name="Eye_R" sid="bone61" type="JOINT">
-                      <translate sid="translate">5.63966 9.08017 -4.38463</translate>
-                      <rotate sid="jointOrientZ">0 0 1 90</rotate>
-                      <rotate sid="jointOrientY">0 1 0 -69</rotate>
-                      <rotate sid="jointOrientX">1 0 0 5.77</rotate>
+                      <matrix sid="transform">0 -0.994933 0.100535 5.63966 0.358368 -0.093857 -0.92885 9.08017 0.93358 0.036028 0.356552 -4.38463 0 0 0 1</matrix>
                       <extra>
                         <technique profile="MAYA">
                           <dynamic_attributes>
@@ -4733,40 +4942,19 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
                   </extra>
                 </node>
                 <node id="Shoulder_L" name="Shoulder_L" sid="bone1" type="JOINT">
-                  <translate sid="translate">17.7277 -1.34026 2.57415</translate>
-                  <rotate sid="jointOrientZ">0 0 1 0</rotate>
-                  <rotate sid="jointOrientY">0 1 0 -90</rotate>
-                  <rotate sid="jointOrientX">1 0 0 -73.9965</rotate>
+                  <matrix sid="transform">0 0.961245 -0.275696 17.7277 0 0.275696 0.961245 -1.34026 1 0 0 2.57415 0 0 0 1</matrix>
                   <node id="UpperArm_L" name="UpperArm_L" sid="bone70" type="JOINT">
-                    <translate sid="translate">9.17204 0 -0.024345</translate>
-                    <rotate sid="jointOrientZ">0 0 1 0</rotate>
-                    <rotate sid="jointOrientY">0 1 0 0.298</rotate>
-                    <rotate sid="jointOrientX">1 0 0 0</rotate>
+                    <matrix sid="transform">0.999986 0 0.005201 9.17204 0 1 0 0 -0.005201 0 0.999986 -0.024345 0 0 0 1</matrix>
                     <node id="Forearm_L" name="Forearm_L" sid="bone71" type="JOINT">
-                      <translate sid="translate">20.8871 0 0</translate>
-                      <rotate sid="jointOrientZ">0 0 1 0</rotate>
-                      <rotate sid="jointOrientY">0 1 0 -0.738083</rotate>
-                      <rotate sid="jointOrientX">1 0 0 0</rotate>
+                      <matrix sid="transform">0.999917 0 -0.012881 20.8871 0 1 0 0 0.012881 0 0.999917 0 0 0 0 1</matrix>
                       <node id="Hand_L" name="Hand_L" sid="bone72" type="JOINT">
-                        <translate sid="translate">21.2498 0 0</translate>
-                        <rotate sid="jointOrientZ">0 0 1 0</rotate>
-                        <rotate sid="jointOrientY">0 1 0 0.440083</rotate>
-                        <rotate sid="jointOrientX">1 0 0 0</rotate>
+                        <matrix sid="transform">0.99997 0 0.00768 21.2498 0 1 0 0 -0.00768 0 0.99997 0 0 0 0 1</matrix>
                         <node id="Index_01_L" name="Index_01_L" sid="bone73" type="JOINT">
-                          <translate sid="translate">7.8084 1.11752 2.38252</translate>
-                          <rotate sid="jointOrientZ">0 0 1 -1.20303</rotate>
-                          <rotate sid="jointOrientY">0 1 0 0</rotate>
-                          <rotate sid="jointOrientX">1 0 0 0</rotate>
+                          <matrix sid="transform">0.99978 0.020995 0 7.8084 -0.020995 0.99978 0 1.11752 0 0 1 2.38252 0 0 0 1</matrix>
                           <node id="Index_02_L" name="Index_02_L" sid="bone74" type="JOINT">
-                            <translate sid="translate">3.66936 0 0</translate>
-                            <rotate sid="jointOrientZ">0 0 1 -2.07555</rotate>
-                            <rotate sid="jointOrientY">0 1 0 0</rotate>
-                            <rotate sid="jointOrientX">1 0 0 0</rotate>
+                            <matrix sid="transform">0.999344 0.036217 0 3.66936 -0.036217 0.999344 0 0 0 0 1 0 0 0 0 1</matrix>
                             <node id="Index_03_L" name="Index_03_L" sid="bone75" type="JOINT">
-                              <translate sid="translate">1.99161 0 0</translate>
-                              <rotate sid="jointOrientZ">0 0 1 1.57796</rotate>
-                              <rotate sid="jointOrientY">0 1 0 0</rotate>
-                              <rotate sid="jointOrientX">1 0 0 0</rotate>
+                              <matrix sid="transform">0.999621 -0.027537 0 1.99161 0.027537 0.999621 0 0 0 0 1 0 0 0 0 1</matrix>
                               <extra>
                                 <technique profile="MAYA">
                                   <dynamic_attributes>
@@ -4795,20 +4983,11 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
                           </extra>
                         </node>
                         <node id="Middle_01_L" name="Middle_01_L" sid="bone76" type="JOINT">
-                          <translate sid="translate">7.96915 1.24381 0.687935</translate>
-                          <rotate sid="jointOrientZ">0 0 1 -3.02529</rotate>
-                          <rotate sid="jointOrientY">0 1 0 0</rotate>
-                          <rotate sid="jointOrientX">1 0 0 0</rotate>
+                          <matrix sid="transform">0.998606 0.052776 0 7.96915 -0.052776 0.998606 0 1.24381 0 0 1 0.687935 0 0 0 1</matrix>
                           <node id="Middle_02_L" name="Middle_02_L" sid="bone77" type="JOINT">
-                            <translate sid="translate">3.92981 0 0</translate>
-                            <rotate sid="jointOrientZ">0 0 1 -0.406675</rotate>
-                            <rotate sid="jointOrientY">0 1 0 0</rotate>
-                            <rotate sid="jointOrientX">1 0 0 0</rotate>
+                            <matrix sid="transform">0.999975 0.007097 0 3.92981 -0.007097 0.999975 0 0 0 0 1 0 0 0 0 1</matrix>
                             <node id="Middle_03_L" name="Middle_03_L" sid="bone78" type="JOINT">
-                              <translate sid="translate">2.12687 0 0</translate>
-                              <rotate sid="jointOrientZ">0 0 1 2.55755</rotate>
-                              <rotate sid="jointOrientY">0 1 0 0</rotate>
-                              <rotate sid="jointOrientX">1 0 0 0</rotate>
+                              <matrix sid="transform">0.999004 -0.044622 0 2.12687 0.044622 0.999004 0 0 0 0 1 0 0 0 0 1</matrix>
                               <extra>
                                 <technique profile="MAYA">
                                   <dynamic_attributes>
@@ -4837,20 +5016,11 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
                           </extra>
                         </node>
                         <node id="Ring_01_L" name="Ring_01_L" sid="bone79" type="JOINT">
-                          <translate sid="translate">7.79573 1.17395 -1.00147</translate>
-                          <rotate sid="jointOrientZ">0 0 1 -2.08952</rotate>
-                          <rotate sid="jointOrientY">0 1 0 0.000006</rotate>
-                          <rotate sid="jointOrientX">1 0 0 0</rotate>
+                          <matrix sid="transform">0.999335 0.036461 0 7.79573 -0.036461 0.999335 0 1.17395 0 0 1 -1.00147 0 0 0 1</matrix>
                           <node id="Ring_02_L" name="Ring_02_L" sid="bone80" type="JOINT">
-                            <translate sid="translate">3.58087 0 0</translate>
-                            <rotate sid="jointOrientZ">0 0 1 -1.23482</rotate>
-                            <rotate sid="jointOrientY">0 1 0 -0.000006</rotate>
-                            <rotate sid="jointOrientX">1 0 0 0</rotate>
+                            <matrix sid="transform">0.999768 0.021549 0 3.58087 -0.021549 0.999768 0 0 0 0 1 0 0 0 0 1</matrix>
                             <node id="Ring_03_L" name="Ring_03_L" sid="bone81" type="JOINT">
-                              <translate sid="translate">2.00488 0 0</translate>
-                              <rotate sid="jointOrientZ">0 0 1 1.61538</rotate>
-                              <rotate sid="jointOrientY">0 1 0 0</rotate>
-                              <rotate sid="jointOrientX">1 0 0 0</rotate>
+                              <matrix sid="transform">0.999603 -0.02819 0 2.00488 0.02819 0.999603 0 0 0 0 1 0 0 0 0 1</matrix>
                               <extra>
                                 <technique profile="MAYA">
                                   <dynamic_attributes>
@@ -4879,20 +5049,11 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
                           </extra>
                         </node>
                         <node id="Pinky_01_L" name="Pinky_01_L" sid="bone82" type="JOINT">
-                          <translate sid="translate">7.57827 1.06911 -2.56051</translate>
-                          <rotate sid="jointOrientZ">0 0 1 -0.145758</rotate>
-                          <rotate sid="jointOrientY">0 1 0 0.000016</rotate>
-                          <rotate sid="jointOrientX">1 0 0 0</rotate>
+                          <matrix sid="transform">0.999997 0.002543 0.000000 7.57827 -0.002543 0.999997 0 1.06911 -0.000000 0 1 -2.56051 0 0 0 1</matrix>
                           <node id="Pinky_02_L" name="Pinky_02_L" sid="bone83" type="JOINT">
-                            <translate sid="translate">2.80917 0 0</translate>
-                            <rotate sid="jointOrientZ">0 0 1 -4.2177</rotate>
-                            <rotate sid="jointOrientY">0 1 0 -0.000016</rotate>
-                            <rotate sid="jointOrientX">1 0 0 0</rotate>
+                            <matrix sid="transform">0.997292 0.073546 -0.000000 2.80917 -0.073546 0.997292 0 0 0.000000 0 1 0 0 0 0 1</matrix>
                             <node id="Pinky_03_L" name="Pinky_03_L" sid="bone84" type="JOINT">
-                              <translate sid="translate">1.43941 0 0</translate>
-                              <rotate sid="jointOrientZ">0 0 1 0.98418</rotate>
-                              <rotate sid="jointOrientY">0 1 0 0</rotate>
-                              <rotate sid="jointOrientX">1 0 0 0</rotate>
+                              <matrix sid="transform">0.999852 -0.017176 0 1.43941 0.017176 0.999852 0 0 0 0 1 0 0 0 0 1</matrix>
                               <extra>
                                 <technique profile="MAYA">
                                   <dynamic_attributes>
@@ -4921,20 +5082,11 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
                           </extra>
                         </node>
                         <node id="Thumb_01_L" name="Thumb_01_L" sid="bone85" type="JOINT">
-                          <translate sid="translate">3.04652 -1.52954 2.6194</translate>
-                          <rotate sid="jointOrientZ">0 0 1 -12.064</rotate>
-                          <rotate sid="jointOrientY">0 1 0 -24.648</rotate>
-                          <rotate sid="jointOrientX">1 0 0 60</rotate>
+                          <matrix sid="transform">0.888814 -0.248691 -0.38492 3.04652 -0.189962 0.564444 -0.803317 -1.52954 0.417043 0.787119 0.454443 2.6194 0 0 0 1</matrix>
                           <node id="Thumb_02_L" name="Thumb_02_L" sid="bone86" type="JOINT">
-                            <translate sid="translate">2.80573 0 0</translate>
-                            <rotate sid="jointOrientZ">0 0 1 -2.65694</rotate>
-                            <rotate sid="jointOrientY">0 1 0 0.992778</rotate>
-                            <rotate sid="jointOrientX">1 0 0 24.7779</rotate>
+                            <matrix sid="transform">0.998775 0.049341 -0.003713 2.80573 -0.046348 0.906627 -0.41938 0 -0.017326 0.419038 0.907803 0 0 0 0 1</matrix>
                             <node id="Thumb_03_L" name="Thumb_03_L" sid="bone87" type="JOINT">
-                              <translate sid="translate">2.37598 0 0</translate>
-                              <rotate sid="jointOrientZ">0 0 1 -5.40656</rotate>
-                              <rotate sid="jointOrientY">0 1 0 -0.3944</rotate>
-                              <rotate sid="jointOrientX">1 0 0 4.82199</rotate>
+                              <matrix sid="transform">0.995528 0.093312 -0.014749 2.37598 -0.09422 0.992082 -0.08304 0 0.006883 0.084058 0.996437 0 0 0 0 1</matrix>
                               <extra>
                                 <technique profile="MAYA">
                                   <dynamic_attributes>
@@ -4972,10 +5124,7 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
                         </extra>
                       </node>
                       <node id="ForearmTwist_L" name="ForearmTwist_L" sid="bone88" type="JOINT">
-                        <translate sid="translate">10 0 0</translate>
-                        <rotate sid="jointOrientZ">0 0 1 0</rotate>
-                        <rotate sid="jointOrientY">0 1 0 0</rotate>
-                        <rotate sid="jointOrientX">1 0 0 0</rotate>
+                        <matrix sid="transform">1 0 0 10 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
                         <extra>
                           <technique profile="MAYA">
                             <dynamic_attributes>
@@ -4995,10 +5144,7 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
                       </extra>
                     </node>
                     <node id="UpperArmTwist_L" name="UpperArmTwist_L" sid="bone38" type="JOINT">
-                      <translate sid="translate">7 0 0</translate>
-                      <rotate sid="jointOrientZ">0 0 1 0</rotate>
-                      <rotate sid="jointOrientY">0 1 0 0</rotate>
-                      <rotate sid="jointOrientX">1 0 0 0</rotate>
+                      <matrix sid="transform">1 0 0 7 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
                       <extra>
                         <technique profile="MAYA">
                           <dynamic_attributes>
@@ -5027,15 +5173,9 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
                   </extra>
                 </node>
                 <node id="Breast_L" name="Breast_L" sid="bone36" type="JOINT">
-                  <translate sid="translate">5.14052 7.21872 6.50986</translate>
-                  <rotate sid="jointOrientZ">0 0 1 109.296</rotate>
-                  <rotate sid="jointOrientY">0 1 0 -26.0125</rotate>
-                  <rotate sid="jointOrientX">1 0 0 178.555</rotate>
+                  <matrix sid="transform">-0.296967 0.947181 -0.121072 5.14052 0.848215 0.319898 0.422133 7.21872 0.438567 0.022664 -0.898413 6.50986 0 0 0 1</matrix>
                   <node id="Breast_Tip_L" name="Breast_Tip_L" sid="bone40" type="JOINT">
-                    <translate sid="translate">3.5 0 0</translate>
-                    <rotate sid="jointOrientZ">0 0 1 0</rotate>
-                    <rotate sid="jointOrientY">0 1 0 0</rotate>
-                    <rotate sid="jointOrientX">1 0 0 0</rotate>
+                    <matrix sid="transform">1 0 0 3.5 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
                     <extra>
                       <technique profile="MAYA">
                         <dynamic_attributes>
@@ -5055,15 +5195,9 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
                   </extra>
                 </node>
                 <node id="Breast_R" name="Breast_R" sid="bone37" type="JOINT">
-                  <translate sid="translate">5.14043 7.21872 -6.50986</translate>
-                  <rotate sid="jointOrientZ">0 0 1 -70.7044</rotate>
-                  <rotate sid="jointOrientY">0 1 0 -26.0125</rotate>
-                  <rotate sid="jointOrientX">1 0 0 178.555</rotate>
+                  <matrix sid="transform">0.296967 -0.947181 0.121072 5.14043 -0.848215 -0.319898 -0.422133 7.21872 0.438567 0.022664 -0.898413 -6.50986 0 0 0 1</matrix>
                   <node id="Breast_Tip_R" name="Breast_Tip_R" sid="bone41" type="JOINT">
-                    <translate sid="translate">-3.5 0 0</translate>
-                    <rotate sid="jointOrientZ">0 0 1 0</rotate>
-                    <rotate sid="jointOrientY">0 1 0 0</rotate>
-                    <rotate sid="jointOrientX">1 0 0 0</rotate>
+                    <matrix sid="transform">1 0 0 -3.5 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
                     <extra>
                       <technique profile="MAYA">
                         <dynamic_attributes>
@@ -5083,40 +5217,19 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
                   </extra>
                 </node>
                 <node id="Shoulder_R" name="Shoulder_R" sid="bone2" type="JOINT">
-                  <translate sid="translate">17.7279 -1.3402 -2.57415</translate>
-                  <rotate sid="jointOrientZ">0 0 1 0</rotate>
-                  <rotate sid="jointOrientY">0 1 0 -90</rotate>
-                  <rotate sid="jointOrientX">1 0 0 106.003</rotate>
+                  <matrix sid="transform">0 -0.961245 0.275696 17.7279 0 -0.275696 -0.961245 -1.3402 1 0 0 -2.57415 0 0 0 1</matrix>
                   <node id="UpperArm_R" name="UpperArm_R" sid="bone89" type="JOINT">
-                    <translate sid="translate">-9.17205 0 0.024346</translate>
-                    <rotate sid="jointOrientZ">0 0 1 0</rotate>
-                    <rotate sid="jointOrientY">0 1 0 0.298</rotate>
-                    <rotate sid="jointOrientX">1 0 0 0</rotate>
+                    <matrix sid="transform">0.999986 0 0.005201 -9.17205 0 1 0 0 -0.005201 0 0.999986 0.024346 0 0 0 1</matrix>
                     <node id="Forearm_R" name="Forearm_R" sid="bone90" type="JOINT">
-                      <translate sid="translate">-20.8872 0 -0.000000</translate>
-                      <rotate sid="jointOrientZ">0 0 1 0</rotate>
-                      <rotate sid="jointOrientY">0 1 0 -0.738083</rotate>
-                      <rotate sid="jointOrientX">1 0 0 0</rotate>
+                      <matrix sid="transform">0.999917 0 -0.012881 -20.8872 0 1 0 0 0.012881 0 0.999917 -0.000000 0 0 0 1</matrix>
                       <node id="Hand_R" name="Hand_R" sid="bone91" type="JOINT">
-                        <translate sid="translate">-21.2497 0 -0.000000</translate>
-                        <rotate sid="jointOrientZ">0 0 1 0</rotate>
-                        <rotate sid="jointOrientY">0 1 0 0.440083</rotate>
-                        <rotate sid="jointOrientX">1 0 0 0</rotate>
+                        <matrix sid="transform">0.99997 0 0.00768 -21.2497 0 1 0 0 -0.00768 0 0.99997 -0.000000 0 0 0 1</matrix>
                         <node id="Index_01_R" name="Index_01_R" sid="bone92" type="JOINT">
-                          <translate sid="translate">-7.8084 -1.117 -2.38252</translate>
-                          <rotate sid="jointOrientZ">0 0 1 -1.20303</rotate>
-                          <rotate sid="jointOrientY">0 1 0 0</rotate>
-                          <rotate sid="jointOrientX">1 0 0 0</rotate>
+                          <matrix sid="transform">0.99978 0.020995 0 -7.8084 -0.020995 0.99978 0 -1.117 0 0 1 -2.38252 0 0 0 1</matrix>
                           <node id="Index_02_R" name="Index_02_R" sid="bone93" type="JOINT">
-                            <translate sid="translate">-3.66941 -0.00004 0</translate>
-                            <rotate sid="jointOrientZ">0 0 1 -2.07555</rotate>
-                            <rotate sid="jointOrientY">0 1 0 0</rotate>
-                            <rotate sid="jointOrientX">1 0 0 0</rotate>
+                            <matrix sid="transform">0.999344 0.036217 0 -3.66941 -0.036217 0.999344 0 -0.00004 0 0 1 0 0 0 0 1</matrix>
                             <node id="Index_03_R" name="Index_03_R" sid="bone94" type="JOINT">
-                              <translate sid="translate">-1.99157 0.000101 0</translate>
-                              <rotate sid="jointOrientZ">0 0 1 1.57796</rotate>
-                              <rotate sid="jointOrientY">0 1 0 0</rotate>
-                              <rotate sid="jointOrientX">1 0 0 0</rotate>
+                              <matrix sid="transform">0.999621 -0.027537 0 -1.99157 0.027537 0.999621 0 0.000101 0 0 1 0 0 0 0 1</matrix>
                               <extra>
                                 <technique profile="MAYA">
                                   <dynamic_attributes>
@@ -5145,20 +5258,11 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
                           </extra>
                         </node>
                         <node id="Middle_01_R" name="Middle_01_R" sid="bone95" type="JOINT">
-                          <translate sid="translate">-7.9692 -1.244 -0.687935</translate>
-                          <rotate sid="jointOrientZ">0 0 1 -3.02529</rotate>
-                          <rotate sid="jointOrientY">0 1 0 0</rotate>
-                          <rotate sid="jointOrientX">1 0 0 0</rotate>
+                          <matrix sid="transform">0.998606 0.052776 0 -7.9692 -0.052776 0.998606 0 -1.244 0 0 1 -0.687935 0 0 0 1</matrix>
                           <node id="Middle_02_R" name="Middle_02_R" sid="bone96" type="JOINT">
-                            <translate sid="translate">-3.92981 0.000598 0</translate>
-                            <rotate sid="jointOrientZ">0 0 1 -0.406675</rotate>
-                            <rotate sid="jointOrientY">0 1 0 0</rotate>
-                            <rotate sid="jointOrientX">1 0 0 0</rotate>
+                            <matrix sid="transform">0.999975 0.007097 0 -3.92981 -0.007097 0.999975 0 0.000598 0 0 1 0 0 0 0 1</matrix>
                             <node id="Middle_03_R" name="Middle_03_R" sid="bone97" type="JOINT">
-                              <translate sid="translate">-2.12689 -0.000323 0</translate>
-                              <rotate sid="jointOrientZ">0 0 1 2.55755</rotate>
-                              <rotate sid="jointOrientY">0 1 0 0</rotate>
-                              <rotate sid="jointOrientX">1 0 0 0</rotate>
+                              <matrix sid="transform">0.999004 -0.044622 0 -2.12689 0.044622 0.999004 0 -0.000323 0 0 1 0 0 0 0 1</matrix>
                               <extra>
                                 <technique profile="MAYA">
                                   <dynamic_attributes>
@@ -5187,20 +5291,11 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
                           </extra>
                         </node>
                         <node id="Ring_01_R" name="Ring_01_R" sid="bone98" type="JOINT">
-                          <translate sid="translate">-7.7958 -1.174 1.00147</translate>
-                          <rotate sid="jointOrientZ">0 0 1 -2.08952</rotate>
-                          <rotate sid="jointOrientY">0 1 0 0.000006</rotate>
-                          <rotate sid="jointOrientX">1 0 0 0</rotate>
+                          <matrix sid="transform">0.999335 0.036461 0 -7.7958 -0.036461 0.999335 0 -1.174 0 0 1 1.00147 0 0 0 1</matrix>
                           <node id="Ring_02_R" name="Ring_02_R" sid="bone99" type="JOINT">
-                            <translate sid="translate">-3.5808 0.00044 0.000009</translate>
-                            <rotate sid="jointOrientZ">0 0 1 -1.23482</rotate>
-                            <rotate sid="jointOrientY">0 1 0 -0.000006</rotate>
-                            <rotate sid="jointOrientX">1 0 0 0</rotate>
+                            <matrix sid="transform">0.999768 0.021549 0 -3.5808 -0.021549 0.999768 0 0.00044 0 0 1 0.000009 0 0 0 1</matrix>
                             <node id="Ring_03_R" name="Ring_03_R" sid="bone100" type="JOINT">
-                              <translate sid="translate">-2.00486 -0.000258 0</translate>
-                              <rotate sid="jointOrientZ">0 0 1 1.61538</rotate>
-                              <rotate sid="jointOrientY">0 1 0 0</rotate>
-                              <rotate sid="jointOrientX">1 0 0 0</rotate>
+                              <matrix sid="transform">0.999603 -0.02819 0 -2.00486 0.02819 0.999603 0 -0.000258 0 0 1 0 0 0 0 1</matrix>
                               <extra>
                                 <technique profile="MAYA">
                                   <dynamic_attributes>
@@ -5229,20 +5324,11 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
                           </extra>
                         </node>
                         <node id="Pinky_01_R" name="Pinky_01_R" sid="bone101" type="JOINT">
-                          <translate sid="translate">-7.5783 -1.069 2.56051</translate>
-                          <rotate sid="jointOrientZ">0 0 1 -0.145758</rotate>
-                          <rotate sid="jointOrientY">0 1 0 0.000016</rotate>
-                          <rotate sid="jointOrientX">1 0 0 0</rotate>
+                          <matrix sid="transform">0.999997 0.002543 0.000000 -7.5783 -0.002543 0.999997 0 -1.069 -0.000000 0 1 2.56051 0 0 0 1</matrix>
                           <node id="Pinky_02_R" name="Pinky_02_R" sid="bone102" type="JOINT">
-                            <translate sid="translate">-2.80921 -0.000146 -0.000000</translate>
-                            <rotate sid="jointOrientZ">0 0 1 -4.2177</rotate>
-                            <rotate sid="jointOrientY">0 1 0 -0.000016</rotate>
-                            <rotate sid="jointOrientX">1 0 0 0</rotate>
+                            <matrix sid="transform">0.997292 0.073546 -0.000000 -2.80921 -0.073546 0.997292 0 -0.000146 0.000000 0 1 -0.000000 0 0 0 1</matrix>
                             <node id="Pinky_03_R" name="Pinky_03_R" sid="bone103" type="JOINT">
-                              <translate sid="translate">-1.43941 0.000486 0</translate>
-                              <rotate sid="jointOrientZ">0 0 1 0.98418</rotate>
-                              <rotate sid="jointOrientY">0 1 0 0</rotate>
-                              <rotate sid="jointOrientX">1 0 0 0</rotate>
+                              <matrix sid="transform">0.999852 -0.017176 0 -1.43941 0.017176 0.999852 0 0.000486 0 0 1 0 0 0 0 1</matrix>
                               <extra>
                                 <technique profile="MAYA">
                                   <dynamic_attributes>
@@ -5271,20 +5357,11 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
                           </extra>
                         </node>
                         <node id="Thumb_01_R" name="Thumb_01_R" sid="bone104" type="JOINT">
-                          <translate sid="translate">-3.0465 1.53 -2.6194</translate>
-                          <rotate sid="jointOrientZ">0 0 1 -12.064</rotate>
-                          <rotate sid="jointOrientY">0 1 0 -24.648</rotate>
-                          <rotate sid="jointOrientX">1 0 0 60</rotate>
+                          <matrix sid="transform">0.888814 -0.248691 -0.38492 -3.0465 -0.189962 0.564444 -0.803317 1.53 0.417043 0.787119 0.454443 -2.6194 0 0 0 1</matrix>
                           <node id="Thumb_02_R" name="Thumb_02_R" sid="bone105" type="JOINT">
-                            <translate sid="translate">-2.80576 0.000017 -0.000003</translate>
-                            <rotate sid="jointOrientZ">0 0 1 -2.65694</rotate>
-                            <rotate sid="jointOrientY">0 1 0 0.992778</rotate>
-                            <rotate sid="jointOrientX">1 0 0 24.7779</rotate>
+                            <matrix sid="transform">0.998775 0.049341 -0.003713 -2.80576 -0.046348 0.906627 -0.41938 0.000017 -0.017326 0.419038 0.907803 -0.000003 0 0 0 1</matrix>
                             <node id="Thumb_03_R" name="Thumb_03_R" sid="bone106" type="JOINT">
-                              <translate sid="translate">-2.37605 0.00003 -0.000102</translate>
-                              <rotate sid="jointOrientZ">0 0 1 -5.40656</rotate>
-                              <rotate sid="jointOrientY">0 1 0 -0.3944</rotate>
-                              <rotate sid="jointOrientX">1 0 0 4.82199</rotate>
+                              <matrix sid="transform">0.995528 0.093312 -0.014749 -2.37605 -0.09422 0.992082 -0.08304 0.00003 0.006883 0.084058 0.996437 -0.000102 0 0 0 1</matrix>
                               <extra>
                                 <technique profile="MAYA">
                                   <dynamic_attributes>
@@ -5322,10 +5399,7 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
                         </extra>
                       </node>
                       <node id="ForearmTwist_R" name="ForearmTwist_R" sid="bone107" type="JOINT">
-                        <translate sid="translate">-10 0 0.000000</translate>
-                        <rotate sid="jointOrientZ">0 0 1 0</rotate>
-                        <rotate sid="jointOrientY">0 1 0 0</rotate>
-                        <rotate sid="jointOrientX">1 0 0 0</rotate>
+                        <matrix sid="transform">1 0 0 -10 0 1 0 0 0 0 1 0.000000 0 0 0 1</matrix>
                         <extra>
                           <technique profile="MAYA">
                             <dynamic_attributes>
@@ -5345,10 +5419,7 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
                       </extra>
                     </node>
                     <node id="UpperArmTwist_R" name="UpperArmTwist_R" sid="bone39" type="JOINT">
-                      <translate sid="translate">-6.99999 0 -0.000000</translate>
-                      <rotate sid="jointOrientZ">0 0 1 0</rotate>
-                      <rotate sid="jointOrientY">0 1 0 0</rotate>
-                      <rotate sid="jointOrientX">1 0 0 0</rotate>
+                      <matrix sid="transform">1 0 0 -6.99999 0 1 0 0 0 0 1 -0.000000 0 0 0 1</matrix>
                       <extra>
                         <technique profile="MAYA">
                           <dynamic_attributes>
@@ -5416,8 +5487,8 @@ dereferenceXRefs=0;cameraXFov=0;cameraYFov=1</comments>
       <extra>
         <technique profile="FCOLLADA">
           <start_time>0</start_time>
-          <end_time>1</end_time>
-          <fps>30</fps>
+          <end_time>1.45833</end_time>
+          <fps>24</fps>
         </technique>
       </extra>
     </visual_scene>

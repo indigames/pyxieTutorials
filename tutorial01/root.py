@@ -1,32 +1,32 @@
 """
-pyxie game engine
+indi game engine
 Tutorial01
 
 star ship moves when you touch the screen
 """
-import pyxie
-from pyxie import devtool
-from pyxie.apputil import graphicsHelper
-import pyvmath as vmath
+import igeCore as core
+from igeCore import devtool
+from igeCore.apputil import graphicsHelper
+import igeVmath as vmath
 import os.path
 
 # convert png to the format suitable for the platform (ship.png -> ship.pyxi)
 # devtool module can not be used in the app
 # this process should be completed in advance, not at runtime
 if not os.path.exists('ship.pyxi'):
-    devtool.convertTextureToPlatform('ship.png', 'ship', pyxie.TARGET_PLATFORM_PC, False, False)
+    devtool.convertTextureToPlatform('ship.png', 'ship', core.TARGET_PLATFORM_PC, False, False)
 
 # open or resize window (This function is valid only on PC,Ignored in smartphone apps)
-pyxie.window(True, 480, 640)
+core.window(True, 480, 640)
 
 ship = graphicsHelper.createSprite(100, 100, "ship")
 
-camera = pyxie.camera("cam01")
+camera = core.camera("cam01")
 camera.orthographicProjection = True
 camera.position = (0, 0, 100)
 
 # what you want to draw should be registered in showcase
-showcase = pyxie.showcase("case01")
+showcase = core.showcase("case01")
 showcase.add(ship)
 
 goal = vmath.vec2(0, 0)
@@ -35,7 +35,7 @@ dir = vmath.vec2(0, 1)
 
 loop = True
 while loop:
-    touch = pyxie.singleTouch()
+    touch = core.singleTouch()
     if touch is not None:
         goal = vmath.vec2(touch['cur_x'], touch['cur_y'])
 
@@ -46,14 +46,14 @@ while loop:
     if r < 0.98:
         n = vmath.cross(d, dir)
         if n > 0:
-            rot = vmath.mat_rotation(-5.0 * pyxie.getElapsedTime(), 2)
+            rot = vmath.mat_rotation(-5.0 * core.getElapsedTime(), 2)
         else:
-            rot = vmath.mat_rotation(5.0 * pyxie.getElapsedTime(), 2)
+            rot = vmath.mat_rotation(5.0 * core.getElapsedTime(), 2)
         dir = rot * dir
 
 
     if dist > 5.0:
-        pos = pos + dir * (pyxie.getElapsedTime() * 100.0)
+        pos = pos + dir * (core.getElapsedTime() * 100.0)
 
     # update the direction and position of the ship object
     ship.rotation = vmath.normalize(vmath.quat_rotation((0, 1), dir))
@@ -63,4 +63,4 @@ while loop:
     camera.shoot(showcase)
 
     # update frame buffer
-    pyxie.swap()
+    core.swap()

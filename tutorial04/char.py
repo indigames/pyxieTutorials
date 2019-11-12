@@ -1,15 +1,15 @@
 """
-pyxie game engine
+indi game engine
 Tutorial04
 
 char.py
 
 Character class
 """
-import pyxie
-from pyxie import devtool
-from pyxie import apputil
-import pyvmath as vmath
+import igeCore as core
+from igeCore import devtool
+from igeCore import apputil
+import igeVmath as vmath
 import os.path
 
 STATUS_STAY = 0
@@ -25,8 +25,8 @@ class Character():
     def __init__( self):
         self.currentState = STATUS_STAY
         self.nextState = STATUS_STAY
-        self.figure = pyxie.figure('Sapphiart/Sapphiart')
-        self.figure.connectAnimator(pyxie.ANIMETION_SLOT_A0, STATE_MOTION[self.currentState])
+        self.figure = core.figure('Sapphiart/Sapphiart')
+        self.figure.connectAnimator(core.ANIMETION_SLOT_A0, STATE_MOTION[self.currentState])
         self.currentDir= vmath.vec3(0,0,1)
         self.gorlDir= vmath.vec3(0,0,1)
         self.currentPosition = vmath.vec3(0,0,0)
@@ -51,9 +51,9 @@ class Character():
             self.currentDir = vmath.normalize(ROT * self.currentDir)
 
         if self.currentState == STATUS_RUN:
-            self.currentPosition += self.currentDir * 2.0 * pyxie.getElapsedTime()
+            self.currentPosition += self.currentDir * 2.0 * core.getElapsedTime()
         elif self.currentState == STATUS_WALK:
-            self.currentPosition += self.currentDir * 1.0 * pyxie.getElapsedTime()
+            self.currentPosition += self.currentDir * 1.0 * core.getElapsedTime()
 
         self.__transitMotion()
 
@@ -66,7 +66,7 @@ class Character():
     def __changeStatus(self, status):
         if status != self.currentState and status != self.nextState:
             self.nextState = status
-            self.figure.connectAnimator(pyxie.ANIMETION_SLOT_A1, STATE_MOTION[status])
+            self.figure.connectAnimator(core.ANIMETION_SLOT_A1, STATE_MOTION[status])
             self.transitTime = 0.0
 
     def __transitMotion(self):
@@ -74,13 +74,13 @@ class Character():
 
             if self.transitTime >= TRANSIT_TIME:
                 self.currentState = self.nextState
-                self.figure.connectAnimator(pyxie.ANIMETION_SLOT_A0, STATE_MOTION[self.currentState])
-                self.figure.connectAnimator(pyxie.ANIMETION_SLOT_A1)
+                self.figure.connectAnimator(core.ANIMETION_SLOT_A0, STATE_MOTION[self.currentState])
+                self.figure.connectAnimator(core.ANIMETION_SLOT_A1)
                 return
 
-            self.transitTime += pyxie.getElapsedTime()
+            self.transitTime += core.getElapsedTime()
             if self.transitTime > TRANSIT_TIME:
                 self.transitTime = TRANSIT_TIME
-            self.figure.setBlendingWeight(pyxie.ANIMETION_PART_A, self.transitTime / TRANSIT_TIME)
+            self.figure.setBlendingWeight(core.ANIMETION_PART_A, self.transitTime / TRANSIT_TIME)
 
 

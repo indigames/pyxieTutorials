@@ -4,9 +4,6 @@ repository
 https://github.com/indigames/pyxieTutorials.git
 
 
-
-
-
 -----------------------------
 How to run
 -----------------------------
@@ -21,6 +18,20 @@ install this tutorial
 
 
 -----------------------------
+How to deploy
+-----------------------------
+from pyxie import devtool
+devtool.deploy(folder, auther, title,version)
+
+"""
+folder(string): folderPath you wnat to deploy
+auther(string): your name
+title(string) : app title name
+version (string):string of version no (Don't use period(.))
+
+"""
+
+-----------------------------
  pyxie reference manual
 -----------------------------
-http://pyxiedoc.uunyan.com
+https://pyxiedoc.000webhostapp.com/
