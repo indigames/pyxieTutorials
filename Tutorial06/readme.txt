@@ -1,19 +1,15 @@
 indi game engine
 
-Tutorial06
+Tutorial05
 
-
-igeBullet tutorial
+Using openCV camera with ige
 
 
 root.py
-	program entry point
-	
-DynamicBox.py
-	class of 2d rectangle rigid body object	
+	entry point of program
 
-	
-befor running this tutorial, you have to install igeBullet
 
-[pip install igeBullet]
+befor running this tutorial, you have to install openCV
+
+[pip install openCV]
 
