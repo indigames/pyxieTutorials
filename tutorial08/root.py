@@ -1,9 +1,9 @@
 """
 """
-import pyxopenal
+import igeOpenAL
 import time
 
-sound = pyxopenal.sound()
+sound = igeOpenAL.sound()
 sound.init()
 
 # sound load cache
