@@ -1,7 +1,7 @@
 # indi game engine
 
 ## Tutorial08
-### igeopenal tutorial
+### igeOpenAL tutorial
 
 
 - root.py
@@ -9,15 +9,15 @@
 - sound folder
 	- sound resource
 
-### Before running this tutorial, you have to install igefirebase
-	[pip install igeopenal]
+### Before running this tutorial, you have to install igeOpenAL
+	[pip install igeOpenAL]
 
 ### Features
 - [ogg , wav] extension are supported
 - Preload supported
 
 ### Functions
-- **First, you need to import and init the firebase system**
+- **First, you need to import and init the sound system**
 	```
 	import pyxopenal
 
