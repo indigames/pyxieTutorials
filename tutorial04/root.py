@@ -28,7 +28,7 @@ controller = Controller()
 ground = graphicsHelper.createSprite(20.0,20.0,texture ='images/Dirt-2290', normal=(0,1,0))
 
 tex = core.texture("offscreen",256,256, depth=True)
-efig = graphicsHelper.createSprite(100, 100, tex)
+efig = graphicsHelper.createSprite(100, 100,tex)
 efig.position = vmath.vec3(-100, 200, 0)
 
 # what you want to draw should be registered in showcase

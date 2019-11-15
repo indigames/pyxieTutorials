@@ -18,7 +18,7 @@ boxinfo = []
 with open(castle + '.pickle', 'rb') as f:
     boxinfo = pickle.load(f)
 
-world = b.dynamicsWorld()
+world = b.world()
 
 planeShape = b.shape(b.STATIC_PLANE_PROXYTYPE, normal=(0,1,0), constant=-5)
 plane = b.rigidBody(planeShape, 0, (0,0,0), (0,0,0,1))
