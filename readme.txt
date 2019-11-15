@@ -1,4 +1,4 @@
-pyxie game engine tutorials
+Indi game engine tutorials
 
 repository
 https://github.com/indigames/pyxieTutorials.git
@@ -7,6 +7,8 @@ https://github.com/indigames/pyxieTutorials.git
 -----------------------------
 How to run
 -----------------------------
+Install visual studio
+
 install python3
 	from https://www.python.org/
 
@@ -34,4 +36,4 @@ version (string):string of version no (Don't use period(.))
 -----------------------------
  pyxie reference manual
 -----------------------------
-https://pyxiedoc.000webhostapp.com/
+https://pyxiedoc2.000webhostapp.com/

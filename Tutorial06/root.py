@@ -15,7 +15,7 @@ capture = cv2.VideoCapture(0)
 width = capture.get(3)  # width
 height = capture.get(4)  # height
 
-tex = core.texture("photo", int(width), int(height))   #RGB format
+tex = core.texture("photo", int(width), int(height), core.GL_RGB)   #RGB format
 efig = graphicsHelper.createSprite(width*0.001, height*0.001, tex)
 efig.position = vmath.vec3(-0.15, 0.3, 0)
 showcase.add(efig)
