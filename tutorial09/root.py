@@ -13,6 +13,9 @@ fb_admob.init(("ca-app-pub-1009273426450955~3020262852", "ca-app-pub-39402560999
 fb_auth = igefirebase.auth()
 fb_auth.init()
 
+fb_messaging = igefirebase.messaging()
+fb_messaging.init()
+
 # firebase analytics testcase
 fb_analytics.setUserProperty("sign_up_method", "google")
 fb_analytics.setUserId("uber_user_510")
@@ -56,6 +59,7 @@ print('isPlayerAuthenticated : ' + str(fb_auth.isPlayerAuthenticated()))
 fb_analytics.release()
 fb_admob.release()
 fb_auth.release()
+fb_messaging.release()
 
 igefirebase.release()
 

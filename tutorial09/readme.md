@@ -16,6 +16,7 @@
 	- Admob [ Android / iOS ]
 	- Analytics [ Android / iOS ]
 	- Authentication [ Android / iOS / Desktop ]
+	- Messaging	[ Android / iOS ]
 
 ### Functions
 #### Firebase
@@ -120,6 +121,21 @@
 	```
 	fb_auth.release()
 	```
+
+#### Firebase Messaging
+> https://firebase.google.com/docs/cloud-messaging/cpp/client
+- _First, init the firebase messaging system_
+	```
+	fb_messaging = igefirebase.messaging()
+	fb_messaging.init()
+	```
+- _Sending the messaging(Push Notification) via console
+	> https://firebase.google.com/docs/cloud-messaging/cpp/send-with-console
+- _Release it when everything is done_
+	```
+	fb_auth.release()
+	```
+
 ### Notes
 	- Firebase C++ SDK desktop support is a beta feature so only a subset of features supported for now.
 		- Authentication
