@@ -3,12 +3,16 @@
 import igefirebase
 import time
 
+def AdmobListener(adsType, amount, reward):
+    print('AdmobListener ads=' + adsType + ' amount=' + str(amount) +' reward=' + str(reward))
+
 igefirebase.init()
 fb_analytics = igefirebase.analytics()
 fb_analytics.init()
 
 fb_admob = igefirebase.admob()
-fb_admob.init(("ca-app-pub-1009273426450955~3020262852", "ca-app-pub-3940256099942544/6300978111", "ca-app-pub-3940256099942544/1033173712", "ca-app-pub-3940256099942544/2888167318"), (320, 50), 1, 1, ("game", "games", "gamess", "gamesss"), (12, 11, 1988), ("112F1C63CDDE8BAAEE287FDE3BA4C662",))
+fb_admob.init(android=(("ca-app-pub-1009273426450955~3020262852", "ca-app-pub-3940256099942544/6300978111", "ca-app-pub-3940256099942544/1033173712", "ca-app-pub-3940256099942544/2888167318"), (320, 50), 1, 1, ("game", "games", "gamess", "gamesss"), (12, 11, 1988), ("112F1C63CDDE8BAAEE287FDE3BA4C662",)), ios=(("ca-app-pub-1009273426450955~8681696761", "ca-app-pub-3940256099942544/2934735716", "ca-app-pub-3940256099942544/4411468910", "ca-app-pub-3940256099942544/6386090517"), (320, 50), 1, 1, ("game", "games", "gamess", "gamesss"), (12, 11, 1988), ("112F1C63CDDE8BAAEE287FDE3BA4C662",)))
+fb_admob.registerEventListener(AdmobListener)
 
 fb_auth = igefirebase.auth()
 fb_auth.init()
