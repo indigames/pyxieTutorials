@@ -26,7 +26,7 @@ def convertVoxelModel(filename, src, dest, platform,scale):
         efig.setVertexElements(i, core.ATTRIBUTE_ID_POSITION, outverts)
         efig.setJoint(i, position=aabb.center)
 
-        min, max = efig.getMeshAABB(i)
+        min, max = efig.getAABB(i)
         pos, rot, _ = efig.getJoint(i)
         data = ((pos.x, pos.y, pos.z), (rot.x, rot.y, rot.z, rot.w), (min.x, min.y, min.z), (max.x, max.z, max.z))
         boxinfo.append(data)
