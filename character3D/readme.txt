@@ -1,9 +1,10 @@
+-------------------------------------
 indi game engine
 
-Tutorial04
-
+character3D
+-------------------------------------
 Walk through 3d character with animation
-
+Move the character using the virtual controller
 
 root.py
 	entry point of program
@@ -47,3 +48,6 @@ Dirt-2290.png
 	Ground image data
 	http://www.cadhatch.com/seamless-grass-textures/4588167774
 	
+
+３Dキャラクターウォークスルーサンプル
+仮想コントローラーを使ってキャラクターを動かします

@@ -1,2 +1,2 @@
 from igeCore import devtool
-devtool.deploy('text', 'tutorial', 'text', '10')
+devtool.deploy('bullet', 'tutorial', 'bullet', '10')

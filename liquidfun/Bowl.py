@@ -1,7 +1,7 @@
 
-from pyxie.apputil import graphicsHelper
-import pyvmath as vmath
-import pyxie
+from igeCore.apputil import graphicsHelper
+import igeVmath as vmath
+import igeCore as core
 import Box2D
 
 import Defines as DEF
@@ -126,7 +126,7 @@ class Bowl:
         radius = self.particleSystem.GetRadius()
 
         # important: pass posBuff.this and colorBuff.this as SwigPyObject (parsable at C++)
-        self.particle = pyxie.particle(
+        self.particle = core.particle(
             posBuff.this, colorBuff.this, count, radius)
         showcase.add(self.particle)
 
@@ -177,7 +177,7 @@ class Bowl:
         invproj = vmath.inverse(cam.projectionMatrix)
         invview = cam.viewInverseMatrix
 
-        w, h = pyxie.viewSize()
+        w, h = core.viewSize()
         x = scrx / w * 2
         y = scry / h * 2
 

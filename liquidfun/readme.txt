@@ -1,6 +1,8 @@
+-------------------------------------
 pyxie game engine
 
-Tutorial05
+liquidfun
+-------------------------------------
 
 using Box2D with pyxie
 
@@ -17,3 +19,7 @@ Bowl.py
 Requirement
     * LiquidFun: https://github.com/indigames/pybox2d.git
     * PyxiePython (internal dev branch)
+    
+    [pip install git+https://github.com/indigames/pybox2d.git@develop]
+
+Liquidfunを使った流体アニメーションのサンプル

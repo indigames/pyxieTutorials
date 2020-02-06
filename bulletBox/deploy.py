@@ -49,14 +49,34 @@ def convertVoxelModel(filename, src, dest, platform,scale):
     efig.mergeMesh()
     efig.saveFigure(os.path.join(dest, filename))
 
-def deployPlatform(src, model, appName, userID, appVersion, platform):
+
+def deployPlatform(src, model, appName, userID, appVersion, platform, scale):
+
+    def makeProjectDir(user, app, version, platform):
+        root = '/'
+        if launch_server.mkdir(root, user) == 0:
+            root += user
+            if launch_server.mkdir(root, app) == 0:
+                root += '/'
+                root += app
+                if launch_server.mkdir(root, version) == 0:
+                    root += '/'
+                    root += version
+                    if launch_server.mkdir(root, apputil.platformName(platform))==0:
+                        return True
+        return False
+
+
     dest = '.tmp/stage/' + appName + '/' + apputil.platformName(platform)
     apputil.makeDirectories(dest)
-    convertVoxelModel(model, src, dest, platform)
+    convertVoxelModel(model, src, dest, platform, scale)
     #devtool.appendFileBehavior('.pickle','copy')
     devtool.compileAndCopy(src, dest)
     devtool.packFolders(dest)
+
+    if makeProjectDir(userID, appName, appVersion, platform) != True:
+        return
+
     addr = '/' + userID + '/' + appName + '/' + str(appVersion) + '/' + apputil.platformName(platform)
     launch_server.upload_files(dest, addr)
-
 

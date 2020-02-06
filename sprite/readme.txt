@@ -1,7 +1,8 @@
+-------------------------------------
 indi game engine
 
-Tutorial01
-
+sprite
+-------------------------------------
 simple 2d rendaring demo
 
 star ship moves when you touch the screen
@@ -15,3 +16,7 @@ ship.png
 	asset image
 	get from https://opengameart.org/content/modular-ships
 	cc0 License
+
+
+
+２Dスプライトオブジェクト描画サンプル

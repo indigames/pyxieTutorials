@@ -1,9 +1,9 @@
+-------------------------------------
 indi game engine
 
-Tutorial02
-
+imgui
+-------------------------------------
 using imgui with ige
-
 
 root.py
 	program entry point
@@ -19,3 +19,6 @@ https://pyimgui.readthedocs.io/en/latest/guide/first-steps.html
 
 beforrunning this tutorial, you have to install imgui
 [pip install imgui]
+
+
+IMGUIを利用したGUIのサンプル

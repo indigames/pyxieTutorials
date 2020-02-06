@@ -1,7 +1,8 @@
+-------------------------------------
 indi game engine
 
-Tutorial03
-
+Box2D
+-------------------------------------
 using Box2D with ige
 
 
@@ -24,3 +25,10 @@ befor running this tutorial, you have to install Box2D
 box2d-py uses swig for installation.
 Please install swig in advance
 
+
+
+
+Box2Dを使った２Dフィジックスのサンプル
+
+実行前にbox2d-pyをインストールする必要があります
+[pip install box2d-py]
