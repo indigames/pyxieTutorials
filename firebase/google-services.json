@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "826848322706",
+    "firebase_url": "https://indigamesengine.firebaseio.com",
+    "project_id": "indigamesengine",
+    "storage_bucket": "indigamesengine.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:826848322706:android:d73c597b8a0e2b4cfa724b",
+        "android_client_info": {
+          "package_name": "com.kiharushishikura.igelauncherandroid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "826848322706-sjhgaai0jmh9u8hvobcqkgltpnltoufp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRHyaxeL4dawZIXvzTJ2KWPDcaK2RC4XU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "826848322706-sjhgaai0jmh9u8hvobcqkgltpnltoufp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
