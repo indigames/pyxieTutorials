@@ -6,7 +6,7 @@ You can install it using the PyPI:
 
 	pip install igeSound
 ### Features
-- (ogg , wav) extension are supported
+- (ogg , wav, mp3, flac) extension are supported
 - Caching, preloading, streaming is supported
 ### Functions
 # First, you need to import and init the sound system
@@ -20,7 +20,7 @@ _sound.init()
 # Play the sound
 ```python
 # (sound_name , stream = False, loop = False)
-sound.play('sound/background.ogg', False, False)
+_sound.play('sound/background.ogg', False, False)
 
 # I highly recommend to use streaming for ogg background music
 ```
