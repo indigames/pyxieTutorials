@@ -7,10 +7,13 @@ _sound = sound()
 _sound.init()
 
 # sound load cache
-_sound.load('sound/beep2.ogg');
+# _sound.load('sound/beep2.ogg');
 
 # play
-_sound.play('sound/beep2.ogg', False, True)
+_sound.play('sound/beep.wav', False, True)
+# _sound.play('sound/beep.ogg', False, True)
+# _sound.play('sound/attack.mp3', False, True)
+# _sound.play('sound/attack.flac', False, True)
 
 # Wait for 5 seconds
 time.sleep(5)
