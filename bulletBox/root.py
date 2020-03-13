@@ -48,5 +48,6 @@ while True:
         figure.setJoint(index, position=bd.position, rotation=bd.rotation)
         index += 1
 
+    core.update
     cam.shoot(showcase)
     core.swap()

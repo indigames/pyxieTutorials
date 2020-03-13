@@ -61,6 +61,8 @@ while loop:
     ship.rotation = vmath.normalize(vmath.quat_rotation((0, 1), dir))
     ship.position = pos
 
+    core.update()
+
     # render the objects contained in showcase from the camera.
     profiler = core.profiler('camera.shoot')
     camera.shoot(showcase)

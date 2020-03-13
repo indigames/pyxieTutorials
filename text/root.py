@@ -14,5 +14,6 @@ camera.position = (0, 0, 100)
 
 
 while True:
+    core.update()
     camera.shoot(case)
     core.swap()

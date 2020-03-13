@@ -59,6 +59,9 @@ while loop:
     ship.rotation = vmath.normalize(vmath.quat_rotation((0, 1), dir))
     ship.position = pos
 
+    # update core
+    core.update()
+
     # render the objects contained in showcase from the camera.
     camera.shoot(showcase)
 
