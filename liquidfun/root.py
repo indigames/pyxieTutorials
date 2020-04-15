@@ -43,5 +43,6 @@ while True:
     for obj in objects:
         obj.update()
 
+    core.update()
     cam.shoot(showcase)
     core.swap()

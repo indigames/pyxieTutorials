@@ -56,6 +56,7 @@ while loop:
         moveVector = vmath.vec3(touch['cur_x'] - touch['org_x'], 0, -(touch['cur_y'] - touch['org_y']))
         d = vmath.length(moveVector)
 
+    core.update()
     viewMat = cam.getWalkThroughMatrix()
     moveVector = vmath.vec3(viewMat * moveVector)
     char.step(moveVector)
