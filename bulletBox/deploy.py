@@ -13,7 +13,10 @@ def convertVoxelModel(filename, src, dest, platform,scale):
     devtool.loadCollada(os.path.join(src, filename+'.dae'), efig)
 
     boxinfo = []
+
     for i in range(efig.numMeshes):
+        # 頂点をボクセルの中心かからの相対座標に変換して
+        # 原点からボクセルの中心までの距離をジョイントにいれる
         aabb = vmath.aabb()
         inverts = efig.getVertexElements(i, core.ATTRIBUTE_ID_POSITION)
         for pos in inverts:
@@ -48,7 +51,6 @@ def convertVoxelModel(filename, src, dest, platform,scale):
 
     efig.mergeMesh()
     efig.saveFigure(os.path.join(dest, filename))
-
 
 def deployPlatform(src, model, appName, userID, appVersion, platform, scale):
 
