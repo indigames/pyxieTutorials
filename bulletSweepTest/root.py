@@ -35,26 +35,23 @@ ground = addObject(world, igeBullet.BOX_SHAPE_PROXYTYPE, 0, position=(0,0,0), si
 bodyA = addObject(world, igeBullet.BOX_SHAPE_PROXYTYPE, 1, position=(8,6,8), name='bodyA')
 bodyB = addObject(world, igeBullet.BOX_SHAPE_PROXYTYPE, 1, position=(-8,6,-8), name='bodyB')
 addObject(world, igeBullet.SPHERE_SHAPE_PROXYTYPE, 1, position=(2,6,0), name='sphere')
-addObject(world, igeBullet.CAPSULE_SHAPE_PROXYTYPE, 1, position=(0,8,2), name='capsule')
-addObject(world, igeBullet.CONE_SHAPE_PROXYTYPE, 1, position=(-2,10,0), name='cone')
-addObject(world, igeBullet.CYLINDER_SHAPE_PROXYTYPE, 1, position=(0,12,-2), name='cylinder')
+addObject(world, igeBullet.CAPSULE_SHAPE_PROXYTYPE, 1, position=(0,6,2), name='capsule')
+addObject(world, igeBullet.CONE_SHAPE_PROXYTYPE, 1, position=(-2,6,0), name='cone')
+addObject(world, igeBullet.SPHERE_SHAPE_PROXYTYPE, 1, position=(2,9,0), name='sphere')
+addObject(world, igeBullet.CAPSULE_SHAPE_PROXYTYPE, 1, position=(0,9,2), name='capsule')
+addObject(world, igeBullet.CONE_SHAPE_PROXYTYPE, 1, position=(-2,9,0), name='cone')
 
 bodyA.collisionGroupBit = 4
-
 ground.collisionGroupMask = 7
 
-
 while True:
-
-    rv = world.convexSweepTest(bodyA.shape, bodyA.transform, bodyB.transform)
-
+    rv = world.convexSweepTest(bodyA.shape, bodyA.transform, bodyB.transform, 0.1)
     print('----------------------')
     for i in rv:
-        print(i['object'].name)
+        print(i['collisionObject'].name)
 
     world.step()
     Utils().Update(world)
     camera.shoot(case)
-
 
     core.swap()
