@@ -35,5 +35,7 @@ while True:
     world.Step(core.getElapsedTime(), 10, 10)
     for box in boxes:
         box.update()
+
+    core.update()
     cam.shoot(showcase)
     core.swap()

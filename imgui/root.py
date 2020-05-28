@@ -30,6 +30,8 @@ while True:
         press = touch['is_holded'] | touch['is_moved']
     impl.process_inputs()
 
+    core.update()
+
     imgui.new_frame()
 
     if imgui.begin_main_menu_bar():
