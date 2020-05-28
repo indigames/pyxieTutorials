@@ -8,9 +8,9 @@ import os
 castle = 'Castle_200'
 
 # pre process
-if not os.path.exists(castle + '.pickle'):
-    import deploy
-    deploy.convertVoxelModel(castle, '.', '.', core.TARGET_PLATFORM_PC, 10)
+#if not os.path.exists(castle + '.pickle'):
+import deploy
+deploy.convertVoxelModel(castle, '.', '.', core.TARGET_PLATFORM_PC, 10)
 
 core.window(True, 480, 640)
 
@@ -42,11 +42,10 @@ showcase.add(figure)
 
 while True:
     world.step()
-
     index = 1
     for bd in bodies:
-        figure.setJoint(index, position=bd.position, rotation=bd.rotation)
-        index += 1
+       figure.setJoint(index, position=bd.position, rotation=bd.rotation)
+       index += 1
 
     core.update
     cam.shoot(showcase)

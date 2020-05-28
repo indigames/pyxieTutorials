@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>kiharushishikura</author>
+      <authoring_tool>OpenCOLLADA2018;  Version: 1.6;  Revision: developer_version</authoring_tool>
+      <comments>
+			ColladaMaya export options: 
+			bakeTransforms=1;relativePaths=0;preserveSourceTree=0;copyTextures=0;exportTriangles=0;exportCgfxFileReferences=1;
+			isSampling=0;curveConstrainSampling=0;removeStaticCurves=1;exportPhysics=0;exportConvexMeshGeometries=1;exportPolygonMeshes=1;exportLights=1;
+			exportCameras=1;exportAnimationsOnly=0;exportSeparateFile=0;modelNameDAE=;exportJoints=1;exportSkin=1;exportAnimations=1;exportOptimizedBezierAnimation=0;exportInvisibleNodes=0;exportDefaultCameras=0;
+			exportTexCoords=1;exportNormals=1;exportNormalsPerVertex=1;exportVertexColors=1;exportVertexColorsPerVertex=1;
+			exportTexTangents=0;exportTangents=0;exportReferencedMaterials=0;exportMaterialsOnly=0;
+			exportXRefs=1;dereferenceXRefs=1;exportCameraAsLookat=0;cameraXFov=0;cameraYFov=1;encodedNames=1;doublePrecision=0
+		</comments>
+      <source_data>file://Mac/Home/Documents/maya/projects/default/%96%B3%91%E8</source_data>
+    </contributor>
+    <created>2020-03-16T14:11:02</created>
+    <modified>2020-03-16T14:11:02</modified>
+    <unit name="centimeter" meter="0.01"/>
+    <up_axis>Y_UP</up_axis>
+  </asset>
+  <library_materials>
+    <material id="lambert1" name="lambert1">
+      <instance_effect url="#lambert1-fx"/>
+    </material>
+  </library_materials>
+  <library_effects>
+    <effect id="lambert1-fx">
+      <profile_COMMON>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <color>0 0.8 0.8 1</color>
+            </diffuse>
+            <transparent opaque="RGB_ZERO">
+              <color>0 0 0 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADAMaya">
+          <originalMayaNodeId sid="originalMayaNodeId" type="string">lambert1</originalMayaNodeId>
+        </technique>
+      </extra>
+    </effect>
+  </library_effects>
+  <library_geometries>
+    <geometry id="pConeShape1" name="pConeShape1">
+      <mesh>
+        <source id="pConeShape1-positions" name="pConeShape1-positions">
+          <float_array id="pConeShape1-positions-array" count="186">0.1811509 -1 -0.05885953 0.1540961 -1 -0.1119574 0.1119573 -1 -0.1540962 0.05885944 -1 -0.1811509 0 -1 -0.1904733 -0.0588595 -1 -0.1811509 -0.1119574 -1 -0.1540962 -0.1540962 -1 -0.1119574 -0.1811508 -1 -0.05885951 -0.1904732 -1 0 -0.1811508 -1 0.05885941 -0.1540961 -1 0.1119573 -0.1119574 -1 0.154096 -0.05885948 -1 0.1811507 0 -1 0.1904731 0.0588594 -1 0.1811507 0.1119573 -1 0.154096 0.154096 -1 0.1119573 0.1811507 -1 0.05885939 0.1904731 -1 0 0.9510571 -1 -0.3090172 0.8090175 -1 -0.5877856 0.5877856 -1 -0.8090175 0.3090172 -1 -0.951057 0 -1 -1 -0.3090172 -1 -0.951057 -0.5877855 -1 -0.8090173 -0.8090172 -1 -0.5877854 -0.9510568 -1 -0.3090171 -1 -1 0 -0.9510568 -1 0.3090171 -0.8090172 -1 0.5877854 -0.5877854 -1 0.8090171 -0.3090171 -1 0.9510567 0 -1 1 0.309017 -1 0.9510566 0.5877852 -1 0.8090171 0.809017 -1 0.5877853 0.9510565 -1 0.309017 1 -1 0 0 1 0 0.1811509 -8.670982 -0.05885953 0.1540961 -8.670982 -0.1119574 0 -8.670982 0 0.1119573 -8.670982 -0.1540962 0.05885944 -8.670982 -0.1811509 0 -8.670982 -0.1904733 -0.0588595 -8.670982 -0.1811509 -0.1119574 -8.670982 -0.1540962 -0.1540962 -8.670982 -0.1119574 -0.1811508 -8.670982 -0.05885951 -0.1904732 -8.670982 0 -0.1811508 -8.670982 0.05885941 -0.1540961 -8.670982 0.1119573 -0.1119574 -8.670982 0.154096 -0.05885948 -8.670982 0.1811507 0 -8.670982 0.1904731 0.0588594 -8.670982 0.1811507 0.1119573 -8.670982 0.154096 0.154096 -8.670982 0.1119573 0.1811507 -8.670982 0.05885939 0.1904731 -8.670982 0</float_array>
+          <technique_common>
+            <accessor source="#pConeShape1-positions-array" count="62" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="pConeShape1-normals" name="pConeShape1-normals">
+          <float_array id="pConeShape1-normals-array" count="366">0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -0.9999999 0 0 -0.9999999 0 0 -1 0 0 -0.9999999 0 0 -1 0 0 -1 0 0 -0.9999999 0 0 -0.9999999 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -0.9999999 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0.850651 0.4472139 -0.2763924 0.7236067 0.4472138 -0.5257311 0 1 0 0.5257309 0.4472138 -0.7236067 0.2763931 0.4472138 -0.8506508 0 0.4472138 -0.8944271 -0.2763933 0.4472137 -0.8506507 -0.5257313 0.4472137 -0.7236066 -0.7236068 0.4472137 -0.525731 -0.8506508 0.4472137 -0.2763931 -0.8944272 0.4472137 0 -0.8506508 0.4472137 0.2763932 -0.7236066 0.4472136 0.5257311 -0.525731 0.4472136 0.7236068 -0.2763931 0.4472136 0.8506508 0 0.4472136 0.8944272 0.2763933 0.4472136 0.8506508 0.5257311 0.4472136 0.7236068 0.7236068 0.4472136 0.5257311 0.8506508 0.4472136 0.2763932 0.8944272 0.4472136 0 0.8090168 0 -0.5877855 0.9510569 0 -0.3090156 0.9510569 0 -0.3090156 0.8090168 0 -0.5877855 0.587785 0 -0.8090171 0.587785 0 -0.8090171 0.3090168 0 -0.9510566 0.3090168 0 -0.9510566 0 0 -1 0 0 -1 -0.3090169 0 -0.9510566 -0.3090169 0 -0.9510566 -0.5877853 0 -0.809017 -0.5877853 0 -0.809017 -0.8090172 0 -0.5877849 -0.8090172 0 -0.5877849 -0.9510567 0 -0.3090164 -0.9510567 0 -0.3090164 -1 0 0 -1 0 0 -0.9510565 0 0.3090172 -0.9510565 0 0.3090172 -0.809017 0 0.5877851 -0.809017 0 0.5877851 -0.5877854 0 0.8090168 -0.5877854 0 0.8090168 -0.3090166 0 0.9510566 -0.3090166 0 0.9510566 0 0 1 0 0 1 0.3090169 0 0.9510565 0.3090169 0 0.9510565 0.5877851 0 0.8090171 0.5877851 0 0.8090171 0.8090171 0 0.5877852 0.8090171 0 0.5877852 0.9510567 0 0.3090165 0.9510567 0 0.3090165 1 0 0 1 0 0</float_array>
+          <technique_common>
+            <accessor source="#pConeShape1-normals-array" count="122" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="pConeShape1-map1" name="pConeShape1-map1">
+          <float_array id="pConeShape1-map1-array" count="166">0.6188821 0.2113729 0.6011272 0.1765268 0.5734732 0.1488728 0.5386271 0.1311179 0.5 0.1249999 0.4613729 0.1311179 0.4265268 0.1488728 0.3988729 0.1765268 0.3811179 0.2113729 0.375 0.25 0.3811179 0.2886271 0.3988729 0.3234732 0.4265268 0.3511271 0.4613729 0.3688821 0.5 0.375 0.5386271 0.3688821 0.5734732 0.3511271 0.6011271 0.3234732 0.6188821 0.2886271 0.625 0.25 0.7377643 0.1727457 0.7022544 0.1030536 0.6469464 0.04774563 0.5772543 0.01223575 0.5 0 0.4227457 0.01223576 0.3530536 0.04774567 0.2977457 0.1030536 0.2622358 0.1727457 0.2499999 0.25 0.2622358 0.3272543 0.2977457 0.3969463 0.3530537 0.4522543 0.4227457 0.4877642 0.5 0.5 0.5772542 0.4877641 0.6469463 0.4522543 0.7022542 0.3969463 0.7377641 0.3272542 0.75 0.25 0.25 0.5 0.275 0.5 0.3 0.5 0.325 0.5 0.35 0.5 0.375 0.5 0.4 0.5 0.425 0.5 0.45 0.5 0.4750001 0.5 0.5000001 0.5 0.525 0.5 0.55 0.5 0.575 0.5 0.6 0.5 0.6249999 0.5 0.6499999 0.5 0.6749999 0.5 0.6999999 0.5 0.7249998 0.5 0.7499998 0.5 0.5 0.25 0.5 1 0.6011272 0.1765268 0.6188821 0.2113729 0.5734732 0.1488728 0.5386271 0.1311179 0.5 0.1249999 0.4613729 0.1311179 0.4265268 0.1488728 0.3988729 0.1765268 0.3811179 0.2113729 0.375 0.25 0.3811179 0.2886271 0.3988729 0.3234732 0.4265268 0.3511271 0.4613729 0.3688821 0.5 0.375 0.5386271 0.3688821 0.5734732 0.3511271 0.6011271 0.3234732 0.6188821 0.2886271 0.625 0.25</float_array>
+          <technique_common>
+            <accessor source="#pConeShape1-map1-array" count="83" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="pConeShape1-vertices" name="pConeShape1-vertices">
+          <input semantic="POSITION" source="#pConeShape1-positions"/>
+        </vertices>
+        <polylist material="initialShadingGroup" count="80">
+          <input semantic="VERTEX" source="#pConeShape1-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#pConeShape1-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#pConeShape1-map1" offset="2" set="0"/>
+          <vcount>4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4</vcount>
+          <p>0 0 0 1 1 1 21 2 21 20 3 20 1 1 1 2 4 2 22 5 22 21 2 21 2 4 2 3 6 3 23 7 23 22 5 22 3 6 3 4 8 4 24 9 24 23 7 23 4 8 4 5 10 5 25 11 25 24 9 24 5 10 5 6 12 6 26 13 26 25 11 25 6 12 6 7 14 7 27 15 27 26 13 26 7 14 7 8 16 8 28 17 28 27 15 27 8 16 8 9 18 9 29 19 29 28 17 28 9 18 9 10 20 10 30 21 30 29 19 29 10 20 10 11 22 11 31 23 31 30 21 30 11 22 11 12 24 12 32 25 32 31 23 31 12 24 12 13 26 13 33 27 33 32 25 32 13 26 13 14 28 14 34 29 34 33 27 33 14 28 14 15 30 15 35 31 35 34 29 34 15 30 15 16 32 16 36 33 36 35 31 35 16 32 16 17 34 17 37 35 37 36 33 36 17 34 17 18 36 18 38 37 38 37 35 37 18 36 18 19 38 19 39 39 39 38 37 38 19 38 19 0 0 0 20 3 20 39 39 39 42 40 63 41 41 64 43 42 61 44 43 65 42 40 63 43 42 61 45 44 66 44 43 65 43 42 61 46 45 67 45 44 66 43 42 61 47 46 68 46 45 67 43 42 61 48 47 69 47 46 68 43 42 61 49 48 70 48 47 69 43 42 61 50 49 71 49 48 70 43 42 61 51 50 72 50 49 71 43 42 61 52 51 73 51 50 72 43 42 61 53 52 74 52 51 73 43 42 61 54 53 75 53 52 74 43 42 61 55 54 76 54 53 75 43 42 61 56 55 77 55 54 76 43 42 61 57 56 78 56 55 77 43 42 61 58 57 79 57 56 78 43 42 61 59 58 80 58 57 79 43 42 61 60 59 81 59 58 80 43 42 61 61 60 82 60 59 81 43 42 61 41 41 64 61 60 82 43 42 61 20 61 40 21 62 41 40 63 62 21 62 41 22 64 42 40 63 62 22 64 42 23 65 43 40 63 62 23 65 43 24 66 44 40 63 62 24 66 44 25 67 45 40 63 62 25 67 45 26 68 46 40 63 62 26 68 46 27 69 47 40 63 62 27 69 47 28 70 48 40 63 62 28 70 48 29 71 49 40 63 62 29 71 49 30 72 50 40 63 62 30 72 50 31 73 51 40 63 62 31 73 51 32 74 52 40 63 62 32 74 52 33 75 53 40 63 62 33 75 53 34 76 54 40 63 62 34 76 54 35 77 55 40 63 62 35 77 55 36 78 56 40 63 62 36 78 56 37 79 57 40 63 62 37 79 57 38 80 58 40 63 62 38 80 58 39 81 59 40 63 62 39 81 59 20 61 60 40 63 62 1 82 1 0 83 0 41 84 64 42 85 63 2 86 2 1 82 1 42 85 63 44 87 65 3 88 3 2 86 2 44 87 65 45 89 66 4 90 4 3 88 3 45 89 66 46 91 67 5 92 5 4 90 4 46 91 67 47 93 68 6 94 6 5 92 5 47 93 68 48 95 69 7 96 7 6 94 6 48 95 69 49 97 70 8 98 8 7 96 7 49 97 70 50 99 71 9 100 9 8 98 8 50 99 71 51 101 72 10 102 10 9 100 9 51 101 72 52 103 73 11 104 11 10 102 10 52 103 73 53 105 74 12 106 12 11 104 11 53 105 74 54 107 75 13 108 13 12 106 12 54 107 75 55 109 76 14 110 14 13 108 13 55 109 76 56 111 77 15 112 15 14 110 14 56 111 77 57 113 78 16 114 16 15 112 15 57 113 78 58 115 79 17 116 17 16 114 16 58 115 79 59 117 80 18 118 18 17 116 17 59 117 80 60 119 81 19 120 19 18 118 18 60 119 81 61 121 82 0 83 0 19 120 19 61 121 82 41 84 64</p>
+        </polylist>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADAMaya">
+          <originalMayaNodeId sid="originalMayaNodeId">pConeShape1</originalMayaNodeId>
+          <double_sided sid="double_sided">1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="VisualSceneNode" name="____">
+      <node id="_pCone1" name="pCone1" type="NODE">
+        <matrix sid="transform">0.445627 0 0 0 0 0 0.445627 0 0 -0.445627 0 -1.927351 0 0 0 1</matrix>
+        <instance_geometry url="#pConeShape1">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="initialShadingGroup" target="#lambert1"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+        <extra>
+          <technique profile="OpenCOLLADAMaya">
+            <originalMayaNodeId sid="originalMayaNodeId" type="string">pCone1</originalMayaNodeId>
+          </technique>
+        </extra>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#VisualSceneNode"/>
+  </scene>
+  <extra>
+    <technique profile="COLLADA">
+      <source_data_base_uri>file://Mac/Home/Documents/maya/projects/default/</source_data_base_uri>
+    </technique>
+  </extra>
+</COLLADA>

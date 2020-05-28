@@ -11,6 +11,7 @@ class Utils:
     shader = core.shaderGenerator()
     shader.setColorTexture(True)
     shader.setNumDirLamp(1)
+    shader.setAmbientType(core.AMBIENT_TYPE_AMBIENT)
     shader.setBoneCondition(1, 100)
     _efig = core.editableFigure('bullet')
     _efig.addMaterial("mate", shader)
