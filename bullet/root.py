@@ -37,6 +37,7 @@ select = -1
 demo = None
 
 while True:
+    core.update()
     world.step()
     camera.shoot(case)
 

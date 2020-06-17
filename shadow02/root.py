@@ -12,10 +12,10 @@ from char import Character
 from cam import TargetCamera
 from controller import Controller
 
-devtool.convertAssets('.','.', core.TARGET_PLATFORM_PC)
+devtool.convertAssets('.','.', core.TARGET_PLATFORM_MOBILE)
 core.window(True, 480, 640)
 
-
+core.autoSaveShader('shaders')
 
 #The character shadow is specified to be set at the time of conversion by figure.conf.
 #See Sapphiart/figure.conf
@@ -69,6 +69,7 @@ cam2D.position = (0, 0, 100)
 
 loop = True
 while loop:
+    core.update()
     dv = 0.0
     moveVector = vmath.vec3(0.0, 0.0, 0.0)
 

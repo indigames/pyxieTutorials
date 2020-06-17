@@ -41,6 +41,7 @@ showcase2D = core.showcase('case2D')
 showcase2D.add(shadowSprite)
 
 while True:
+    core.update()
     cam2D.shoot(showcase2D)
     core.swap()
 

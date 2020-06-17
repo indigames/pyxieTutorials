@@ -77,6 +77,8 @@ rotX = 0
 rotY = 0
 
 while True:
+    core.update()
+ 
     box.step()
     touch = core.singleTouch()
     if touch is not None:

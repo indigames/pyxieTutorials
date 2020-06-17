@@ -41,6 +41,7 @@ showcase = core.showcase("case")
 showcase.add(figure)
 
 while True:
+    core.update()
     world.step()
     index = 1
     for bd in bodies:

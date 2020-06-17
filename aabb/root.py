@@ -69,6 +69,7 @@ rotX = 0.0
 rotY = 0.0
 
 while True:
+    core.update()
     min, max = figure2.getAABB(-1, core.WorldSpace)
     poss, _, _, _ = shapes.makeBoxFromAABB(min, max)
     aabbBox2.setVertexElements("mesh", core.ATTRIBUTE_ID_POSITION, poss)

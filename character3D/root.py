@@ -48,6 +48,7 @@ cam2D.position = (0, 0, 100)
 
 loop = True
 while loop:
+    core.update()
     dv = 0.0
     moveVector = vmath.vec3(0.0, 0.0, 0.0)
 

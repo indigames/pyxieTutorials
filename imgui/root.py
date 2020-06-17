@@ -19,6 +19,7 @@ imgui.create_context()
 impl = ImgiIGERenderer()
 
 while True:
+    core.update()
     w, h = core.viewSize()
     curX = 0
     curY = 0

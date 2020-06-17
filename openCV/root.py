@@ -21,6 +21,7 @@ efig.position = vmath.vec3(-0.15, 0.3, 0)
 showcase.add(efig)
 
 while(True):
+    core.update()
     ret, frame = capture.read()
     frame = cv2.flip(frame,-1)
     frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)

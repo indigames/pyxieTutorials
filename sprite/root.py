@@ -35,6 +35,7 @@ dir = vmath.vec2(0, 1)
 
 loop = True
 while loop:
+    core.update()
     touch = core.singleTouch()
     if touch is not None:
         goal = vmath.vec2(touch['cur_x'], touch['cur_y'])

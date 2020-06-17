@@ -40,7 +40,7 @@ head = 0.0
 pitch = 0.0
 
 while True:
-
+    core.update()
     touch = core.singleTouch()
     if touch is not None:
         if touch['is_moved']:
