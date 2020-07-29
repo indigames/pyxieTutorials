@@ -15,7 +15,6 @@ core.window(True, 480, 640)
 imgui.create_context()
 
 impl = ImgiIGERenderer()
-show_keyboard = False
 
 while True:
     w, h = core.viewSize()
@@ -42,14 +41,11 @@ while True:
         imgui.end_main_menu_bar()
 
     imgui.begin("Custom window", True)
-    imgui.text("Virtual Keyboard : " + str(show_keyboard))
+    imgui.text("Virtual Keyboard : " + str(core.isVirtualKeyboardShown()))
     imgui.text("Value: " + core.getInputText())
-        
     if imgui.button("Show Virtual Keyboard"):
-        show_keyboard = True
         core.showVirtualKeyboard()
     if imgui.button("Hide Virtual Keyboard"):
-        show_keyboard = False
         core.hideVirtualKeyboard()
     
     imgui.end()
