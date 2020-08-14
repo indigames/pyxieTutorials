@@ -36,16 +36,13 @@ world.gravity = (0,-10,0)
 select = -1
 demo = None
 
-# case.add(core.figure('ground'))
-# case.add(core.figure('shape'))
-        
 while True:
     core.update()
     world.step()
     camera.shoot(case)
 
-    # if demo is not None:
-        # demo.update()
+    if demo is not None:
+        demo.update()
 
     clicked, newselect = imguiUpdate(select)
     if clicked and newselect != select:

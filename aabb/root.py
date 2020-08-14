@@ -53,7 +53,7 @@ aabbBox2.setTriangles("mesh", idxs)
 aabbBox2.setMeshWireframe(0, True)
 
 cam = core.camera()
-cam.orthographicProjection = False
+#cam.orthographicProjection = True
 #cam.widthBase = True
 #cam.orthoWidth = 1.0
 cam.position = (0,1,3)
@@ -83,13 +83,12 @@ while True:
         elif touch['is_tapped']:
             invProj = vmath.inverse(cam.projectionMatrix)
             invView = cam.viewInverseMatrix
-            sw, sh = core.viewSize()            
+            sw, sh = core.viewSize()
             sx = touch['cur_x'] / (sw / 2)
             sy = touch['cur_y'] / (sh / 2)
-            print(sx, sy)
             near = vmath.vec4(sx, sy, 0.0, 1.0)
-            # if cam.orthographicProjection:
-                # near.z = -1.0
+            if cam.orthographicProjection:
+                near.z = -1.0
             near = invProj * near
             near = invView * near
             near /= near.w

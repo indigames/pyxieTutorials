@@ -9,9 +9,7 @@ from igeCore import apputil
 import igeVmath as vmath
 import imgui
 from igeCore.apputil.imguirenderer import ImgiIGERenderer
-import igeGameAnalytics
 
-igeGameAnalytics.init("0.0.1", "9d105618343d94d19b3e8d1b7cc3e054", "b36e6d085713861af00ca033c9503f690d809c32", debug=False)
 
 # open or resize window (This function is valid only on PC,Ignored in smartphone apps)
 core.window(True, 480, 640)

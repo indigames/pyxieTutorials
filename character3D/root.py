@@ -12,8 +12,6 @@ import os.path
 from char import Character
 from cam import TargetCamera
 from controller import Controller
-import imgui
-from igeCore.apputil.imguirenderer import ImgiIGERenderer
 
 # convert all assets to the format suitable for the platform
 # devtool module can not be used in the app
@@ -22,9 +20,6 @@ devtool.convertAssets('.','.', core.TARGET_PLATFORM_PC)
 
 # open or resize window (This function is valid only on PC,Ignored in smartphone apps)
 core.window(True, 480, 640)
-imgui.create_context()
-
-impl = ImgiIGERenderer()
 
 
 char = Character()
@@ -51,9 +46,6 @@ cam2D = core.camera('2dcam')
 cam2D.orthographicProjection = True
 cam2D.position = (0, 0, 100)
 
-def captured(name):
-    print(name)
-
 loop = True
 while loop:
     core.update()
@@ -70,19 +62,10 @@ while loop:
     char.step(moveVector)
     cam.step(char.figure)
     controller.step()
-    
-    impl.process_inputs()
-    imgui.new_frame()
-    imgui.begin("Custom window", True)
-    if imgui.button("Capturing"):
-        tex.captureScreenshot('offscreen', callback=captured)
-    imgui.end()
-    imgui.render()    
 
     cam.camera.shoot(showcase3D, tex)  # render to texture
     cam.camera.shoot(showcase3D)
     cam2D.shoot(showcase2D, clearColor=False)
-    impl.render(imgui.get_draw_data())
 
     core.swap()
 
