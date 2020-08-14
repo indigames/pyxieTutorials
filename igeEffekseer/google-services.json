@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "216310295247",
+    "firebase_url": "https://indigames-4c66a.firebaseio.com",
+    "project_id": "indigames-4c66a",
+    "storage_bucket": "indigames-4c66a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:216310295247:android:0f04dcd9439456469be5ba",
+        "android_client_info": {
+          "package_name": "net.indigames.igelauncher"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "216310295247-ehe4jcclfcr6iq9bq386uua047a7qqhi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1PqMtlsUQtz7OK-5HiUX-vMaWjGcBPpY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "216310295247-ehe4jcclfcr6iq9bq386uua047a7qqhi.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "216310295247-sn7bbd8dgiiiv6remh7dtkl0l42orrm2.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "net.indigames.igelauncher"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
