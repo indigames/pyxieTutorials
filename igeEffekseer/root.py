@@ -10,7 +10,7 @@ from igeCore.apputil.imguirenderer import ImgiIGERenderer
 
 # open or resize window (This function is valid only on PC,Ignored in smartphone apps)
 core.window(True, 480, 640)
-# core.window(True, 640, 960)
+# core.window(True, 1280, 720)
 
 imgui.create_context()
 
@@ -25,7 +25,7 @@ def f_texture_loader(name, type):
     textures[name] = tex
     return (tex.width, tex.height, tex.id, tex.numMips > 1)
 
-_w, _h = core.viewSize()
+_w, _h = core.viewSize()    #core.deviceSize()
 
 igeEffekseer.texture_loader(f_texture_loader)
 _particle = igeEffekseer.particle()
