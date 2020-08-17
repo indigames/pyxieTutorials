@@ -25,19 +25,19 @@ def f_texture_loader(name, type):
     textures[name] = tex
     return (tex.width, tex.height, tex.id, tex.numMips > 1)
 
-_w, _h = core.viewSize()    #core.deviceSize()
+_w, _h = core.deviceSize()
 
 igeEffekseer.texture_loader(f_texture_loader)
 _particle = igeEffekseer.particle()
 
-_particle.camera_eye = (0.0, 0.0, -20.0)
+_particle.camera_eye = (10.0, 5.0, -20.0)
 _particle.camera_at = (0.0, 0.0, 0.0)
 _particle.camera_up = (0.0, 1.0, 0.0)
 
 _particle.projection_ortho = False
+_particle.projection_viewsize = (_w / 10, _h / 10)
 
-_particle.projection_aspect = _w / _h
-_particle.projection_viewport = (_w, _h)
+# _particle.projection_viewport = (_w, _h)
 _particle.projection_near = 1.0
 _particle.projection_far = 1000.0
 _particle.projection_fov = 90.0
@@ -119,7 +119,7 @@ while True:
         imgui.text('Homing_Laser01')
         imgui.same_line()
         if imgui.button("play"):
-            _homing_hd = _particle.add('Homing_Laser01.efk')
+            _homing_hd = _particle.add('Homing_Laser01.efk', (0.0, -10.0, 0.0))
         imgui.same_line()    
         if imgui.button("stop"):
             _particle.remove(_homing_hd)
