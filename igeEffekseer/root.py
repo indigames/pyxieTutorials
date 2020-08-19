@@ -30,7 +30,8 @@ _w, _h = core.deviceSize()
 igeEffekseer.texture_loader(f_texture_loader)
 _particle = igeEffekseer.particle()
 
-_particle.camera_eye = (10.0, 5.0, -20.0)
+# _particle.camera_eye = (10.0, 5.0, -20.0)
+_particle.camera_eye = (0.0, 0.0, 20.0)
 _particle.camera_at = (0.0, 0.0, 0.0)
 _particle.camera_up = (0.0, 1.0, 0.0)
 
@@ -47,7 +48,10 @@ _particle.framerate = 60.0
 _distortion_hd = -1
 _laser_hd = -1
 _homing_hd = -1
+_model_hd = -1
+
 _tornade_hd = -1
+_rotation_value = 0.0
 
 _color = 1.0, 0.0, 1.0, 1.0
 
@@ -88,7 +92,7 @@ while True:
         imgui.text('Distortion')
         imgui.same_line()
         if imgui.button("play"):
-            _distortion_hd = _particle.add('Simple_Distortion.efk')
+            _distortion_hd = _particle.add('Effects/Simple_Distortion.efk')
         imgui.same_line()    
         if imgui.button("move"):
             _particle.set_location(_distortion_hd, 0.0, -10.0, 0.0) 
@@ -109,17 +113,27 @@ while True:
         imgui.text('Laser01')
         imgui.same_line()
         if imgui.button("play"):
-            _laser_hd = _particle.add('Laser01.efk', (0.0, 0.0, 0.0))
+            _laser_hd = _particle.add('Effects/Laser01.efk', position=(0.0, 0.0, 0.0))
         imgui.same_line()    
         if imgui.button("stop"):
             _particle.remove(_laser_hd)          
+        imgui.pop_id()
+        
+        imgui.push_id('Model')
+        imgui.text('Model')
+        imgui.same_line()
+        if imgui.button("play"):
+            _model_hd = _particle.add('Effects/Simple_Model_UV.efk', position=(0.0, -10.0, 0.0))
+        imgui.same_line()    
+        if imgui.button("stop"):
+            _particle.remove(_model_hd)          
         imgui.pop_id()
         
         imgui.push_id('Homing_Laser01')
         imgui.text('Homing_Laser01')
         imgui.same_line()
         if imgui.button("play"):
-            _homing_hd = _particle.add('Homing_Laser01.efk', (0.0, -10.0, 0.0))
+            _homing_hd = _particle.add('Effects/Homing_Laser01.efk', position=(0.0, -10.0, 0.0))
         imgui.same_line()    
         if imgui.button("stop"):
             _particle.remove(_homing_hd)
@@ -129,11 +143,14 @@ while True:
         imgui.text('MagicTornade')
         imgui.same_line()
         if imgui.button("play"):
-            _tornade_hd = _particle.add('MagicTornade.efk')
-        imgui.same_line()    
+            _tornade_hd = _particle.add('Effects/MagicTornade.efk', position=(0.0, -10.0, 0.0))
+        imgui.same_line()
         if imgui.button("stop"):
             _particle.remove(_tornade_hd)
         imgui.pop_id()
+        changed, _rotation_value = imgui.slider_float("Rotation", _rotation_value, min_value=0.0, max_value=3.14 * 2,format="%.2f", power=1)
+        if changed is True:
+            _particle.set_rotation(_tornade_hd, _rotation_value, 0.0, 0.0)
         
         if imgui.button("Stop All"):
             _particle.stop_all_effects()  
