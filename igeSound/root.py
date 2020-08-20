@@ -17,6 +17,10 @@ imgui.create_context()
 
 impl = ImgiIGERenderer()
 
+sfxr_preset = 0
+sfxr_handle = -1
+position_3d = 0.0, 0.0, 0.0
+
 while True:
     w, h = core.viewSize()
     curX = 0
@@ -30,6 +34,7 @@ while True:
     impl.process_inputs()
 
     core.update()
+    igeSound.update()
 
     imgui.new_frame()
 
@@ -41,7 +46,7 @@ while True:
             imgui.end_menu()
         imgui.end_main_menu_bar()
 
-    imgui.begin("Sound", True)
+    imgui.begin("Sound", True, imgui.WINDOW_ALWAYS_AUTO_RESIZE)
     
     imgui.push_id('mp3')
     imgui.text('mp3')
@@ -71,6 +76,23 @@ while True:
     imgui.same_line()    
     if imgui.button("stop"):
         igeSound.stop('sound/beep.ogg')
+    imgui.pop_id()
+    
+    imgui.separator()
+    
+    imgui.push_id('sfxr')
+    imgui.text('sfxr + 3d')
+    imgui.same_line()
+    if imgui.button("play"):
+        sfxr_handle = igeSound.play(sfxr_preset, is_3d=True, position=position_3d, loop=True)
+    imgui.same_line()
+    if imgui.button("stop"):
+        igeSound.stop(sfxr_handle)
+    _, sfxr_preset = imgui.slider_int("preset", sfxr_preset, min_value=0, max_value=6, format="%d")
+    position_changed, position_3d = imgui.slider_float3("position", *position_3d, min_value=0, max_value=500, format="%.1f", power=1.0)
+    if position_changed is True:
+        igeSound.set3dSourcePosition(sfxr_handle, position_3d)
+        igeSound.set3dAttenuation(sfxr_handle, igeSound.EXPONENTIAL_DISTANCE, 0.25)   
     imgui.pop_id()
     
     if imgui.button("Stop All"):
