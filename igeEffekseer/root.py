@@ -8,6 +8,7 @@ import igeVmath as vmath
 import imgui
 from igeCore.apputil.imguirenderer import ImgiIGERenderer
 import igeEffekseer
+import os
 
 # open or resize window (This function is valid only on PC,Ignored in smartphone apps)
 core.window(True, 480, 640)
@@ -24,7 +25,12 @@ def f_texture_loader(name, type):
 
 igeEffekseer.texture_loader(f_texture_loader)
 
-effect_list = ['Effects/MagicTornade.efk', 'Effects/Simple_Sprite_BillBoard.efk', 'Effects/Simple_Distortion.efk', 'Effects/Simple_Model_UV.efk', 'Effects/Laser01.efk', 'Effects/Homing_Laser01.efk']
+effect_list = []
+for root, dirs, files in os.walk("Effects"):
+    for file in files:
+        if file.endswith(".efk"):
+            effect_list.append(os.path.join(root, file))
+
 effect_current = 0
 
 _particle = igeEffekseer.particle()
