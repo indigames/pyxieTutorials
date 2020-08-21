@@ -7,14 +7,13 @@ from igeCore import apputil
 import igeVmath as vmath
 import imgui
 from igeCore.apputil.imguirenderer import ImgiIGERenderer
+import igeEffekseer
 
 # open or resize window (This function is valid only on PC,Ignored in smartphone apps)
 core.window(True, 480, 640)
 
 imgui.create_context()
 impl = ImgiIGERenderer()
-
-import igeEffekseer
 
 textures = {}
 def f_texture_loader(name, type):
@@ -23,35 +22,31 @@ def f_texture_loader(name, type):
     textures[name] = tex
     return (tex.width, tex.height, tex.id, tex.numMips > 1)
 
-_w, _h = core.deviceSize()
-
 igeEffekseer.texture_loader(f_texture_loader)
+
+effect_list = ['Effects/MagicTornade.efk', 'Effects/Simple_Sprite_BillBoard.efk', 'Effects/Simple_Distortion.efk', 'Effects/Simple_Model_UV.efk', 'Effects/Laser01.efk', 'Effects/Homing_Laser01.efk']
+effect_current = 0
+
 _particle = igeEffekseer.particle()
-
-_particle.framerate = 60.0
-_handle = _particle.add('Effects/MagicTornade.efk')
-_particle.set_scale(_handle, 0.25, 0.25, 0.25)
-
 _rotation = 0.0, 0.0, 0.0
-_position = 0.0, 0.0, 0.0
-
-_distortion_hd = -1
-_laser_hd = -1
-_homing_hd = -1
-_tornade_hd = -1
-
-_color = 1.0, 0.0, 1.0, 1.0
+_position = 0.0, -2.0, 0.0
+_scale = .25, .25, .25
+_dynamic = 100.0, 0.0, 0.0, 0.0
+_particle.framerate = 60.0
+_show_enabled = True
+_loop_enabled = True
+_handle = _particle.add(effect_list[effect_current], loop=_loop_enabled)
+_particle.set_location(_handle, _position[0], _position[1], _position[2])
+_particle.set_scale(_handle, _scale[0], _scale[1], _scale[2])
 
 showcase = core.showcase("showcase")
 camera = core.camera("cam01")
 # camera.orthographicProjection = True
-
-__w, __h = core.viewSize()
-
-camera.orthoHeight = __h / 50
-camera.position = (0, 0, 10)
+# camera.orthoHeight = _h / 50
+camera.position = (10, 5, 10)
 
 figure = core.figure('Sapphiart/Sapphiart')
+figure.position = _position
 showcase.add(figure)
 
 while True:
@@ -67,21 +62,49 @@ while True:
     impl.process_inputs()
 
     core.update()
-    
+
     camera.shoot(showcase)
     if _particle is not None:
         _particle.shoot(camera.projectionMatrix, vmath.inverse(camera.viewInverseMatrix), core.getElapsedTime())
     
     imgui.new_frame()    
-    imgui.begin("Effekseer", True)
+    imgui.begin("Effekseer", True, imgui.WINDOW_ALWAYS_AUTO_RESIZE)
     
+    changed, effect_current = imgui.combo("Effects", effect_current, effect_list)
+    if changed is True:
+        _particle.stop_all_effects()
+        _handle = _particle.add(effect_list[effect_current], loop=_loop_enabled)  
+        _particle.set_dynamic_input(_handle, _dynamic)
+        _particle.set_location(_handle, _position[0], _position[1], _position[2])
+        _particle.set_scale(_handle, _scale[0], _scale[1], _scale[2])        
+    
+    # if _particle is not None:
+        # imgui.text('instance count:' + str(_particle.instance_count(_handle)) + ' total:' + str(_particle.total_instance_count()))
+        # imgui.text('dynamic_input' +  str(_particle.get_dynamic_input(_handle)))
+    
+    changed, _show_enabled = imgui.checkbox("Show", _show_enabled)
+    if changed is True:
+        _particle.set_shown(_handle, _show_enabled, True)
+    imgui.same_line()
+    changed, _loop_enabled = imgui.checkbox("Loop", _loop_enabled)
+    if changed is True:
+        _particle.set_loop(_handle, _loop_enabled)
+
+    changed, _position = imgui.slider_float3("Position", *_position, min_value=-10.0, max_value=10.0,format="%.0f", power=1)
+    if changed is True:
+        _particle.set_location(_handle, _position[0], _position[1], _position[2])
+        
     changed, _rotation = imgui.slider_float3("Rotation", *_rotation, min_value=0.0, max_value=3.14 * 2,format="%.2f", power=1)
     if changed is True:
-        _particle.set_rotation(_handle, _rotation[0], _rotation[1], _rotation[2])    
-
-    position_changed, _position = imgui.slider_float3("Position", *_position, min_value=-10.0, max_value=10.0,format="%.0f", power=1)
-    if position_changed is True:
-        _particle.set_location(_handle, _position[0], _position[1], _position[2])   
+        _particle.set_rotation(_handle, _rotation[0], _rotation[1], _rotation[2])   
+    
+    changed, _scale = imgui.slider_float3("Scale", *_scale, min_value=0.0, max_value=2,format="%.2f", power=1)
+    if changed is True:
+        _particle.set_scale(_handle, _scale[0], _scale[1], _scale[2])
+    
+    changed, _dynamic = imgui.slider_float4("Dynamic_Input", *_dynamic, min_value=0.0, max_value=100.0,format="%.0f", power=1)
+    if changed is True:
+        _particle.set_dynamic_input(_handle, _dynamic) 
     
     imgui.end()    
     imgui.render()
