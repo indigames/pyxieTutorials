@@ -36,7 +36,7 @@ effect_current = 0
 _particle = igeEffekseer.particle()
 _rotation = 0.0, 0.0, 0.0
 _position = 0.0, -2.0, 0.0
-_scale = .25, .25, .25
+_scale = 1.0, 1.0, 1.0
 _dynamic = 100.0, 0.0, 0.0, 0.0
 _particle.framerate = 60.0
 _show_enabled = True
@@ -82,11 +82,7 @@ while True:
         _handle = _particle.add(effect_list[effect_current], loop=_loop_enabled)  
         _particle.set_dynamic_input(_handle, _dynamic)
         _particle.set_location(_handle, _position[0], _position[1], _position[2])
-        _particle.set_scale(_handle, _scale[0], _scale[1], _scale[2])        
-    
-    # if _particle is not None:
-        # imgui.text('instance count:' + str(_particle.instance_count(_handle)) + ' total:' + str(_particle.total_instance_count()))
-        # imgui.text('dynamic_input' +  str(_particle.get_dynamic_input(_handle)))
+        _particle.set_scale(_handle, _scale[0], _scale[1], _scale[2])
     
     changed, _show_enabled = imgui.checkbox("Show", _show_enabled)
     if changed is True:
