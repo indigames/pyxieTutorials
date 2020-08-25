@@ -35,7 +35,7 @@ for root, dirs, files in os.walk("Effects"):
 effect_current = 5
 
 _particle_nb = 1000
-_particle = igeEffekseer.particle(True)
+_particle = igeEffekseer.particle(culling=True)
 _rotation = 0.0, 0.0, 0.0
 _position = 0.0, -2.0, 0.0
 _scale = .25, .25, .25
