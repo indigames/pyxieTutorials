@@ -1,6 +1,2 @@
-
-*.pyxi
 *.pyc
-*.pyxf
-*.xml
 .*

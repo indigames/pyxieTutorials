@@ -45,6 +45,7 @@ bodyA.collisionGroupBit = 4
 ground.collisionGroupMask = 7
 
 while True:
+    core.update()
     rv = world.convexSweepTest(bodyA.shape, bodyA.transform, bodyB.transform, 0.1)
     print('----------------------')
     for i in rv:

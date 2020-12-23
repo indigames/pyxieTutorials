@@ -9,6 +9,7 @@ from hinge import Hinge
 from conetwist import ConeTwist
 from vehicle import Vehicle
 from compound import Compound
+from meshshape import Meshshape
 
 core.window(True, 480, 640)
 
@@ -24,7 +25,7 @@ def imguiUpdate(select):
 
 imgui.create_context()
 impl = ImgiIGERenderer()
-samples = ['rigidbody', 'ragdoll', 'hinge', 'conetwist', 'compound', 'vehicle']
+samples = ['rigidbody', 'ragdoll', 'hinge', 'conetwist', 'compound', 'vehicle', 'meshShape']
 
 case = core.showcase()
 case.add(Utils().GetFigure())
@@ -36,6 +37,7 @@ select = -1
 demo = None
 
 while True:
+    core.update()
     world.step()
 
     core.update()
@@ -59,6 +61,8 @@ while True:
             demo = Compound()
         elif select is 5:
             demo = Vehicle()
+        elif select is 6:
+            demo = Meshshape()
         demo.setup(world)
 
     core.swap()

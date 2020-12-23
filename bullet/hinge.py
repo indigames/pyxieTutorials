@@ -29,7 +29,7 @@ class Hinge():
                                      frameA=(posA, rotA), frameB=(posB, rotB))
         world.add(joint)
 
-        efig.mergeMesh()
+        efig.mergeSameMaterialMesh()
 
     def update(self):
         efig = Utils().GetFigure()

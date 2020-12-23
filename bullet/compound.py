@@ -25,7 +25,7 @@ class Compound():
         world.add(self.body1)
         Utils().AddShapeMesh(compound)
 
-        efig.mergeMesh()
+        efig.mergeSameMaterialMesh()
 
     def update(self):
         efig = Utils().GetFigure()
