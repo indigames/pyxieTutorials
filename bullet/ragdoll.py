@@ -225,7 +225,7 @@ class Ragdoll():
         m_joints[JOINT_RIGHT_ELBOW].setLimit(-M_PI_2, 0)
         world.add(m_joints[JOINT_RIGHT_ELBOW], True)
 
-        efig.mergeMesh()
+        efig.mergeSameMaterialMesh()
 
     def update(self):
         efig = Utils().GetFigure()

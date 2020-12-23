@@ -36,13 +36,17 @@ class Character():
         self.figure.killJointTransform('cape')
         self.figure.setMaterialRenderState('phong1', 'cull_face_enable', False)
         pos, _, _ = self.figure.getJoint('anchor1', core.WorldSpace)
-        self.soft.appendDeformableAnchor(self.soft.findNearestNode(pos), self.body)
+        no, pos = self.soft.findNearestNode(pos)
+        self.soft.appendDeformableAnchor(no, self.body)
         pos, _, _ = self.figure.getJoint('anchor2', core.WorldSpace)
-        self.soft.appendDeformableAnchor(self.soft.findNearestNode(pos), self.body)
+        no, pos = self.soft.findNearestNode(pos)
+        self.soft.appendDeformableAnchor(no, self.body)
         pos, _, _ = self.figure.getJoint('anchor3', core.WorldSpace)
-        self.soft.appendDeformableAnchor(self.soft.findNearestNode(pos), self.body)
+        no, pos = self.soft.findNearestNode(pos)
+        self.soft.appendDeformableAnchor(no, self.body)
         pos, _, _ = self.figure.getJoint('anchor4', core.WorldSpace)
-        self.soft.appendDeformableAnchor(self.soft.findNearestNode(pos), self.body)
+        no, pos = self.soft.findNearestNode(pos)
+        self.soft.appendDeformableAnchor(no, self.body)
 
 
 
@@ -53,7 +57,7 @@ class Character():
         l = vmath.length(moveVector)
         if l > 10.0:
             gorlDir = vmath.normalize(moveVector)
-            self.body.linearVelocity = gorlDir * 10000.0 * core.getElapsedTime()
+            self.body.linearVelocity = gorlDir * 100.0 * core.getElapsedTime()
         else:
             gorlDir = currentDir
             self.body.linearVelocity = (0,0,0)

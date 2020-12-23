@@ -53,7 +53,7 @@ class Vehicle():
         connectionPointCS0 = (CUBE_HALF_EXTENTS - (0.3 * wheelWidth), connectionHeight,-2 * CUBE_HALF_EXTENTS + wheelRadius);
         self.vehicle.addWheel(connectionPointCS0, wheelDirectionCS0, wheelAxleCS, suspensionRestLength, wheelRadius, isFrontWheel);
 
-        efig.mergeMesh()
+        efig.mergeSameMaterialMesh()
 
         """
         for (int i = 0; i < m_vehicle->getNumWheels(); i++)

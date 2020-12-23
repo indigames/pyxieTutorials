@@ -7,8 +7,8 @@ from utils import Utils
 import igeVmath as vmath
 
 
-#from igeCore import devtool
-#devtool.convertAssets('.','.', core.TARGET_PLATFORM_MOBILE)
+from igeCore import devtool
+devtool.convertAssets('.','.', core.TARGET_PLATFORM_MOBILE)
 
 utl = Utils()
 core.window(True, 480, 640)

@@ -33,7 +33,7 @@ for i in range(ground.numMaterials):
     ground.setShaderGenerator(i, shaderGen)
 
 #create shadow buffer
-shadowBuffer = core.texture('Shadow', 1024,1024, format=core.GL_RED, depth=True)
+shadowBuffer = core.texture('Shadow', 1024,1024, format=core.GL_RED, depth=True, float=True)
 
 
 efig = graphicsHelper.createSprite(100, 100,shadowBuffer)
@@ -57,7 +57,7 @@ env = core.environment()
 env.setDirectionalLampDirection(0, (5,5,5))
 env.shadowColor = (0.0, 0.0, 0.0)
 env.shadowDensity = 0.7
-env.shadowWideness = 20.0
+env.shadowWideness = 10.0
 env.ambientColor = (0.2,0.2,0.2)
 
 showcase3D.add(env)

@@ -4,7 +4,8 @@ from utils import Utils
 
 class Meshshape():
     def __init__( self):
-        None
+        from igeCore import devtool
+        devtool.convertAssets('.','.', igeCore.TARGET_PLATFORM_PC)
 
     def setup(self, world):
         world.clear()
@@ -31,7 +32,7 @@ class Meshshape():
         world.add(self.body2)
         Utils().AddShapeMesh(shape)
 
-        efig.mergeMesh()
+        efig.mergeSameMaterialMesh()
 
     def update(self):
         efig = Utils().GetFigure()
