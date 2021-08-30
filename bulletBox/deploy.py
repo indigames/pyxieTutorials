@@ -49,7 +49,7 @@ def convertVoxelModel(filename, src, dest, platform,scale):
         if len(filepath) != 0:
             devtool.convertTextureToPlatform(filepath[0], os.path.join(dest, name), platform, tex['normal'], tex['wrap'])
 
-    efig.mergeMesh()
+    efig.mergeSameMaterialMesh()
     efig.saveFigure(os.path.join(dest, filename))
 
 def deployPlatform(src, model, appName, userID, appVersion, platform, scale):
