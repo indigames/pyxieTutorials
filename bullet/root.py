@@ -39,6 +39,8 @@ demo = None
 while True:
     core.update()
     world.step()
+
+    core.update()
     camera.shoot(case)
 
     if demo is not None:
