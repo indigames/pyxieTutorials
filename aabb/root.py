@@ -8,6 +8,10 @@ import shapes
 import sys
 import math
 
+
+from igeCore import devtool
+devtool.convertAssets('.','.', core.TARGET_PLATFORM_PC)
+
 core.window(True, 480, 640)
 
 def IntersectRayAABB(p, d, min, max):
@@ -50,13 +54,13 @@ aabbBox2.setVertexElements("mesh", core.ATTRIBUTE_ID_POSITION, poss)
 aabbBox2.setVertexElements("mesh", core.ATTRIBUTE_ID_NORMAL, noms)
 aabbBox2.setVertexElements("mesh", core.ATTRIBUTE_ID_UV0, uvs)
 aabbBox2.setTriangles("mesh", idxs)
-#aabbBox2.setMeshPrimitiveType(0, core.GL_LINE_STRIP)
+aabbBox2.setMeshPrimitiveType(0, core.GL_LINE_STRIP)
 
 cam = core.camera()
 #cam.orthographicProjection = True
 #cam.widthBase = True
 #cam.orthoWidth = 1.0
-cam.position = (0,1,3)
+cam.position = (0,10,30)
 cam.target = (0,0,0)
 
 showcase = core.showcase("case")
