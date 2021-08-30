@@ -50,7 +50,7 @@ aabbBox2.setVertexElements("mesh", core.ATTRIBUTE_ID_POSITION, poss)
 aabbBox2.setVertexElements("mesh", core.ATTRIBUTE_ID_NORMAL, noms)
 aabbBox2.setVertexElements("mesh", core.ATTRIBUTE_ID_UV0, uvs)
 aabbBox2.setTriangles("mesh", idxs)
-aabbBox2.setMeshWireframe(0, True)
+#aabbBox2.setMeshPrimitiveType(0, core.GL_LINE_STRIP)
 
 cam = core.camera()
 #cam.orthographicProjection = True

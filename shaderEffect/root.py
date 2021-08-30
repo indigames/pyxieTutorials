@@ -16,7 +16,7 @@ shader = core.shaderGenerator()
 shader.setColorTexture(True)            #use color texture
 shader.setDistortion(True)              #add distortion effect
 shader.setUVScroll(1,True)              #start uv scroll at uv channel 1
-shader.setNormalTextureUVChannel(1, 1)  #change normal texture uv channel to 1
+shader.setNormalTextureUVSet(1, 1)  #change normal texture uv channel to 1
 shader.setProjectionMapping(1, True)    #projection mapping mode at uv channel 1
 
 print(shader)                           #print shader program
@@ -24,7 +24,7 @@ print(shader)                           #print shader program
 shadowSprite = graphicsHelper.createSprite(200,200,"fire",shader=shader)
 
 #set uv scroll speed for uv set 1
-shadowSprite.setMaterialParam("mate", "ScrollSpeedSet2", (0.0, -0.08));
+shadowSprite.setMaterialParam("mate", "ScrollSpeedSet1", (0.0, -0.08));
 
 #set distortion strength
 shadowSprite.setMaterialParam("mate", "DistortionStrength", (0.02,));

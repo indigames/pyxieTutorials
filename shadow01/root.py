@@ -12,10 +12,12 @@ import igeVmath as vmath
 
 #asset convert
 from igeCore import devtool
-devtool.convertAssets('.','.', core.TARGET_PLATFORM_ANDROID,0.1)
+devtool.convertAssets('.','.', core.TARGET_PLATFORM_MOBILE,0.1)
 
 
 core.window(True, 640, 480)
+
+core.shaderGenerator().globalShadowBias = 0.001
 
 
 #ground plane
@@ -37,7 +39,7 @@ cam.position = (-100,100,100)
 cam.target = (0,0,0)
 
 #create shadow buffer
-shadowBuffer = core.texture('Shadow', 1024,1024, format=core.GL_RED, depth=True)
+shadowBuffer = core.texture('Shadow', 1024,1024, format=core.GL_RED, depth=True, float=True)
 
 env = core.environment()
 

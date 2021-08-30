@@ -1,2 +1,5 @@
 *.pyc
 .*
+*.pyxi
+*.pyxf
+*.efk

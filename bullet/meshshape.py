@@ -31,7 +31,7 @@ class Meshshape():
         world.add(self.body2)
         Utils().AddShapeMesh(shape)
 
-        efig.mergeMesh()
+        efig.mergeSameMaterialMesh()
 
     def update(self):
         efig = Utils().GetFigure()

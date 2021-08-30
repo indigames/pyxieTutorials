@@ -46,7 +46,7 @@ def convertVoxelModel(filename, src, dest, platform,scale):
         newtex['path'] = name
         efig.replaceTextureSource(tex, newtex)
         filepath = glob.glob('**/'+texfilename, recursive=True)
-        if len(filepath) is not 0:
+        if len(filepath) != 0:
             devtool.convertTextureToPlatform(filepath[0], os.path.join(dest, name), platform, tex['normal'], tex['wrap'])
 
     efig.mergeMesh()
