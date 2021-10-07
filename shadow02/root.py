@@ -15,7 +15,9 @@ from controller import Controller
 devtool.convertAssets('.','.', core.TARGET_PLATFORM_MOBILE)
 core.window(True, 480, 640)
 
-core.autoSaveShader('shaders')
+core.shaderGenerator().globalShadowBias = 0.001
+
+#core.autoSaveShader('shaders')
 
 #The character shadow is specified to be set at the time of conversion by figure.conf.
 #See Sapphiart/figure.conf
@@ -57,7 +59,7 @@ env = core.environment()
 env.setDirectionalLampDirection(0, (5,5,5))
 env.shadowColor = (0.0, 0.0, 0.0)
 env.shadowDensity = 0.7
-env.shadowWideness = 10.0
+env.shadowWideness = 12.0
 env.ambientColor = (0.2,0.2,0.2)
 
 showcase3D.add(env)

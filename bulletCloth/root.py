@@ -17,8 +17,6 @@ from utils import Utils
 
 utl = Utils()
 
-core.autoSaveShader('shaders')
-
 devtool.convertAssets('.','.', core.TARGET_PLATFORM_PC)
 core.window(True, 480, 640)
 
