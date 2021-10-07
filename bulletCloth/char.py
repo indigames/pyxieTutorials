@@ -35,22 +35,18 @@ class Character():
         self.soft = igeBullet.softBody(world, points, triangles)
         self.figure.killJointTransform('cape')
         self.figure.setMaterialRenderState('phong1', 'cull_face_enable', False)
-
         pos, _, _ = self.figure.getJoint('anchor1', core.WorldSpace)
-        idx, _ = self.soft.findNearestNode(pos)
-        self.soft.appendDeformableAnchor(idx, self.body)
-
+        no, pos = self.soft.findNearestNode(pos)
+        self.soft.appendDeformableAnchor(no, self.body)
         pos, _, _ = self.figure.getJoint('anchor2', core.WorldSpace)
-        idx, _ = self.soft.findNearestNode(pos)
-        self.soft.appendDeformableAnchor(idx, self.body)
-
+        no, pos = self.soft.findNearestNode(pos)
+        self.soft.appendDeformableAnchor(no, self.body)
         pos, _, _ = self.figure.getJoint('anchor3', core.WorldSpace)
-        idx, _ = self.soft.findNearestNode(pos)
-        self.soft.appendDeformableAnchor(idx, self.body)
-
+        no, pos = self.soft.findNearestNode(pos)
+        self.soft.appendDeformableAnchor(no, self.body)
         pos, _, _ = self.figure.getJoint('anchor4', core.WorldSpace)
-        idx, _ = self.soft.findNearestNode(pos)
-        self.soft.appendDeformableAnchor(idx, self.body)
+        no, pos = self.soft.findNearestNode(pos)
+        self.soft.appendDeformableAnchor(no, self.body)
 
 
 

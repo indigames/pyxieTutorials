@@ -10,6 +10,7 @@ import igeVmath as vmath
 from igeCore import devtool
 devtool.convertAssets('.','.', core.TARGET_PLATFORM_ANDROID,0.1)
 
+
 core.window(True, 480, 640)
 
 shader = core.shaderGenerator()
